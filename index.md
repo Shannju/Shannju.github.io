@@ -4,8 +4,6 @@ Drink up and good luck !
 
 ## 2. Dirctory 目录
 
-[TOC]
-
 ## 3. Diray 日寄
 
 **2022年6月26日**
