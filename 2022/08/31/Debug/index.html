@@ -1,0 +1,262 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 解决载入外链限制的问题 -->
+  <meta name="referrer" content="no-referrer" />
+  <title>  Debug |    Blog of Shan</title>
+  <meta name="description" content="Daydreamer.">
+  <!-- 标签页图标 -->
+  
+  <link rel="shortcut icon" href="https://github.com/Shannju/Picture/raw/main/Ico/hanaku.ico" type="image/x-icon">
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Blog of Shan
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/gallery" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              GALLERY
+            </li>
+          </a>
+        
+          <a href="/downloads" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              DOWNLOADS
+            </li>
+          </a>
+        
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Blog of Shan
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/gallery" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>GALLERY</span>
+      </div>
+    </a>
+  
+    <a href="/downloads" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>DOWNLOADS</span>
+      </div>
+    </a>
+  
+  
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">Debug</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">8月 31 2022</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="个人网页请求图片403—不要用Gitee做图床"><a href="#个人网页请求图片403—不要用Gitee做图床" class="headerlink" title="个人网页请求图片403—不要用Gitee做图床"></a>个人网页请求图片403—不要用Gitee做图床</h1><p>这是我搭建个人网站遇到的头几个bug，那就一边de，一边吹。在一个满是bug的博客里看debug教程，是不是有点一边开车一边换轮子的乐趣（</p>
+<p>搭博客的教程参考的cu大师。傻瓜教程，非常细腻，推！<a target="_blank" rel="noopener" href="https://blog.cuijiacai.com/blog-building/">https://blog.cuijiacai.com/blog-building/</a></p>
+<p>然后个人做了个低配版本：HEXO框架 + Git Page（可包揽服务器域名等等一切麻烦事，只要会add commit push和科学上网就可以做，缺点是访问慢）</p>
+<h3 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h3><p>bug：Hexo框架搭建网站，自己的图片无法显示，主题自带的就可以。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/31/Debug/1661917703001.png" >
+        </span>
+      
+
+<p>所以不是不能显示，是请求不到，浏览器F12开控制台看看，报错403</p>
+<p><strong>Failed to load resource: the server responded with a status of 403</strong> </p>
+<h3 id="速通–if你的图床是gitee"><a href="#速通–if你的图床是gitee" class="headerlink" title="速通–if你的图床是gitee"></a>速通–if你的图床是gitee</h3><p>不要用Gitee做图床 不要用Gitee做图床 不要用Gitee做图床</p>
+<p>如果您的图片存在gitee，可以试试换个地方（比如github）gitee大量屏蔽外链，所以出现了403 资源不可用。</p>
+<p>我只是图一个国内访问快，没想到在这栽了。</p>
+<h3 id="主流解决方案–if-你的debug-time-x3D-x3D-0"><a href="#主流解决方案–if-你的debug-time-x3D-x3D-0" class="headerlink" title="主流解决方案–if 你的debug.time&#x3D;&#x3D;0"></a>主流解决方案–if 你的debug.time&#x3D;&#x3D;0</h3><p>如果你的问题不在此，我分享一下我浏览的记录。</p>
+<p>百度一下，给出的解决方案多是：</p>
+<blockquote>
+<p>解决方案：利用html中的meta标签关闭浏览器的UrlReferer访问</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/<span class="keyword">next</span>(主题)/layout/_partials/head/head.njk</span><br></pre></td></tr></table></figure>
+
+<p>在里面的<head></head>中添加下面代码即可</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>就是在模板的head部分关掉referrer（引用源），这样生成的每个网页head里面都包含这一句。不告诉服务器图片出处。 原理如下：</p>
+<blockquote>
+<p>图片服务器通过检测 Referrer 是否来自规定域名，来进行防盗链。如果没有设置referrer，那就可以直接绕过防盗链机制，直接使用或盗取。 </p>
+<p>— 参考<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017896469">https://segmentfault.com/a/1190000017896469</a></p>
+</blockquote>
+<p>但是我试了并不可，或许head是关了，但是我的图在body里面</p>
+<h3 id="进一步解决-if-你已经在互联网de了一圈"><a href="#进一步解决-if-你已经在互联网de了一圈" class="headerlink" title="进一步解决 if 你已经在互联网de了一圈"></a>进一步解决 if 你已经在互联网de了一圈</h3><p>那就找找主题模板的body在哪里。</p>
+<p>菜鸡还是浏览器看，定位到这里。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/31/Debug/1661918474721.png" >
+        </span>
+      
+
+<p>在主题模板里翻翻，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Blog\themes\white\layout\_partial\mode-img.ejs</span><br></pre></td></tr></table></figure>
+
+<p>可以在此找到 对应的<code>div class=&quot;img-show-post-cover&quot;</code></p>
+<p>我试图在a标签里面加了ref设置成no-referrer，img href也可以加这个。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/31/Debug/1661919065635.png" >
+        </span>
+      
+
+<p>完全的好了，网站可以放自己的照片了呢！</p>
+
+        <!-- 分类文章 -->
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-1"><a class="space-toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E8%AF%B7%E6%B1%82%E5%9B%BE%E7%89%87403%E2%80%94%E4%B8%8D%E8%A6%81%E7%94%A8Gitee%E5%81%9A%E5%9B%BE%E5%BA%8A"><span class="space-toc-text">个人网页请求图片403—不要用Gitee做图床</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#bug"><span class="space-toc-text">bug</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E9%80%9F%E9%80%9A%E2%80%93if%E4%BD%A0%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%98%AFgitee"><span class="space-toc-text">速通–if你的图床是gitee</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%BB%E6%B5%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%80%93if-%E4%BD%A0%E7%9A%84debug-time-x3D-x3D-0"><span class="space-toc-text">主流解决方案–if 你的debug.time&#x3D;&#x3D;0</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%A7%A3%E5%86%B3-if-%E4%BD%A0%E5%B7%B2%E7%BB%8F%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91de%E4%BA%86%E4%B8%80%E5%9C%88"><span class="space-toc-text">进一步解决 if 你已经在互联网de了一圈</span></a></li></ol></li></ol></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>2022 By <a href="">WangShan</a> Welcome to hell~</p>
+
+    </div>
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/Shannju" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:Wangshan9102@163.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="https://space.bilibili.com/17387202" target="_blank">
+                <i class="ri-bilibili-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+</body>
+</html>
