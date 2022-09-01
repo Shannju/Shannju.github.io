@@ -46,7 +46,7 @@ span {
   background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .menu-outer {
   font-family: Gothic;
@@ -93,7 +93,7 @@ span {
   right: 0;
   bottom: -0.2em;
   transition: all 0.3s;
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .active-link li:hover:after {
   right: 50%;
@@ -108,7 +108,7 @@ span {
   background: #fff;
   border-radius: 3px;
   min-width: 100px;
-  border: 1px solid #880A21;
+  border: 1px solid #a61b29;
   position: absolute;
   left: -30px;
   top: 30px;
@@ -167,7 +167,7 @@ span {
   right: 0;
   bottom: -0.04em;
   transition: all 0.3s;
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .intro-sub a:hover:after {
   right: 50%;
@@ -209,7 +209,7 @@ a {
   margin: 7px 0px;
 }
 .archive-post:hover .archive-post-title {
-  color: #880A21;
+  color: #a61b29;
 }
 .archive-post-title {
   font-size: 1.1em;
@@ -219,9 +219,9 @@ a {
 }
 .archive-post-date {
   font-family: Merriweather;
-  color: #880A21;
+  color: #a61b29;
   font-weight: 1000;
-  background-color: #0F505E;
+  background-color: #e3b4b8;
   font-size: 0.8em;
   border-radius: 5px;
   padding: 0px 10px;
@@ -239,8 +239,8 @@ a {
 }
 .paginator .extend {
   margin: 0 10px;
-  background-color: #0F505E;
-  color: #880A21;
+  background-color: #e3b4b8;
+  color: #a61b29;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -249,7 +249,7 @@ a {
 }
 .paginator .extend:hover {
   color: #fff;
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .footer-outer {
   display: flex;
@@ -272,7 +272,7 @@ a {
   transition: all 0.3s;
 }
 .footer-text a:hover {
-  color: #880A21;
+  color: #a61b29;
 }
 .footer-contact {
   font-size: 1.2em;
@@ -293,7 +293,7 @@ a {
   border-radius: 100%;
 }
 .footer-li:hover i {
-  color: #880A21;
+  color: #a61b29;
 }
 .gitalk-saysay > #gitalk-container .gt-counts {
   display: none;
@@ -338,7 +338,7 @@ a {
   right: 45%;
   bottom: 98%;
   transition: all 0.3s;
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .img-show-post {
   display: flex;
@@ -412,7 +412,7 @@ a {
   right: 48%;
   bottom: 98%;
   transition: all 0.3s;
-  background-color: #880A21;
+  background-color: #a61b29;
 }
 .post-content-outer {
   margin-top: 50px;
@@ -473,7 +473,7 @@ a {
   line-height: 1.65;
 }
 .post-content-inner a {
-  color: #880A21;
+  color: #a61b29;
 }
 .post-content-inner a:hover {
   text-decoration: underline;
@@ -485,7 +485,7 @@ a {
   display: block;
 }
 strong {
-  color: #880A21;
+  color: #a61b29;
   display: inline-block;
 }
 hr {
@@ -658,40 +658,40 @@ li p {
 }
 #gitalk-container .gt-header-controls>.gt-header-controls-tip,
 .gt-svg {
-  color: #880A21;
+  color: #a61b29;
 }
 #gitalk-container .gt-header-avatar>img,
 .gt-comment-avatar>img {
   border-radius: 100% !important;
 }
 #gitalk-container .gt-btn-preview {
-  border: 1px solid #880A21;
+  border: 1px solid #a61b29;
   border-radius: 20px;
   transition: all 0.3s;
 }
 #gitalk-container .gt-btn-preview:hover {
-  background-color: #880A21;
+  background-color: #a61b29;
   color: #fff;
 }
 #gitalk-container .gt-btn-login {
-  border: 1px solid #880A21;
-  background-color: #880A21;
+  border: 1px solid #a61b29;
+  background-color: #a61b29;
   border-radius: 20px;
   transition: all 0.3s;
 }
 #gitalk-container .gt-btn-login:hover {
   background-color: #fff;
-  color: #880A21;
+  color: #a61b29;
 }
 #gitalk-container .gt-btn-public {
-  border: 1px solid #880A21;
-  background-color: #880A21;
+  border: 1px solid #a61b29;
+  background-color: #a61b29;
   border-radius: 20px;
   transition: all 0.3s;
 }
 #gitalk-container .gt-btn-public:hover {
   background-color: #fff;
-  color: #880A21;
+  color: #a61b29;
 }
 .post-content-inner {
   display: flex;
@@ -808,14 +808,14 @@ li p {
   padding-left: 13px;
   padding-right: 46px;
   background: transparent;
-  border: 2px solid #880A21;
+  border: 2px solid #a61b29;
 }
 .search-input-outer button {
   height: 42px;
   width: 42px;
   cursor: pointer;
   position: absolute;
-  background: #880A21;
+  background: #a61b29;
   color: #fff;
 }
 #local-search-result {
@@ -835,10 +835,10 @@ li p {
 }
 #local-search-result .search-result-title:hover {
   text-decoration: none;
-  color: #880A21;
+  color: #a61b29;
 }
 #local-search-result .search-keyword {
-  color: #880A21;
+  color: #a61b29;
   font-weight: 1000;
 }
 #mobile-main {
@@ -877,7 +877,7 @@ li p {
   cursor: pointer;
 }
 .moibile-active-link span {
-  box-shadow: inset 0 -0.2em 0 #880A21;
+  box-shadow: inset 0 -0.2em 0 #a61b29;
 }
 #mobile-menu {
   display: none;
