@@ -27,6 +27,12 @@
 
   <!-- 代码高亮 -->
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css">
+
+    
+  
 <meta name="generator" content="Hexo 6.2.0"></head>
 
 
@@ -170,10 +176,11 @@
 <p>百度一下，给出的解决方案多是：</p>
 <blockquote>
 <p>解决方案：利用html中的meta标签关闭浏览器的UrlReferer访问</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/<span class="keyword">next</span>(主题)/layout/_partials/head/head.njk</span><br></pre></td></tr></table></figure>
-
+<pre><code class="ruby">themes/next(主题)/layout/_partials/head/head.njk
+</code></pre>
 <p>在里面的<head></head>中添加下面代码即可</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="xml">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;
+</code></pre>
 </blockquote>
 <p>就是在模板的head部分关掉referrer（引用源），这样生成的每个网页head里面都包含这一句。不告诉服务器图片出处。 原理如下：</p>
 <blockquote>
@@ -191,8 +198,8 @@
       
 
 <p>在主题模板里翻翻，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Blog\themes\white\layout\_partial\mode-img.ejs</span><br></pre></td></tr></table></figure>
-
+<pre><code>Blog\themes\white\layout\_partial\mode-img.ejs
+</code></pre>
 <p>可以在此找到 对应的<code>div class=&quot;img-show-post-cover&quot;</code></p>
 <p>我试图在a标签里面加了ref设置成no-referrer，img href也可以加这个。</p>
 
@@ -318,6 +325,13 @@
 <script src="/js/white.js"></script>
 
 
+
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
 
 </body>
 </html>

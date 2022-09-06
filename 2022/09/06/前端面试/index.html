@@ -27,6 +27,12 @@
 
   <!-- 代码高亮 -->
   
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css">
+
+    
+  
 <meta name="generator" content="Hexo 6.2.0"></head>
 
 
@@ -150,7 +156,7 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h3 id="x3D-x3D-git-常用命令-x3D-x3D"><a href="#x3D-x3D-git-常用命令-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;git 常用命令&#x3D;&#x3D;"></a>&#x3D;&#x3D;git 常用命令&#x3D;&#x3D;</h3><p><del>\1. git clone</del></p>
+        <h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h3 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a><strong>git 常用命令</strong></h3><p><del>\1. git clone</del></p>
 <p><del>\2. git add .</del></p>
 <p><del>\3. git commit -m</del></p>
 <p><del>\4. git push</del></p>
@@ -166,24 +172,24 @@
 <p>\14. git checkout -b xxx origin&#x2F;xxx 拉去远程分支</p>
 <p>\15. git log 查看提交记录</p>
 <h1 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h1><p>TCP与UDP的区别</p>
-<h3 id="GET和POST区别（高频）"><a href="#GET和POST区别（高频）" class="headerlink" title="GET和POST区别（高频）"></a>GET和POST区别（高频）</h3><p>1.GET在&#x3D;&#x3D;浏览器回退&#x3D;&#x3D;不会再次请求，POST会再次提交请求</p>
-<p>&#x3D;&#x3D;2.GET请求会被浏览器主动缓存，POST不会，要手动设置&#x3D;&#x3D;</p>
+<h3 id="GET和POST区别（高频）"><a href="#GET和POST区别（高频）" class="headerlink" title="GET和POST区别（高频）"></a>GET和POST区别（高频）</h3><p>1.GET在<strong>浏览器回退</strong>不会再次请求，POST会再次提交请求</p>
+<p><strong>2.GET请求会被浏览器主动缓存，POST不会，要手动设置</strong></p>
 <p>3.GET请求<strong>参数会被完整保留</strong>在浏览器历史记录里，POST中的参数不会</p>
 <p>4.GET请求在URL中传送的<strong>参数是有长度限制</strong>的，而POST没有限制</p>
 <p>5.GET参数通过URL传递，POST放在<strong>Request body</strong>中</p>
 <p>6.GET参数暴露在地址栏不安全，POST放在<strong>报文内部</strong>更安全</p>
 <p>7.GET一般用于查询信息，POST一般用于<strong>提交某种信息</strong>进行某些修改操作</p>
-<p>&#x3D;&#x3D;8.GET产生一个TCP数据包；POST产生两个TCP数据包&#x3D;&#x3D;</p>
+<p><strong>8.GET产生一个TCP数据包；POST产生两个TCP数据包</strong></p>
 <h2 id="HTTP和HTTPS"><a href="#HTTP和HTTPS" class="headerlink" title="HTTP和HTTPS"></a>HTTP和HTTPS</h2><h3 id="http-和-https-的基本概念"><a href="#http-和-https-的基本概念" class="headerlink" title="http 和 https 的基本概念"></a>http 和 https 的基本概念</h3><p>http: 是一个客户端和服务器端&#x2F;请求和应答的标准（TCP），用于从 WWW 服务器&#x2F;传输超文本到本地浏览器的超文本传输协议。</p>
-<p> https:是以安全为目标的 HTTP 通道，即 &#x3D;&#x3D;HTTP 下 加入 SSL 层&#x3D;&#x3D;进行加密。其作用是：建立一个信息安全通道，来确保数据的传输，确保网站的真实性。</p>
-<h3 id="http-和-https-的区别（高频）-x3D-x3D-SSL-x3D-x3D"><a href="#http-和-https-的区别（高频）-x3D-x3D-SSL-x3D-x3D" class="headerlink" title="http 和 https 的区别（高频）&#x3D;&#x3D;SSL?&#x3D;&#x3D;"></a>http 和 https 的区别（高频）&#x3D;&#x3D;SSL?&#x3D;&#x3D;</h3><p>1.<code>HTTP</code> 的URL 以http:&#x2F;&#x2F; 开头，而HTTPS 的URL 以https:&#x2F;&#x2F; 开头</p>
-<p>2.<code>HTTP</code> 是不安全的，而 HTTPS 是安全的</p>
-<p>3.<code>HTTP</code> 标准端口是80 ，而 HTTPS 的标准端口是443</p>
-<p>4.<code>在OSI</code> 网络模型中，HTTP工作于应用层，而HTTPS 的安全传输机制工作在传输层</p>
-<p>5.<code>HTTP</code> 无法加密，而HTTPS 对传输的数据进行加密</p>
-<p>6.<code>HTTP</code>无需证书，而HTTPS 需要CA机构wosign的颁发的SSL证书</p>
+<p> https:是以安全为目标的 HTTP 通道，即 <strong>HTTP 下 加入 SSL 层</strong>进行加密。其作用是：建立一个信息安全通道，来确保数据的传输，确保网站的真实性。</p>
+<h3 id="http-和-https-的区别（高频）SSL"><a href="#http-和-https-的区别（高频）SSL" class="headerlink" title="http 和 https 的区别（高频）SSL?"></a>http 和 https 的区别（高频）<strong>SSL?</strong></h3><p>1.<strong>HTTP</strong> 的URL 以http:&#x2F;&#x2F; 开头，而HTTPS 的URL 以https:&#x2F;&#x2F; 开头</p>
+<p>2.<strong>HTTP</strong> 是不安全的，而 HTTPS 是安全的</p>
+<p>3.<strong>HTTP</strong> 标准端口是80 ，而 HTTPS 的标准端口是443</p>
+<p>4.<strong>在OSI</strong> 网络模型中，HTTP工作于应用层，而HTTPS 的安全传输机制工作在传输层</p>
+<p>5.<strong>HTTP</strong> 无法加密，而HTTPS 对传输的数据进行加密</p>
+<p>6.<strong>HTTP</strong>无需证书，而HTTPS 需要CA机构wosign的颁发的SSL证书</p>
 <h3 id="http状态码（高频）"><a href="#http状态码（高频）" class="headerlink" title="http状态码（高频）"></a>http状态码（高频）</h3><p><del>\1. 200响应成功</del></p>
-<p>\2. 301永久&#x3D;&#x3D;重定向&#x3D;&#x3D;</p>
+<p>\2. 301永久<strong>重定向</strong></p>
 <p>\3. 302临时重定向</p>
 <p>\4. 304资源缓存</p>
 <p>\5. 403服务器禁止访问</p>
@@ -199,7 +205,7 @@
 <li>关闭TCP连接：通过<strong>四次挥手释放TCP连接</strong></li>
 <li>浏览器<strong>渲染</strong>：客户端（浏览器）解析HTML内容并渲染出来，浏览器接收到数据包后的解析流程为</li>
 </ol>
-<h3 id="x3D-x3D-浏览器渲染机制、重绘、重排-x3D-x3D"><a href="#x3D-x3D-浏览器渲染机制、重绘、重排-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;浏览器渲染机制、重绘、重排&#x3D;&#x3D;"></a>&#x3D;&#x3D;浏览器渲染机制、重绘、重排&#x3D;&#x3D;</h3><ul>
+<h3 id="浏览器渲染机制、重绘、重排"><a href="#浏览器渲染机制、重绘、重排" class="headerlink" title="浏览器渲染机制、重绘、重排"></a><strong>浏览器渲染机制、重绘、重排</strong></h3><ul>
 <li>构建DOM树：词法分析然后解析成DOM树（dom tree），是由dom元素及属性节点组成，树的根是document对象</li>
 <li>构建CSS规则树：生成CSS规则树（CSS Rule Tree）</li>
 <li>构建render树：Web浏览器将DOM和CSSOM结合，并构建出渲染树（render tree）</li>
@@ -209,10 +215,10 @@
 <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><p>各类标签的名字</p>
 <h1 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h1><h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>盒模型都是由四个部分组成的，分别是margin、border、padding和content。</p>
 <ul>
-<li>&#x3D;&#x3D;标准盒模型的width和height属性的范围只包含了content，&#x3D;&#x3D;</li>
-<li>&#x3D;&#x3D;IE盒模型的width和height属性的范围包含了border、padding和content。&#x3D;&#x3D;</li>
+<li><strong>标准盒模型的width和height属性的范围只包含了content，</strong></li>
+<li><strong>IE盒模型的width和height属性的范围包含了border、padding和content。</strong></li>
 </ul>
-<h3 id="x3D-x3D-position属性-x3D-x3D"><a href="#x3D-x3D-position属性-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;position属性&#x3D;&#x3D;"></a>&#x3D;&#x3D;position属性&#x3D;&#x3D;</h3><ol>
+<h3 id="position属性"><a href="#position属性" class="headerlink" title="position属性"></a><strong>position属性</strong></h3><ol>
 <li><strong>固定定位 fixed</strong>： 元素的位置相对于浏览器窗口是固定位置，即使窗口是滚动的它也不会移动。Fixed 定 位使元素的位置与文档流无关，因此不占据空间。 Fixed 定位的元素和其他元素重叠。</li>
 <li><strong>相对定位 relative</strong>： 如果对一个元素进行相对定位，它将出现在它所在的位置上。然后，可以通过设置垂直 或水平位置，让这个元素“相对于”它的起点进行移动。 在使用相对定位时，无论是 否进行移动，元素仍然占据原来的空间。因此，移动元素会导致它覆盖其它框。</li>
 <li><strong>绝对定位 absolute</strong>： 绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那 么它的位置相对于。absolute 定位使元素的位置与文档流无关，因此不占据空间。 absolute 定位的元素和其他元素重叠。</li>
@@ -225,7 +231,7 @@
 <p>instanceof</p>
 <p>Object.prototype.toString.call()</p>
 <h3 id="DOM-amp-BOM"><a href="#DOM-amp-BOM" class="headerlink" title="DOM&amp;BOM"></a>DOM&amp;BOM</h3><p>●<strong>ECMAScript</strong> (核心): 规定了JS的语法和基本对象。。<br><strong>●DOM</strong> document object model文档对象模型:处理网页内容的方法和接口。<br><strong>●BOM</strong> Bowser object model 浏览器对象模型:与浏览器交互的方法和接口。</p>
-<h2 id="x3D-x3D-ES-x3D-x3D"><a href="#x3D-x3D-ES-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;ES&#x3D;&#x3D;"></a>&#x3D;&#x3D;ES&#x3D;&#x3D;</h2><h3 id="var-x2F-x3D-x3D-let-x2F-const-x3D-x3D"><a href="#var-x2F-x3D-x3D-let-x2F-const-x3D-x3D" class="headerlink" title="var&#x2F;&#x3D;&#x3D;let&#x2F;const&#x3D;&#x3D;"></a>var&#x2F;&#x3D;&#x3D;let&#x2F;const&#x3D;&#x3D;</h3><ol>
+<h2 id="ES"><a href="#ES" class="headerlink" title="ES"></a><strong>ES</strong></h2><h3 id="var-x2F-let-x2F-const"><a href="#var-x2F-let-x2F-const" class="headerlink" title="var&#x2F;let&#x2F;const"></a>var&#x2F;<strong>let&#x2F;const</strong></h3><ol>
 <li>var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。 let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。 const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，且不能修改。</li>
 <li>var可以先使用，后声明，因为存在变量提升；let必须先声明后使用。</li>
 <li>var是允许在相同作用域内重复声明同一个变量的，而let与const不允许这一现象。</li>
@@ -299,7 +305,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#x3D-x3D-git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-x3D-x3D"><span class="space-toc-text">&#x3D;&#x3D;git 常用命令&#x3D;&#x3D;</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#GET%E5%92%8CPOST%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">GET和POST区别（高频）</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#HTTP%E5%92%8CHTTPS"><span class="space-toc-text">HTTP和HTTPS</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="space-toc-text">http 和 https 的基本概念</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89-x3D-x3D-SSL-x3D-x3D"><span class="space-toc-text">http 和 https 的区别（高频）&#x3D;&#x3D;SSL?&#x3D;&#x3D;</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">http状态码（高频）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AAURL%E5%88%B0%E9%A1%B5%E9%9D%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="space-toc-text">输入一个URL到页面过程中发生了什么</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#x3D-x3D-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6%E3%80%81%E9%87%8D%E7%BB%98%E3%80%81%E9%87%8D%E6%8E%92-x3D-x3D"><span class="space-toc-text">&#x3D;&#x3D;浏览器渲染机制、重绘、重排&#x3D;&#x3D;</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="space-toc-text">盒模型</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#x3D-x3D-position%E5%B1%9E%E6%80%A7-x3D-x3D"><span class="space-toc-text">&#x3D;&#x3D;position属性&#x3D;&#x3D;</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="space-toc-text">基本类型：</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="space-toc-text">复杂类型：</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#JS%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">JS的类型检测（高频）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#DOM-amp-BOM"><span class="space-toc-text">DOM&amp;BOM</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#x3D-x3D-ES-x3D-x3D"><span class="space-toc-text">&#x3D;&#x3D;ES&#x3D;&#x3D;</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#var-x2F-x3D-x3D-let-x2F-const-x3D-x3D"><span class="space-toc-text">var&#x2F;&#x3D;&#x3D;let&#x2F;const&#x3D;&#x3D;</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="space-toc-text">git 常用命令</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#GET%E5%92%8CPOST%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">GET和POST区别（高频）</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#HTTP%E5%92%8CHTTPS"><span class="space-toc-text">HTTP和HTTPS</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="space-toc-text">http 和 https 的基本概念</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http-%E5%92%8C-https-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89SSL"><span class="space-toc-text">http 和 https 的区别（高频）SSL?</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#http%E7%8A%B6%E6%80%81%E7%A0%81%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">http状态码（高频）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AAURL%E5%88%B0%E9%A1%B5%E9%9D%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="space-toc-text">输入一个URL到页面过程中发生了什么</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6%E3%80%81%E9%87%8D%E7%BB%98%E3%80%81%E9%87%8D%E6%8E%92"><span class="space-toc-text">浏览器渲染机制、重绘、重排</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="space-toc-text">盒模型</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#position%E5%B1%9E%E6%80%A7"><span class="space-toc-text">position属性</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="space-toc-text">基本类型：</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%A4%8D%E6%9D%82%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="space-toc-text">复杂类型：</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#JS%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B%EF%BC%88%E9%AB%98%E9%A2%91%EF%BC%89"><span class="space-toc-text">JS的类型检测（高频）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#DOM-amp-BOM"><span class="space-toc-text">DOM&amp;BOM</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#ES"><span class="space-toc-text">ES</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#var-x2F-let-x2F-const"><span class="space-toc-text">var&#x2F;let&#x2F;const</span></a></li></ol>
            </div>
         
       </div>
@@ -355,6 +361,13 @@
 <script src="/js/white.js"></script>
 
 
+
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
 
 </body>
 </html>
