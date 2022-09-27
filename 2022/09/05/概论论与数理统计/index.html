@@ -72,7 +72,7 @@
           <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
              Categories
              <div class="categories-outer " id="sort-div">
-               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E5%8D%B7/">书卷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">3</span></li></ul>
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%A6%E5%8D%B7/">书卷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">4</span></li></ul>
              </div>
           </li>
         
@@ -187,7 +187,7 @@
 <td>第一章.随机事件与概率 §4.几何概率 §5.条件概率 §6.独立性</td>
 <td>傅冬生</td>
 <td>课堂教学</td>
-<td></td>
+<td>2022年9月19日</td>
 </tr>
 <tr>
 <td>3</td>
@@ -330,7 +330,50 @@
 <h2 id="3-等可能概率-古典概型"><a href="#3-等可能概率-古典概型" class="headerlink" title="3.等可能概率(古典概型)"></a><strong>3.等可能概率(古典概型)</strong></h2><p>有限等可能</p>
 <p>1）样本空间有限</p>
 <p>2）每个等可能</p>
+<h2 id="6-独立性"><a href="#6-独立性" class="headerlink" title="6.独立性"></a>6.独立性</h2><h3 id="6-1-性质"><a href="#6-1-性质" class="headerlink" title="6.1 性质"></a>6.1 性质</h3><p>1）定义$A,B$满足$P(AB)&#x3D;P(A)P(B)$，称事件$AB$相互独立 </p>
+<ul>
+<li>理解$P(B|A) &#x3D; P(B)$</li>
+</ul>
+<p>2）概率为0|1 于任意事件</p>
 
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/09/05/%E6%A6%82%E8%AE%BA%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/1663558213739.png" >
+        </span>
+      
+
+<ol start="3">
+<li>定理：以下情形等价 <strong>对称性</strong></li>
+</ol>
+<ul>
+<li>$AB$相互独立</li>
+<li>$\overline{A}B$相互独立</li>
+<li>$A\overline{B}$相互独立</li>
+<li>$\overline{A}\overline{B}$相互独立</li>
+</ul>
+<p>4）分组独立性</p>
+<p>将上述$n$个事件划分成<strong>没有公共事件</strong>的$k$组，每组中的事件做任意事件运算，得到的$k$个新事件仍相互独立</p>
+<p>*<strong>相互独立！&#x3D;互不相容</strong></p>
+<p>证明 见笔记</p>
+<h3 id="6-2-多个事件独立"><a href="#6-2-多个事件独立" class="headerlink" title="6.2 多个事件独立"></a>6.2 多个事件独立</h3>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/09/05/%E6%A6%82%E8%AE%BA%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/1663558721658.png" >
+        </span>
+      
+
+<h4 id="6-21-数量"><a href="#6-21-数量" class="headerlink" title="6.21 数量"></a><strong>6.21 数量</strong></h4><p>即任意的$2,3,…,n$个事件拿出来都满足上述等式（共有$C_n^2+C_n^3+…+C_n^n&#x3D;2^n-n-1个等式$）</p>
+<h4 id="6-22-相互独立事件至少发生一个"><a href="#6-22-相互独立事件至少发生一个" class="headerlink" title="6.22 相互独立事件至少发生一个"></a>6.22 相互独立事件至少发生一个</h4><p><strong>加法公式简化</strong>：$A_i$相互独立，则$P(A_1\bigcup A_2\bigcup…\bigcup A_n)&#x3D;1-P(\overline{ {A_1}\bigcup{A_2}\bigcup…\bigcup{A_n} })&#x3D; 1-P({\overline{A_1}\bigcap\overline{A_2}\bigcap…\bigcap\overline{A_} }})&#x3D;1-P(\overline{A_1})P(\overline{A_2})…P(\overline{A_n})$</p>
+<h4 id="6-23-小概率事件原理"><a href="#6-23-小概率事件原理" class="headerlink" title="6.23 小概率事件原理"></a>6.23 小概率事件原理</h4><p>书p19</p>
+<h4 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h4><p>串联 并联 </p>
+<p>书1.25 笔记两两并再串联</p>
+<p>桥式系统</p>
+<h2 id="7-独立重复实验"><a href="#7-独立重复实验" class="headerlink" title="7. 独立重复实验"></a>7. 独立重复实验</h2>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/09/05/%E6%A6%82%E8%AE%BA%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/1663916230421.png" >
+        </span>
+      
         <!-- 分类文章 -->
         
           <div class="post-categoris-bottom">
@@ -387,6 +430,10 @@
               
             
             
+            
+              
+            
+            
             </ul>
 
           </div>
@@ -396,7 +443,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="space-toc-text">绪论</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97"><span class="space-toc-text">1.  随机事件及其运算</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%80-%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C-%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6"><span class="space-toc-text">一. 随机试验 样本空间 随机事件</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8B%E4%BB%B6%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="space-toc-text">二、事件间的关系与运算</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#2-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87%E5%8F%8A%E6%80%A7%E8%B4%A8"><span class="space-toc-text">2. 事件的概率及性质</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%80-%E9%A2%91%E7%8E%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="space-toc-text">一. 频率的定义和性质</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#3-%E7%AD%89%E5%8F%AF%E8%83%BD%E6%A6%82%E7%8E%87-%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="space-toc-text">3.等可能概率(古典概型)</span></a>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="space-toc-text">绪论</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97"><span class="space-toc-text">1.  随机事件及其运算</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%80-%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C-%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6"><span class="space-toc-text">一. 随机试验 样本空间 随机事件</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8B%E4%BB%B6%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="space-toc-text">二、事件间的关系与运算</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#2-%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%A6%82%E7%8E%87%E5%8F%8A%E6%80%A7%E8%B4%A8"><span class="space-toc-text">2. 事件的概率及性质</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%80-%E9%A2%91%E7%8E%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="space-toc-text">一. 频率的定义和性质</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#3-%E7%AD%89%E5%8F%AF%E8%83%BD%E6%A6%82%E7%8E%87-%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="space-toc-text">3.等可能概率(古典概型)</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#6-%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="space-toc-text">6.独立性</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#6-1-%E6%80%A7%E8%B4%A8"><span class="space-toc-text">6.1 性质</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#6-2-%E5%A4%9A%E4%B8%AA%E4%BA%8B%E4%BB%B6%E7%8B%AC%E7%AB%8B"><span class="space-toc-text">6.2 多个事件独立</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#7-%E7%8B%AC%E7%AB%8B%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C"><span class="space-toc-text">7. 独立重复实验</span></a>
            </div>
         
       </div>
