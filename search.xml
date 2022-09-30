@@ -4,11 +4,61 @@
   
     
     <entry>
-      <title>诗歌|莱蒙托夫《悬崖》</title>
+      <title>《氓》</title>
+      <link href="/2022/10/01/%E6%B0%93/"/>
+      <url>/2022/10/01/%E6%B0%93/</url>
+      
+        <content type="html"><![CDATA[<p>赛博书法</p><p>《氓-拓印》</p>        <span class="lazyload-img-span">        <img              data-src="/2022/10/01/%E6%B0%93/QQ%E5%9B%BE%E7%89%8720221001010623.png" >        </span>      <p>《氓-做旧》</p>        <span class="lazyload-img-span">        <img              data-src="/2022/10/01/%E6%B0%93/QQ%E5%9B%BE%E7%89%8720221001010623-1664558625339.jpg" >        </span>      ]]></content>
+      
+      
+      <categories>
+          
+          <category> 随想 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 诗经 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cpp|STL之vector</title>
+      <link href="/2022/10/01/cppSTL%E4%B9%8Bvector/"/>
+      <url>/2022/10/01/cppSTL%E4%B9%8Bvector/</url>
+      
+        <content type="html"><![CDATA[<p>STL 标准模板库（Standard Template Library，<em>STL</em>） 是写cpp时很容易遇到的一个库，非常的好用。</p><blockquote><p> 标准模板库（Standard Template Library，STL）是<a href="https://baike.baidu.com/item/%E6%83%A0%E6%99%AE%E5%AE%9E%E9%AA%8C%E5%AE%A4/489303?fromModule=lemma_inlink">惠普实验室</a>开发的一系列软件的统称。它是由Alexander Stepanov、Meng Lee和David R Musser在<a href="https://baike.baidu.com/item/%E6%83%A0%E6%99%AE%E5%AE%9E%E9%AA%8C%E5%AE%A4/489303?fromModule=lemma_inlink">惠普实验室</a>工作时所开发出来的。虽说它主要出现到C++中，但在被引入C++之前该技术就已经存在了很长时间。STL的代码从广义上讲分为三类：algorithm（算法）、container（容器）和iterator（<a href="https://baike.baidu.com/item/%E8%BF%AD%E4%BB%A3%E5%99%A8/3803342?fromModule=lemma_inlink">迭代器</a>），几乎所有的代码都采用了<a href="https://baike.baidu.com/item/%E6%A8%A1%E6%9D%BF%E7%B1%BB/6768650?fromModule=lemma_inlink">模板类</a>和模板函数的方式，这相比于传统的由函数和类组成的库来说提供了更好的代码重用机会。 </p><p>—baidu</p></blockquote><p>借此高级程序设计上机的好机会，在此复习一下我STL中最喜欢的vector，这是我唯一自己半实现过的库，斗胆称一声略微了解。</p><p><strong>c++有了vector，就像南大有了麦当当，以色列有了耶路撒冷！</strong>你可以忘记动静态数组忘记越界访问忘记烫烫烫的往事。与其他的容器比较，vector是和数组最相似的：里面什么都能放，无论结构体还是vector套vector；顺序存储，支持下标访问；迭代器与其他的不同可以每次加n。如果课程没有特殊要求，又不想使用数据库来管理文件，vector一定是我们的首选。</p><p>那么就来看一看吧</p><h3 id="1-构造vector"><a href="#1-构造vector" class="headerlink" title="1. 构造vector"></a>1. 构造vector</h3><pre><code class="cpp">  vector&lt;int&gt; v0;  vector&lt;int&gt; v1(10); // vector(int nSize):创建一个vector,元素个数为nSize  vector&lt;char&gt; v2(10, &#39;A&#39;);  // vector(int nSize,const t&amp; t):创建一个vector，元素个数为nSize,且值均为t  //数组方式  int i[5] = &#123;1, 2, 3, 4, 5&#125;;  vector&lt;int&gt; v3(i, i + 2);  //得到i索引值为3以后的值 &#123;3,4,5&#125;  vector&lt;char&gt; v4(i, i + 2); //可以转化类型  vector&lt;vector&lt;int&gt;&gt; v5;    //二位vector 成员是一个一维的vector&lt; int&gt;  //迭代器方式--迭代器见后面  // vector(begin,end):复制[begin,end)区间内另一个数组的元素到vector中  string str(&quot;1234567890&quot;);                //直接创建一个String类的字符串  vector&lt;char&gt; v6(str.begin(), str.end()); //利用迭代器获取起始和末尾的位置,进行输出</code></pre><h3 id="容量"><a href="#容量" class="headerlink" title="容量"></a>容量</h3><p><strong>Capacity</strong></p><ol><li><a href="https://www.geeksforgeeks.org/vectorempty-vectorsize-c-stl/">size()</a> – Returns the number of elements in the vector.</li><li><a href="https://www.geeksforgeeks.org/vector-max_size-function-in-c-stl/">max_size()</a> – Returns the maximum number of elements that the vector can hold.</li><li><a href="https://www.geeksforgeeks.org/vector-capacity-function-in-c-stl/">capacity()</a> – Returns the size of the storage space currently allocated to the vector expressed as number of elements.</li><li><a href="https://www.geeksforgeeks.org/vector-resize-c-stl/">resize(n)</a> – Resizes the container so that it contains ‘n’ elements.</li><li><a href="https://www.geeksforgeeks.org/vectorempty-vectorsize-c-stl/">empty()</a> – Returns whether the container is empty.</li><li><a href="https://www.geeksforgeeks.org/vector-shrink_to_fit-function-in-c-stl/">shrink_to_fit()</a> – Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.</li><li><a href="https://www.geeksforgeeks.org/using-stdvectorreserve-whenever-possible/">reserve() </a>– Requests that the vector capacity be at least enough to contain n elements.</li></ol><h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><h4 id="数组访问"><a href="#数组访问" class="headerlink" title="数组访问"></a>数组访问</h4><pre><code class="c"> for （i=0;i&lt;v.size();i++）    visit arr [i] //略</code></pre><h4 id="迭代器访问"><a href="#迭代器访问" class="headerlink" title="迭代器访问"></a>迭代器访问</h4><pre><code class="CPP"> vector&lt;int&gt;::iterator it;//*声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素*///orauto ite;*for* (ite = obj.begin(); ite != obj.end(); ite++)&#123; cout &lt;&lt; *ite &lt;&lt; &quot; &quot;;&#125;</code></pre><h3 id="增删"><a href="#增删" class="headerlink" title="增删"></a>增删</h3><h4 id="push-back-pop-back"><a href="#push-back-pop-back" class="headerlink" title="push_back pop_back"></a>push_back pop_back</h4><p>主要是在尾部插入元素：push_back(elem)和尾部弹出元素：pop_back()</p><pre><code class="cpp">pop_back()//无输入无返回值push_back(elem)//放一个类型一样的元素插在最后，无返回</code></pre><p>这两个都很友好，但是…</p><h4 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h4><p>清除容器中所有数据</p><h4 id="erase"><a href="#erase" class="headerlink" title="erase"></a>erase</h4><p>删除指定元素：erase（）看着很强大的一个函数，其实会导致下标的变化，于是遍历变得困难，</p><blockquote><p>erase函数可以用于删除vector容器中的一个或者一段元素，</p><p>在删除一个元素的时候，其参数为<strong>指向相应元素的迭代器</strong>，</p><p>而在删除一段元素的时候，参数为指向一段元素的<strong>开头的迭代器</strong>以及指向<strong>结尾元素的下一个元素的迭代器；</strong></p><p>在进行单个元素删除后，传入的迭代器指向不变，仍然指向被删除元素的位置，而被删除元素之后的所有元素都向前移动一位，也就是该迭代器实际上是<strong>指向了原来被删除元素的下一个元素</strong>。</p><p>删除一段元素后，传入的迭代器指向也是不变的，仍然指向原来传进去时候的位置，修改的是删除段后面的元素的位置。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>诗歌|莱蒙托夫《云》《悬崖》</title>
       <link href="/2022/09/28/Cliff/"/>
       <url>/2022/09/28/Cliff/</url>
       
-        <content type="html"><![CDATA[<h1 id="俄国-莱蒙托夫：悬崖"><a href="#俄国-莱蒙托夫：悬崖" class="headerlink" title="(俄国)莱蒙托夫：悬崖"></a>(俄国)莱蒙托夫：悬崖</h1><blockquote><p>一朵小小的金色云彩，</p><p>投宿在悬岩巨人的胸怀；</p><p>清晨，她早早地急速上路，</p><p>在蓝天中瓢浮，轻松愉快。</p><p>可是在古老悬崖的石缝里，</p><p>到底留下了她湿润的足迹。</p><p>孤独的悬崖兀立着，沉思着，</p><p><strong>不禁在荒原上轻声地啜泣。</strong></p></blockquote><p>You look so pretty but you gone so soon.</p><p>我的月亮，你为什么走的那么匆促</p><p>我年轻的生活大多数沉溺在回忆里。</p><p>偶尔醒来一个月</p><p>清醒的时候就盼着睡去</p><p>享用一段甜蜜的死亡</p><p>向虚无祈求一份意义</p><p>细碎的很轻很轻</p>]]></content>
+        <content type="html"><![CDATA[<p>莱蒙托夫被放逐高加索前，和朋友在饯别上即兴完成</p><h3 id="莱蒙托夫《云》"><a href="#莱蒙托夫《云》" class="headerlink" title="莱蒙托夫《云》"></a>莱蒙托夫《云》</h3><blockquote><p>余振译</p><p>天空的行云啊，永恒的流浪者!<br>你们，逐放的流囚，同我一样，<br>经过碧绿的草原，绵连的山脉，<br>由可爱的北国匆匆奔向南方。<br>是谁在迫害你们:命运的裁判?<br>隐秘的妒嫉?还是公然的毁谤?<br>苦恼你们的是你们自己的罪行（内疚），<br>还是朋友们狠毒的恶意中伤?<br>不是，<strong>荒凉的田野使你们感到厌倦.</strong><br>你们不知道什么是痛苦和惆怅,<br>你们是永远冷漠，永远自由的，<br><strong>你们没有祖国，也不会有逐放。</strong><br>(1840年)</p></blockquote><p>放逐</p><p>这个概念蕴含了，对归属的渴望。</p><h3 id="俄国-莱蒙托夫：悬崖"><a href="#俄国-莱蒙托夫：悬崖" class="headerlink" title="(俄国)莱蒙托夫：悬崖"></a>(俄国)莱蒙托夫：悬崖</h3><blockquote><p>一朵小小的金色云彩，</p><p>投宿在悬岩巨人的胸怀；</p><p>清晨，她早早地急速上路，</p><p>在蓝天中瓢浮，轻松愉快。</p><p>可是在古老悬崖的石缝里，</p><p>到底留下了她湿润的足迹。</p><p>孤独的悬崖兀立着，沉思着，</p><p><strong>不禁在荒原上轻声地啜泣。</strong></p></blockquote><p>You look so pretty but you gone so soon.</p><p>我的月亮，你为什么走的那么匆促</p><p>我年轻的生活大多数沉溺在回忆里。</p><p>偶尔醒来一个月</p><p>清醒的时候就盼着睡去</p><p>享用一段甜蜜的死亡</p><p>向虚无祈求一份意义</p><p>细碎的很轻很轻</p>]]></content>
       
       
       <categories>
