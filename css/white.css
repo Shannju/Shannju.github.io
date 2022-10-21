@@ -261,6 +261,7 @@ a {
   width: 1130px;
   display: flex;
   justify-content: space-between;
+  float: left;
 }
 .footer-text {
   color: #636363;
