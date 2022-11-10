@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 解决载入外链限制的问题 -->
   <meta name="referrer" content="no-referrer" />
-  <title>  哲学 |    Blog of Shan</title>
+  <title>  前端 | 本网站对Hexo主题的修改 |    Blog of Shan</title>
   <meta name="description" content="Daydreamer.">
   <!-- 标签页图标 -->
   
@@ -142,39 +142,171 @@
 <div class="body-outer">
   <div class="body-inner">
     
-  
-<section class="img-show-outer">
-    <section class="img-show-inner">
-          
-          
-          <div class="img-show-post">
-            <div class="img-show-post-cover">
-              <span class="lazyload-img-span">
-              <a  href="/2022/08/26/Ismism/ " referrer="no-referrer">
-                
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">前端 | 本网站对Hexo主题的修改</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">11月 10 2022</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <p><br></p>
+<p><br></p>
+<h3 id="支持markdown中的Latex语法"><a href="#支持markdown中的Latex语法" class="headerlink" title="支持markdown中的Latex语法"></a>支持markdown中的Latex语法</h3><p>2022年11月10日</p>
+<blockquote>
+<p>例子： $E=mc^2$</p>
+</blockquote>
+<p>此教程对于white主题可用：<a target="_blank" rel="noopener" href="http://t.csdn.cn/pGsjx">http://t.csdn.cn/pGsjx</a></p>
+<p><br></p>
+<h3 id="iframe嵌入网页测试"><a href="#iframe嵌入网页测试" class="headerlink" title="iframe嵌入网页测试"></a>iframe嵌入网页测试</h3><p>2022年11月10日</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="http://t.csdn.cn/OnWUM">http://t.csdn.cn/OnWUM</a></p>
+<p>本网站为http插入https可能会被浏览器阻挡</p>
+<h4 id="第一种：使用object标签"><a href="#第一种：使用object标签" class="headerlink" title="第一种：使用object标签"></a>第一种：使用object标签</h4><pre><code class="lang-html">&lt;!--第一种：使用object标签--&gt;
+    &lt;object type=&quot;text/html&quot; data=&quot;http://space.bilibili.com/17387202&quot; style=&quot;width=&quot;100%; height = 500px&quot;&gt;
+        &lt;p&gt;backup content&lt;/p&gt;
+    &lt;/object&gt;
+</code></pre>
+<p><div>
+<!--第一种：使用object标签-->
+    <object type="text/html" data="http://space.bilibili.com/17387202"  width="100%"  height = "500px">
+        <p>backup content</p>
+    </object>
+</div></p>
+<h4 id="第二种：使用iframe-标签"><a href="#第二种：使用iframe-标签" class="headerlink" title="第二种：使用iframe 标签"></a>第二种：使用iframe 标签</h4><pre><code class="lang-html">   &lt;!--第二种：使用iframe 标签--&gt;
+    &lt;iframe src=&#39;http://space.bilibili.com/17387202&#39;  scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;100%&quot; height = 500px&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<p><iframe src='http://space.bilibili.com/17387202'  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"  height = "500px"></iframe></p>
+<p><div></p>
+<h4 id="第三种：弹出页面"><a href="#第三种：弹出页面" class="headerlink" title="第三种：弹出页面"></a>第三种：弹出页面</h4><p>这种不试了，会转到该网页</p>
+<pre><code class="lang-html">    &lt;!--第三种：先弹出一个页面，再在这个页面使用window.location.href重定向到网页--&gt;
+&lt;script&gt;
+    window.location.href=&#39;http://space.bilibili.com/17387202&#39;;
+</code></pre>
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Debug</div>
+            <ul>
+            
+            
               
-                
-                <img data-src="https://pic1.zhimg.com/80/v2-ef1e4248f488b37a656c8a3aa52924f8_720w.jpeg" class="img-show-post-cover-class">
+            
+            
+            
               
-              </a>
-              </span>
-            </div>
-            <div class="img-show-post-intro">
-             <a  href="/2022/08/26/Ismism/">
-            <div class="img-show-post-title animate__animated  animate__fadeInUp">哲学| Ismism</div>
-            </a>
-            <div class="img-show-post-date animate__animated  animate__fadeInUp">8月 26 2022 </div>
-            </div>
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/08/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E8%AF%B7%E6%B1%82%E5%9B%BE%E7%89%87403---%E4%B8%8D%E8%A6%81%E7%94%A8Gitee%E5%81%9A%E5%9B%BE%E5%BA%8A/" class="post-categoris-bottom-link">
+                  个人网页请求图片403---不要用Gitee做图床
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2022/11/10/as/" class="post-categoris-bottom-link">
+                  前端 | 本网站对Hexo主题的修改
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
           </div>
-          
-         
-    </section>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E6%94%AF%E6%8C%81markdown%E4%B8%AD%E7%9A%84Latex%E8%AF%AD%E6%B3%95"><span class="space-toc-text">支持markdown中的Latex语法</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#iframe%E5%B5%8C%E5%85%A5%E7%BD%91%E9%A1%B5%E6%B5%8B%E8%AF%95"><span class="space-toc-text">iframe嵌入网页测试</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
     
-</section>
-
-
-
-
+  </div>
+</article>
   </div>
 </div>
 

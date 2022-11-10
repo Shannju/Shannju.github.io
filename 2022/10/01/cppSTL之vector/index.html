@@ -33,9 +33,7 @@
 
     
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -74,7 +72,7 @@
           <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
              Categories
              <div class="categories-outer " id="sort-div">
-               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">6</span></li></ul>
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">6</span></li></ul>
              </div>
           </li>
         
@@ -160,13 +158,13 @@
         
         <p>STL 标准模板库（Standard Template Library，<em>STL</em>） 是写cpp时很容易遇到的一个库，非常的好用。</p>
 <blockquote>
-<p> 标准模板库（Standard Template Library，STL）是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%83%A0%E6%99%AE%E5%AE%9E%E9%AA%8C%E5%AE%A4/489303?fromModule=lemma_inlink">惠普实验室</a>开发的一系列软件的统称。它是由Alexander Stepanov、Meng Lee和David R Musser在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%83%A0%E6%99%AE%E5%AE%9E%E9%AA%8C%E5%AE%A4/489303?fromModule=lemma_inlink">惠普实验室</a>工作时所开发出来的。虽说它主要出现到C++中，但在被引入C++之前该技术就已经存在了很长时间。STL的代码从广义上讲分为三类：algorithm（算法）、container（容器）和iterator（<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BF%AD%E4%BB%A3%E5%99%A8/3803342?fromModule=lemma_inlink">迭代器</a>），几乎所有的代码都采用了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%A8%A1%E6%9D%BF%E7%B1%BB/6768650?fromModule=lemma_inlink">模板类</a>和模板函数的方式，这相比于传统的由函数和类组成的库来说提供了更好的代码重用机会。 </p>
-<p>—baidu</p>
+<p> 标准模板库（Standard Template Library，STL）是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/惠普实验室/489303?fromModule=lemma_inlink">惠普实验室</a>开发的一系列软件的统称。它是由Alexander Stepanov、Meng Lee和David R Musser在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/惠普实验室/489303?fromModule=lemma_inlink">惠普实验室</a>工作时所开发出来的。虽说它主要出现到C++中，但在被引入C++之前该技术就已经存在了很长时间。STL的代码从广义上讲分为三类：algorithm（算法）、container（容器）和iterator（<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/迭代器/3803342?fromModule=lemma_inlink">迭代器</a>），几乎所有的代码都采用了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/模板类/6768650?fromModule=lemma_inlink">模板类</a>和模板函数的方式，这相比于传统的由函数和类组成的库来说提供了更好的代码重用机会。 </p>
+<p>—-baidu</p>
 </blockquote>
 <p>借此高级程序设计上机的好机会，在此复习一下我STL中最喜欢的vector，这是我唯一自己半实现过的库，斗胆称一声略微了解。</p>
 <p><strong>c++有了vector，就像南大有了麦当当，以色列有了耶路撒冷！</strong>你可以忘记动静态数组忘记越界访问忘记烫烫烫的往事。与其他的容器比较，vector是和数组最相似的：里面什么都能放，无论结构体还是vector套vector；顺序存储，支持下标访问；迭代器与其他的不同可以每次加n。如果课程没有特殊要求，又不想使用数据库来管理文件，vector一定是我们的首选。</p>
 <p>那么就来看一看吧</p>
-<h3 id="1-构造vector"><a href="#1-构造vector" class="headerlink" title="1. 构造vector"></a>1. 构造vector</h3><pre><code class="cpp">  vector&lt;int&gt; v0;
+<h3 id="1-构造vector"><a href="#1-构造vector" class="headerlink" title="1. 构造vector"></a>1. 构造vector</h3><pre><code class="lang-cpp">  vector&lt;int&gt; v0;
   vector&lt;int&gt; v1(10); // vector(int nSize):创建一个vector,元素个数为nSize
 
   vector&lt;char&gt; v2(10, &#39;A&#39;);
@@ -193,10 +191,10 @@
 <li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/vector-shrink_to_fit-function-in-c-stl/">shrink_to_fit()</a> – Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.</li>
 <li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/using-stdvectorreserve-whenever-possible/">reserve() </a>– Requests that the vector capacity be at least enough to contain n elements.</li>
 </ol>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><h4 id="数组访问"><a href="#数组访问" class="headerlink" title="数组访问"></a>数组访问</h4><pre><code class="c"> for （i=0;i&lt;v.size();i++）
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><h4 id="数组访问"><a href="#数组访问" class="headerlink" title="数组访问"></a>数组访问</h4><pre><code class="lang-c"> for （i=0;i&lt;v.size();i++）
     visit arr [i] //略
 </code></pre>
-<h4 id="迭代器访问"><a href="#迭代器访问" class="headerlink" title="迭代器访问"></a>迭代器访问</h4><pre><code class="CPP"> vector&lt;int&gt;::iterator it;
+<h4 id="迭代器访问"><a href="#迭代器访问" class="headerlink" title="迭代器访问"></a>迭代器访问</h4><pre><code class="lang-CPP"> vector&lt;int&gt;::iterator it;
 //*声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素*/
 //or
 auto ite;
@@ -206,7 +204,7 @@ auto ite;
 &#125;
 </code></pre>
 <h3 id="增删"><a href="#增删" class="headerlink" title="增删"></a>增删</h3><h4 id="push-back-pop-back"><a href="#push-back-pop-back" class="headerlink" title="push_back pop_back"></a>push_back pop_back</h4><p>主要是在尾部插入元素：push_back(elem)和尾部弹出元素：pop_back()</p>
-<pre><code class="cpp">pop_back()//无输入无返回值
+<pre><code class="lang-cpp">pop_back()//无输入无返回值
 push_back(elem)//放一个类型一样的元素插在最后，无返回
 </code></pre>
 <p>这两个都很友好，但是…</p>
@@ -323,6 +321,10 @@ push_back(elem)//放一个类型一样的元素插在最后，无返回
               
             
             
+            
+              
+            
+            
             </ul>
 
           </div>
@@ -406,5 +408,22 @@ push_back(elem)//放一个类型一样的元素插在最后，无返回
       <script>hljs.initHighlightingOnLoad();</script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>

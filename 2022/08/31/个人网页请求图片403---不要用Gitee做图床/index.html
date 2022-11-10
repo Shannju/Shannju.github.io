@@ -33,9 +33,7 @@
 
     
   
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -74,7 +72,7 @@
           <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
              Categories
              <div class="categories-outer " id="sort-div">
-               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">6</span></li></ul>
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">6</span></li></ul>
              </div>
           </li>
         
@@ -158,35 +156,35 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="个人网页请求图片403—不要用Gitee做图床"><a href="#个人网页请求图片403—不要用Gitee做图床" class="headerlink" title="个人网页请求图片403—不要用Gitee做图床"></a>个人网页请求图片403—不要用Gitee做图床</h1><p>这是我搭建个人网站遇到的头几个bug，那就一边de，一边吹。在一个满是bug的博客里看debug教程，是不是有点一边开车一边换轮子的乐趣（</p>
+        <h1 id="个人网页请求图片403—-不要用Gitee做图床"><a href="#个人网页请求图片403—-不要用Gitee做图床" class="headerlink" title="个人网页请求图片403—-不要用Gitee做图床"></a>个人网页请求图片403—-不要用Gitee做图床</h1><p>这是我搭建个人网站遇到的头几个bug，那就一边de，一边吹。在一个满是bug的博客里看debug教程，是不是有点一边开车一边换轮子的乐趣（</p>
 <p>搭博客的教程参考的cu大师。傻瓜教程，非常细腻，推！<a target="_blank" rel="noopener" href="https://blog.cuijiacai.com/blog-building/">https://blog.cuijiacai.com/blog-building/</a></p>
 <p>然后个人做了个低配版本：HEXO框架 + Git Page（可包揽服务器域名等等一切麻烦事，只要会add commit push和科学上网就可以做，缺点是访问慢）</p>
 <h3 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h3><p>bug：Hexo框架搭建网站，自己的图片无法显示，主题自带的就可以。</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="/Debug/1661917703001.png" >
+           data-src="Debug/1661917703001.png" >
         </span>
       </p>
 <p>所以不是不能显示，是请求不到，浏览器F12开控制台看看，报错403</p>
 <p><strong>Failed to load resource: the server responded with a status of 403</strong> </p>
-<h3 id="速通–if你的图床是gitee"><a href="#速通–if你的图床是gitee" class="headerlink" title="速通–if你的图床是gitee"></a>速通–if你的图床是gitee</h3><p>不要用Gitee做图床 不要用Gitee做图床 不要用Gitee做图床</p>
+<h3 id="速通—if你的图床是gitee"><a href="#速通—if你的图床是gitee" class="headerlink" title="速通—if你的图床是gitee"></a>速通—if你的图床是gitee</h3><p>不要用Gitee做图床 不要用Gitee做图床 不要用Gitee做图床</p>
 <p>如果您的图片存在gitee，可以试试换个地方（比如github）gitee大量屏蔽外链，所以出现了403 资源不可用。</p>
 <p>我只是图一个国内访问快，没想到在这栽了。</p>
-<h3 id="主流解决方案–if-你的debug-time-x3D-x3D-0"><a href="#主流解决方案–if-你的debug-time-x3D-x3D-0" class="headerlink" title="主流解决方案–if 你的debug.time&#x3D;&#x3D;0"></a>主流解决方案–if 你的debug.time&#x3D;&#x3D;0</h3><p>如果你的问题不在此，我分享一下我浏览的记录。</p>
+<h3 id="主流解决方案—if-你的debug-time-0"><a href="#主流解决方案—if-你的debug-time-0" class="headerlink" title="主流解决方案—if 你的debug.time==0"></a>主流解决方案—if 你的debug.time==0</h3><p>如果你的问题不在此，我分享一下我浏览的记录。</p>
 <p>百度一下，给出的解决方案多是：</p>
 <blockquote>
 <p>解决方案：利用html中的meta标签关闭浏览器的UrlReferer访问</p>
-<pre><code class="ruby">themes/next(主题)/layout/_partials/head/head.njk
+<pre><code class="lang-ruby">themes/next(主题)/layout/_partials/head/head.njk
 </code></pre>
 <p>在里面的<head></head>中添加下面代码即可</p>
-<pre><code class="xml">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;
+<pre><code class="lang-xml">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;
 </code></pre>
 </blockquote>
 <p>就是在模板的head部分关掉referrer（引用源），这样生成的每个网页head里面都包含这一句。不告诉服务器图片出处。 原理如下：</p>
 <blockquote>
 <p>图片服务器通过检测 Referrer 是否来自规定域名，来进行防盗链。如果没有设置referrer，那就可以直接绕过防盗链机制，直接使用或盗取。 </p>
-<p>— 参考<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017896469">https://segmentfault.com/a/1190000017896469</a></p>
+<p>—- 参考<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017896469">https://segmentfault.com/a/1190000017896469</a></p>
 </blockquote>
 <p>但是我试了并不可，或许head是关了，但是我的图在body里面</p>
 <h3 id="进一步解决-if-你已经在互联网de了一圈"><a href="#进一步解决-if-你已经在互联网de了一圈" class="headerlink" title="进一步解决 if 你已经在互联网de了一圈"></a>进一步解决 if 你已经在互联网de了一圈</h3><p>那就找找主题模板的body在哪里。</p>
@@ -194,18 +192,17 @@
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="/Debug/1661918474721.png" >
+           data-src="Debug/1661918474721.png" >
         </span>
       </p>
 <p>在主题模板里翻翻，</p>
 <pre><code>Blog\themes\white\layout\_partial\mode-img.ejs
-</code></pre>
-<p>可以在此找到 对应的<code>div class=&quot;img-show-post-cover&quot;</code></p>
+</code></pre><p>可以在此找到 对应的<code>div class=&quot;img-show-post-cover&quot;</code></p>
 <p>我试图在a标签里面加了ref设置成no-referrer，img href也可以加这个。</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="/Debug/1661919065635.png" >
+           data-src="Debug/1661919065635.png" >
         </span>
       </p>
 <p>完全的好了，网站可以放自己的照片了呢！</p>
@@ -299,6 +296,17 @@
               
             
             
+            
+              
+                <li class="base">
+                  <a  href="/2022/11/10/as/" class="post-categoris-bottom-link">
+                  前端 | 本网站对Hexo主题的修改
+                </a>
+                </li>
+              
+              
+            
+            
             </ul>
 
           </div>
@@ -308,7 +316,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#bug"><span class="space-toc-text">bug</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E9%80%9F%E9%80%9A%E2%80%93if%E4%BD%A0%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%98%AFgitee"><span class="space-toc-text">速通–if你的图床是gitee</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%BB%E6%B5%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%80%93if-%E4%BD%A0%E7%9A%84debug-time-x3D-x3D-0"><span class="space-toc-text">主流解决方案–if 你的debug.time&#x3D;&#x3D;0</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%A7%A3%E5%86%B3-if-%E4%BD%A0%E5%B7%B2%E7%BB%8F%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91de%E4%BA%86%E4%B8%80%E5%9C%88"><span class="space-toc-text">进一步解决 if 你已经在互联网de了一圈</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#bug"><span class="space-toc-text">bug</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E9%80%9F%E9%80%9A%E2%80%94if%E4%BD%A0%E7%9A%84%E5%9B%BE%E5%BA%8A%E6%98%AFgitee"><span class="space-toc-text">速通—if你的图床是gitee</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%BB%E6%B5%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%80%94if-%E4%BD%A0%E7%9A%84debug-time-0"><span class="space-toc-text">主流解决方案—if 你的debug.time&#x3D;&#x3D;0</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%A7%A3%E5%86%B3-if-%E4%BD%A0%E5%B7%B2%E7%BB%8F%E5%9C%A8%E4%BA%92%E8%81%94%E7%BD%91de%E4%BA%86%E4%B8%80%E5%9C%88"><span class="space-toc-text">进一步解决 if 你已经在互联网de了一圈</span></a></li></ol>
            </div>
         
       </div>
@@ -382,5 +390,22 @@
       <script>hljs.initHighlightingOnLoad();</script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>
