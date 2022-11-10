@@ -4,11 +4,36 @@
   
     
     <entry>
-      <title>前端 | 本网站对Hexo主题的修改</title>
-      <link href="/2022/11/10/as/"/>
-      <url>/2022/11/10/as/</url>
+      <title>前端 | 使用Hexo+md的小技巧</title>
+      <link href="/2022/11/10/2022-11-10-%E4%BD%BF%E7%94%A8Hexo-md%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+      <url>/2022/11/10/2022-11-10-%E4%BD%BF%E7%94%A8Hexo-md%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
       
-        <content type="html"><![CDATA[<p><br></p><p><br></p><h3 id="支持markdown中的Latex语法"><a href="#支持markdown中的Latex语法" class="headerlink" title="支持markdown中的Latex语法"></a>支持markdown中的Latex语法</h3><p>2022年11月10日</p><blockquote><p>例子： $E=mc^2$</p></blockquote><p>此教程对于white主题可用：<a href="http://t.csdn.cn/pGsjx">http://t.csdn.cn/pGsjx</a></p><p><br></p><h3 id="iframe嵌入网页测试"><a href="#iframe嵌入网页测试" class="headerlink" title="iframe嵌入网页测试"></a>iframe嵌入网页测试</h3><p>2022年11月10日</p><p>原文链接：<a href="http://t.csdn.cn/OnWUM">http://t.csdn.cn/OnWUM</a></p><p>本网站为http插入https可能会被浏览器阻挡</p><h4 id="第一种：使用object标签"><a href="#第一种：使用object标签" class="headerlink" title="第一种：使用object标签"></a>第一种：使用object标签</h4><pre><code class="lang-html">&lt;!--第一种：使用object标签--&gt;    &lt;object type=&quot;text/html&quot; data=&quot;http://space.bilibili.com/17387202&quot; style=&quot;width=&quot;100%; height = 500px&quot;&gt;        &lt;p&gt;backup content&lt;/p&gt;    &lt;/object&gt;</code></pre><p><div><!--第一种：使用object标签-->    <object type="text/html" data="http://space.bilibili.com/17387202"  width="100%"  height = "500px">        <p>backup content</p>    </object></div></p><h4 id="第二种：使用iframe-标签"><a href="#第二种：使用iframe-标签" class="headerlink" title="第二种：使用iframe 标签"></a>第二种：使用iframe 标签</h4><pre><code class="lang-html">   &lt;!--第二种：使用iframe 标签--&gt;    &lt;iframe src=&#39;http://space.bilibili.com/17387202&#39;  scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;100%&quot; height = 500px&quot;&gt;&lt;/iframe&gt;</code></pre><p><iframe src='http://space.bilibili.com/17387202'  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"  height = "500px"></iframe></p><p><div></p><h4 id="第三种：弹出页面"><a href="#第三种：弹出页面" class="headerlink" title="第三种：弹出页面"></a>第三种：弹出页面</h4><p>这种不试了，会转到该网页</p><pre><code class="lang-html">    &lt;!--第三种：先弹出一个页面，再在这个页面使用window.location.href重定向到网页--&gt;&lt;script&gt;    window.location.href=&#39;http://space.bilibili.com/17387202&#39;;</code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="MD内的分段消失问题"><a href="#MD内的分段消失问题" class="headerlink" title="MD内的分段消失问题"></a>MD内的分段消失问题</h3><p>可以嵌入<code>&lt;br&gt;</code>html标签完成</p><pre><code class="lang-html">&lt;br&gt;下面还有俩&lt;br&gt;&lt;br&gt;</code></pre><p>渲染结果如下：</p><p><br></p><p>下面还有俩</p><p><br></p><p><br></p><h3 id="嵌入网页"><a href="#嵌入网页" class="headerlink" title="嵌入网页"></a>嵌入网页</h3><p>原文链接：<a href="http://t.csdn.cn/OnWUM">http://t.csdn.cn/OnWUM</a></p><p>本网站为http插入https可能会被浏览器阻挡</p><h4 id="第一种：使用object标签"><a href="#第一种：使用object标签" class="headerlink" title="第一种：使用object标签"></a>第一种：使用object标签</h4><pre><code class="lang-html">&lt;!--第一种：使用object标签--&gt;    &lt;object type=&quot;text/html&quot; data=&quot;http://space.bilibili.com/17387202&quot; style=&quot;width=&quot;100%; height = 500px&quot;&gt;        &lt;p&gt;backup content&lt;/p&gt;    &lt;/object&gt;</code></pre><p><div><!--第一种：使用object标签-->    <object type="text/html" data="http://space.bilibili.com/17387202"  width="100%"  height = "500px">        <p>backup content</p>    </object></div></p><h4 id="第二种：使用iframe-标签"><a href="#第二种：使用iframe-标签" class="headerlink" title="第二种：使用iframe 标签"></a>第二种：使用iframe 标签</h4><pre><code class="lang-html">   &lt;!--第二种：使用iframe 标签--&gt;    &lt;iframe src=&#39;http://space.bilibili.com/17387202&#39;  scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;100%&quot; height = 500px&quot;&gt;&lt;/iframe&gt;</code></pre><p><iframe src='http://space.bilibili.com/17387202'  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"  height = "500px"></iframe></p><p><div></p><h4 id="第三种：弹出页面"><a href="#第三种：弹出页面" class="headerlink" title="第三种：弹出页面"></a>第三种：弹出页面</h4><p>这种不试了，会转到该网页</p><pre><code class="lang-html">    &lt;!--第三种：先弹出一个页面，再在这个页面使用window.location.href重定向到网页--&gt;&lt;script&gt;    window.location.href=&#39;http://space.bilibili.com/17387202&#39;;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Debug </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端 | 本网站对Hexo主题的修改</title>
+      <link href="/2022/11/10/2022-11-10%20%E6%9C%AC%E7%BD%91%E7%AB%99%E5%AF%B9Hexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9/"/>
+      <url>/2022/11/10/2022-11-10%20%E6%9C%AC%E7%BD%91%E7%AB%99%E5%AF%B9Hexo%E4%B8%BB%E9%A2%98%E7%9A%84%E4%BF%AE%E6%94%B9/</url>
+      
+        <content type="html"><![CDATA[<p><br></p><p><br></p><h3 id="支持markdown中的Latex语法"><a href="#支持markdown中的Latex语法" class="headerlink" title="支持markdown中的Latex语法"></a>支持markdown中的Latex语法</h3><p>2022年11月10日</p><blockquote><p>例子： $E=mc^2$</p></blockquote><p>此教程对于white主题可用：<a href="http://t.csdn.cn/pGsjx">http://t.csdn.cn/pGsjx</a></p><p><br></p>]]></content>
       
       
       <categories>
