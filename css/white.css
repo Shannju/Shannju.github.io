@@ -299,6 +299,10 @@ vertical-lr
 .gitalk-saysay > #gitalk-container .gt-counts {
   display: none;
 }
+#busuanzi {
+  display: block;
+  width: 100%;
+}
 .img-show-inner {
   margin-top: 50px;
   display: flex;
