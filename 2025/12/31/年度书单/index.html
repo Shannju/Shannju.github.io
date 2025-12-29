@@ -188,7 +188,7 @@
 <td>3</td>
 <td>日</td>
 <td>三岛由纪夫</td>
-<td>《春雪》</td>
+<td><strong>《春雪》</strong></td>
 <td>傲娇少年和青梅姐相爱相杀<br />「今、夢を見ていた。又、会うぜ。きつと会う。滝の下で」<br /><em>刚才，我做了个梦。还会再见面的。一定会见面。在瀑布下面。</em></td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@
 <td>5</td>
 <td>匈牙利</td>
 <td>马洛伊·山多尔</td>
-<td>《烛烬》</td>
+<td><strong>《烛烬》</strong></td>
 <td>三角关系！<br />“在那个时候，所有人都迫不及待地向你会聚，仿佛你是一位值得用葡萄酒、女人和鲜花庆贺的征服者”</td>
 </tr>
 <tr>
@@ -244,7 +244,7 @@
 <td>11</td>
 <td>德</td>
 <td>赫尔曼·黑塞</td>
-<td>《悉达多》</td>
+<td><strong>《悉达多》</strong></td>
 <td>普鲁士的做题家的故事但是发生在印度婆罗门身上。悉达多离开婆罗门的既定之路，苦修、投入尘世、归隐、因儿子迷失。<br /> “你看，我怎能把这个心硬的孩子送到那个世界去？难道他不会放肆地沉迷于享乐和权力，不会重复他父亲的过失，不会完全迷失于轮回之中？”</td>
 </tr>
 <tr>
@@ -1027,5 +1027,22 @@
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>
