@@ -156,44 +156,6 @@
     
     
     <entry>
-      <title>【Fufu Modeling &amp; Animation 1】Project Background</title>
-      <link href="/2026/01/12/%E3%80%90Fufu-Modeling-&amp;-Animation-1%E3%80%91Project-Background/"/>
-      <url>/2026/01/12/%E3%80%90Fufu-Modeling-&amp;-Animation-1%E3%80%91Project-Background/</url>
-      
-        <content type="html"><![CDATA[<h1 id="【Fufu-Modeling-amp-Animation-1】Project-Background"><a href="#【Fufu-Modeling-amp-Animation-1】Project-Background" class="headerlink" title="【Fufu Modeling &amp; Animation 1】Project Background"></a>【Fufu Modeling &amp; Animation 1】Project Background</h1><blockquote><p>A record of a modeling process that was not perfect, but very real<br>Tools: Blender<br>Keywords: character modeling / rigging / weight painting / toon shading (3D-to-2D) / Eevee</p></blockquote><p>As a hand-drawn animation fan, I have always wanted to make my own animated piece. Recently, I listened to the song <em>Corpse Wax</em> and was deeply moved by it.</p><p>(Is it true that listening to depressing songs can give you stomach problems? My stomach has been acting up lately…)</p><p>So I created this hand-drawn animation for Fufu, with the background paying homage to <em>Corpse Wax</em>.</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/VS--CCbilibili-0%E2%80%9920%E2%80%9D.jpg" >        </span>      </p><p>I wanted the character to feel doll-like—soft, cute, and cartoony—while keeping the background and camera work more “serious”: richer textures and more visual layers. This contrast helps the overall image feel more like a music video or a fashion film.</p><p>Because of that, I experimented with a stylized toon-shading (3D-to-2D) look.</p><p>I watched a lot of MMD works. Most of them focus on high-quality 3D production, with detailed models and impressive motion data. There are many ready-made, flashy animations, but not everyone enjoys mainstream choreography.</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-01-18%20164612.png" >        </span>      </p><p>Personally, I prefer the feeling of frame-by-frame animation. So this time, I chose a chibi-style character to give the work a more artistic tone.</p><p>Next, let’s take a look at how the model was built.</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/meeting_01.00_00_02_07.Still002.png" >        </span>      </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Model </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>【Fufu建模与动画1】项目背景</title>
-      <link href="/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/"/>
-      <url>/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/</url>
-      
-        <content type="html"><![CDATA[<h1 id="【Fufu建模与动画1】项目背景"><a href="#【Fufu建模与动画1】项目背景" class="headerlink" title="【Fufu建模与动画1】项目背景"></a>【Fufu建模与动画1】项目背景</h1><blockquote><p>记录一次并不完美，但非常真实的建模过程<br>工具：Blender<br>关键词：角色建模 / 绑定 / 权重 / 三渲二 / Eevee</p></blockquote><p>作为手书爱好者我一直有一个做自己手书的愿望！最近听到了《尸蜡》这首歌真是太感动了。</p><p>（是不是听胃弱会得胃病呢，最近胃很不听话啊）</p><p>所以为fufu制作了这样一段手书，背景致敬《尸蜡》。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/VS--CCbilibili-0%E2%80%9920%E2%80%9D-1769730153588.jpg" >        </span>      </p><p>我希望角色是偏玩偶感、偏软软的卡通风格，但背景和镜头可以“认真”一点：质感细一点、层次多一点，这样会有一种反差，画面更像 MV/时尚片。</p><p>所以我尝试了三渲二的风格化。</p><p>mmd我看了很多，主要分为3D的，优质在细腻的建模和动作，很多现成动作很炫酷，但不是谁都喜欢看流行编舞。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-01-18%20164612-1769730158751.png" >        </span>      </p><p>我更喜欢逐帧动画的感觉。所以这次我选择了Q版的角色给一种更加艺术的感觉！</p><p>下面就来看看是怎么建模的吧！</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/meeting_01.00_00_02_07.Still002-1769730167798.png" >        </span>      </p><p>下一章 参考图和 AI 三视图</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Model </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>书单 | 2022-2025年度</title>
       <link href="/2025/12/31/%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/"/>
       <url>/2025/12/31/%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/</url>
