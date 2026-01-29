@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 解决载入外链限制的问题 -->
   <meta name="referrer" content="no-referrer" />
-  <title>  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting With AI Orthographic Views |    Blog of Shan</title>
+  <title>  【Fufu建模与动画4】骨骼绑定与权重 |    Blog of Shan</title>
   <meta name="description" content="Daydreamer.">
   <!-- 标签页图标 -->
   
@@ -69,7 +69,7 @@
           <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
              Categories
              <div class="categories-outer " id="sort-div">
-               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
              </div>
           </li>
         
@@ -142,8 +142,8 @@
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views</div>
-      <div class="meta-intro animate__animated  animate__fadeInUp">1月 13 2025</div>
+      <div class="post-title animate__animated  animate__fadeInUp">【Fufu建模与动画4】骨骼绑定与权重</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">1月 16 2026</div>
       
     </div>
     <div class="post-content-inner">
@@ -153,69 +153,61 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h3 id="Preparation-Before-Starting"><a href="#Preparation-Before-Starting" class="headerlink" title="Preparation Before Starting"></a>Preparation Before Starting</h3><p><strong>Step 0: Create a dedicated project folder (highly recommended)</strong>  </p>
-<ul>
-<li><code>refs/</code> for reference images (product photos, AI-generated orthographic views, style references)  </li>
-<li><code>blend/</code> for Blender project files (named with version numbers)  </li>
-<li><code>renders/</code> for final renders and process screenshots  </li>
-<li><code>video/</code> for exported test videos / GIFs  </li>
-</ul>
-<p>There are already some Fufu models available online, but I still wanted to make an original one—mainly to avoid copyright issues.</p>
+        <p>打开我们之前做好的、还没有穿衣服的角色</p>
+<h3 id="用-Auto-Rig-Pro-快速生成骨骼"><a href="#用-Auto-Rig-Pro-快速生成骨骼" class="headerlink" title="用 Auto-Rig Pro 快速生成骨骼"></a>用 Auto-Rig Pro 快速生成骨骼</h3><p>放置锚点（定位骨骼关键点）</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/%E4%B8%8B%E8%BD%BD-1769653350177-1769653363012.jpg" >
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_01_50_04.Still027.png" >
         </span>
       </p>
-<p>In the future, I plan to build a Fufu teahouse in VR, where cute Fufu characters will work as servers.</p>
-<p>My main reference comes from the Fufu plush doll hanging by my window. It cannot stand on its own, but some plush toys use internal armatures to support standing poses. So in theory, this design should be feasible.</p>
+<p> 它就会自动根据模型去计算出一套骨骼，能省不少功夫。</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/image-20260129022312111-1769653399882.png" >
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_01_51_01.Still028-1769725161009.png" >
         </span>
       </p>
-<p>I also searched for product photos on shopping websites (a small modeling tip). It’s a very quick way to find references with the right proportions and feel—super convenient.</p>
+<p>这一步<strong>还没有真正绑定</strong>，只是先帮我们生成了对应骨骼。</p>
+<h3 id="检查骨骼并生成控制器（Rig）"><a href="#检查骨骼并生成控制器（Rig）" class="headerlink" title="检查骨骼并生成控制器（Rig）"></a>检查骨骼并生成控制器（Rig）</h3><p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_01_52_05.Still029.png" >
+        </span>
+      </p>
+<p>生成骨骼后先检查有没有问题。</p>
+<p>点击“匹配到控制器”，它会生成一套方便控制骨骼的控制器（类似 Rig 控制器）。<br> Blender 自带方案也能做控制器，只是样式不一样，原理类似。</p>
+<h3 id="正式蒙皮绑定（Skin-Bind）"><a href="#正式蒙皮绑定（Skin-Bind）" class="headerlink" title="正式蒙皮绑定（Skin / Bind）"></a>正式蒙皮绑定（Skin / Bind）</h3><p>“绑定（Bind）”按钮点一下。</p>
+<p>到<strong>姿态模式（Pose Mode）</strong>，随便动一下控制器，就能看到角色跟着动。</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/f5e4fcb8-ba2c-4589-951a-b11949132490.png" >
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_02_01_08.Still034.png" >
         </span>
       </p>
-<p>Then I used AI to make the character stand upright.</p>
+<blockquote>
+<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p>有时候控制器会“躲在模型里面”，看不清。<br> 打开姿态面板，在视图显示里勾选“<strong>在前面（In Front）</strong>”，一下子就能看清所有控制器了。</p>
+<p>你也可以打开右上角的 <strong>X 轴镜像</strong>：<br> 移动左手腕，右手也会一起动，</p>
+</blockquote>
+<h2 id="头发不跟头动：用约束解决"><a href="#头发不跟头动：用约束解决" class="headerlink" title="头发不跟头动：用约束解决"></a>头发不跟头动：用约束解决</h2><p>继续摆动作检查时发现：头发（比如曲线做的假发）没跟着头动。</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/ChatGPT%20Image%202026%E5%B9%B41%E6%9C%8829%E6%97%A5%2002_32_08.png" >
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_01_55_07.Still032.png" >
         </span>
       </p>
-<p>After that, I asked the AI to generate orthographic views.</p>
+<p>这里要用<strong>约束</strong>。然后回到姿态模式，转一下头部控制器： 这时候头发就会跟着头一起动了。</p>
+<h3 id="权重绘制"><a href="#权重绘制" class="headerlink" title="权重绘制"></a>权重绘制</h3><p> 物体模式切到 <strong>权重绘制模式（Weight Paint）</strong>：</p>
+<p>重绘一些不对的地方</p>
 <p>
         <span class="lazyload-img-span">
         <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/ChatGPT%20Image%202026%E5%B9%B41%E6%9C%8829%E6%97%A5%2002_32_10-1769653967677.png" >
+           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/meeting_01.00_01_58_09.Still033-1769725257947.png" >
         </span>
       </p>
-<p>The result was quite good, but unfortunately the head size was inconsistent between the front and side views, and the camera angle was slightly misaligned.</p>
-<p>If I were to do this again, I would first fix these issues in Photoshop. That would make the modeling process much smoother.</p>
-<hr>
-<h3 id="Importing-Reference-Images-into-Blender"><a href="#Importing-Reference-Images-into-Blender" class="headerlink" title="Importing Reference Images into Blender"></a>Importing Reference Images into Blender</h3><ul>
-<li><code>Shift + A → Image → Reference</code>  </li>
-<li>Place the front and side views separately  </li>
-<li>Adjust their positions so that:  <ul>
-<li>The feet rest on the same ground line  </li>
-<li>The head height matches across views  </li>
-</ul>
-</li>
-</ul>
-<p>This prevents reference images from interfering with later modeling steps.</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/meeting_01.00_00_31_02.Still003.png" >
-        </span>
-      </p>
-<p>Next chapter: Modeling!</p>
+<blockquote>
+<h4 id="tips-光滑工具：让过渡更柔和"><a href="#tips-光滑工具：让过渡更柔和" class="headerlink" title="tips 光滑工具：让过渡更柔和"></a>tips 光滑工具：让过渡更柔和</h4><p>如果整体权重没大问题，只是某个关节过渡很硬，可以用“<strong>光滑（Smooth）</strong>”刷一下，让两个骨骼之间的权重过渡更柔和。<br> 很多权重问题用 Smooth 就能解决大半。</p>
+</blockquote>
 
         <!-- 分类文章 -->
         
@@ -418,52 +410,8 @@
             
               
                 <li class="base">
-                  <a  href="/2025/01/12/%E3%80%90Fufu-Modeling-&amp;-Animation-1%E3%80%91Project-Background/" class="post-categoris-bottom-link">
-                  【Fufu Modeling &amp; Animation 1】Project Background
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-                <li class="base">
-                  <a  href="/2025/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/" class="post-categoris-bottom-link">
-                  【Fufu建模与动画1】项目背景
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-                <li class="me base">
-                  <a  href="/2025/01/13/%E3%80%90Fufu%20Modeling-&amp;-Animation-2%E3%80%91Pre-production/" class="post-categoris-bottom-link">
-                  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-                <li class="base">
                   <a  href="/2025/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/" class="post-categoris-bottom-link">
                   【Fufu建模与动画2】前期准备｜从 AI 三视图开始
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-                <li class="base">
-                  <a  href="/2025/01/14/%E3%80%90Fufu-Modeling-&amp;-Animation-3%E3%80%91Modeling/" class="post-categoris-bottom-link">
-                  【Fufu Modeling &amp; Animation 3】Modeling
                 </a>
                 </li>
               
@@ -502,6 +450,116 @@
               
             
             
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/12/%E3%80%90Fufu-Modeling-&amp;-Animation-1%E3%80%91Project-Background/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 1】Project Background
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画1】项目背景
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%20Modeling-&amp;-Animation-2%E3%80%91Pre-production/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu-Modeling-&amp;-Animation-3%E3%80%91Modeling/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 3】Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-4%E3%80%91Rigging-and-Weight-Painting/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 4】Rigging and Weight Painting
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画4】骨骼绑定与权重
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-5%E3%80%91Clothing/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 5】Clothing
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画5】衣服
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu-Modeling-&amp;-Animation-6%E3%80%91Materials-and-Rendering/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 6】Materials and Rendering
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB6%E3%80%91%E6%9D%90%E8%B4%A8%E4%B8%8E%E6%B8%B2%E6%9F%93/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画6】材质与渲染
+                </a>
+                </li>
+              
+              
+            
+            
             </ul>
 
           </div>
@@ -511,7 +569,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Preparation-Before-Starting"><span class="space-toc-text">Preparation Before Starting</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Importing-Reference-Images-into-Blender"><span class="space-toc-text">Importing Reference Images into Blender</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E7%94%A8-Auto-Rig-Pro-%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E9%AA%A8%E9%AA%BC"><span class="space-toc-text">用 Auto-Rig Pro 快速生成骨骼</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E6%A3%80%E6%9F%A5%E9%AA%A8%E9%AA%BC%E5%B9%B6%E7%94%9F%E6%88%90%E6%8E%A7%E5%88%B6%E5%99%A8%EF%BC%88Rig%EF%BC%89"><span class="space-toc-text">检查骨骼并生成控制器（Rig）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E6%AD%A3%E5%BC%8F%E8%92%99%E7%9A%AE%E7%BB%91%E5%AE%9A%EF%BC%88Skin-Bind%EF%BC%89"><span class="space-toc-text">正式蒙皮绑定（Skin &#x2F; Bind）</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%A4%B4%E5%8F%91%E4%B8%8D%E8%B7%9F%E5%A4%B4%E5%8A%A8%EF%BC%9A%E7%94%A8%E7%BA%A6%E6%9D%9F%E8%A7%A3%E5%86%B3"><span class="space-toc-text">头发不跟头动：用约束解决</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E6%9D%83%E9%87%8D%E7%BB%98%E5%88%B6"><span class="space-toc-text">权重绘制</span></a></li></ol>
            </div>
         
       </div>
