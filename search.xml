@@ -87,6 +87,63 @@
     
     
     <entry>
+      <title>【Fufu建模与动画3】建模</title>
+      <link href="/2025/01/14/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/"/>
+      <url>/2025/01/14/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/</url>
+      
+        <content type="html"><![CDATA[<p>使用 Blender建模很简单的，一起来看看吧</p><p>俗话说“万物始于立方体”。<br> 我们先按 <strong>Shift + A</strong> 新建一个立方体，然后按 <strong>Ctrl + 1</strong> 给它添加一段细分，再应用修改器，这样就得到了一个四边球。</p><p>调整附近的点，这样就能得到一个基础的头部形状。</p><p>头部通常分为“三庭”。现在我们只有上        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_00_34_04.Still005.png" >        </span>      下两段，所以可以选中中间那一条线，按 <strong>Ctrl + B</strong> 倒角一下，这样头部的三庭结构就出来了。</p><p>接着再次添加细分并应用，</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_00_31_07.Still004.png" >        </span>      </p><p><strong>小tips：mirror修改器</strong></p><p>为了方便操作，我们进入透显模式，选中左半边的点并删除，再添加一个<strong>镜像修改器</strong>，并打开“编辑模式可见”。</p><p>这样作为一个对称模型，我们只需要编辑一侧，另一侧就会自动镜像生成。</p><p>回到物体模式，按 <strong>Ctrl + 2</strong> 添加两段细分，并右键选择平滑着色，这样头部就会变得比较光滑。</p><p>稍微调整让形状更可爱一些。到这里，头部的大形就差不多了。</p><p>眼睛我留到了后面做，画龙点睛嘛，最后再确定，表情本来希望用贴图做的，最后没能实现很可惜。</p><p>加上头发</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_12_14.Still009.png" >        </span>      </p><p>以及曲线做的双马尾！</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_27_14.Still011.png" >        </span>      </p><h2 id="身体"><a href="#身体" class="headerlink" title="身体"></a>身体</h2><p>按 <strong>Tab</strong> 进入编辑模式，选中中间这条线，按 <strong>Ctrl + B</strong> 倒角，让整体变成上、中、下三段。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_30_04.Still013.png" >        </span>      </p><p>调整一下缩放并往上拖一点。让上中下三个分段尽量平均一些。</p><p>现在身体有点短，我们做一个竖向缩放，把身体拉长一点。</p><p>接着到右视图，也往前推一点，大概做出背部的形态。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_31_00.Still014.png" >        </span>      </p><p>接着我们再加一些分段：按 <strong>Ctrl + 1</strong> 添加细分，再应用。这样我们就有了更多的编辑空间。</p><hr><h3 id="手臂与-A-Pose"><a href="#手臂与-A-Pose" class="headerlink" title="手臂与 A Pose"></a>手臂与 A Pose</h3><p>接下来我们来做手臂。进入编辑模式，找到手臂衔接位置的四个面。右键找到 Loop 工具里的“圆环”（来自插件 Loop ）。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_32_00.Still015-1769655907074.png" >        </span>      </p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_32_10.Still016.png" >        </span>      </p><p>挤出手臂之后，我们调整一下胳肢窝</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_34_11.Still018.png" >        </span>      </p><p>添加<strong>镜像修改器</strong>，并打开“裁剪/范围限制”，减少中轴线编辑出问题。</p><hr><h3 id="腿部与脚掌"><a href="#腿部与脚掌" class="headerlink" title="腿部与脚掌"></a>腿部与脚掌</h3><p>接着做脚。是类似的。先找到腿和身体的衔接面：注意不要用中轴线旁边那两个面，不然腿可能会连在一起。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_37_07.Still020.png" >        </span>      </p><p>然后选中四个面按 <strong>E</strong> 往下挤出，再调整，让它整体是下垂的。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_37_13.Still021.png" >        </span>      </p><p>挤出来如果倾斜了，可以用“沿某轴缩放为零”的方法把它掰正，</p><p>调整腿型可以简单做得更圆一些</p><p>然后做脚掌：在脚踝位置用 <strong>Ctrl + R</strong> 环切一刀，按 <strong>E</strong> 挤出脚掌。底部再环切几刀，调整脚掌的厚薄和形状。整体从侧面和正面看一下比例</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_40_05.Still022.png" >        </span>      </p><p>补足够的分段</p><p>脖子也很简单：选中肩膀        <span class="lazyload-img-span">        <img              data-src="meeting_01.00_01_45_00.Still023.png" >        </span>      上方的面，按 <strong>E</strong> 挤出，再 <strong>S</strong> 缩放一下，<strong>G</strong> 稍微往后拖一点。</p><p>到这里身体部分差不多了。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/meeting_01.00_01_49_09.Still025.png" >        </span>      </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Model </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【Fufu建模与动画2】前期准备｜从 AI 三视图开始</title>
+      <link href="/2025/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/"/>
+      <url>/2025/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="开工前的准备"><a href="#开工前的准备" class="headerlink" title="开工前的准备"></a>开工前的准备</h3><p><strong>Step 0：建一个专门的工程文件夹（强烈建议）</strong>  </p><ul><li><code>refs/</code> 放参考图（产品图、AI三视图、风格参考）  </li><li><code>blend/</code> 放工程文件（版本号命名）  </li><li><code>renders/</code> 放最终渲染和过程截图  </li><li><code>video/</code> 放导出的测试视频/GIF  </li></ul><p>网络上其实已经有一些 fufu 的建模了，但我还是想做一个原创的，主要是为了规避版权的问题。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/%E4%B8%8B%E8%BD%BD-1769653350177-1769653363012.jpg" >        </span>      </p><p>日后我计划做一个VR里面的fufu茶社！店里是可爱的fufu服务生。</p><p>我的参考来自一直挂在我窗前的 fufu 玩偶，她是无法站立的，但是也有给棉花里加入骨架来使他们站立的。所以理论上是可行的。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/image-20260129022312111-1769653399882.png" >        </span>      </p><p>我找了购物网站上的产品图（建模小技巧），你可以很快的选到感觉合适的！是不是很方便</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/f5e4fcb8-ba2c-4589-951a-b11949132490.png" >        </span>      </p><p>然后用 AI 让它站起来。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/ChatGPT%20Image%202026%E5%B9%B41%E6%9C%8829%E6%97%A5%2002_32_08.png" >        </span>      </p><p>再让ai出三视图</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/ChatGPT%20Image%202026%E5%B9%B41%E6%9C%8829%E6%97%A5%2002_32_10-1769653967677.png" >        </span>      效果很好，可惜正面和侧面的头大小不一致  并且视角有些偏移，</p><p>如果在做一次，我会 ps 调整后再来。建模都会顺很多。</p><h3 id="把参考图放进-Blender"><a href="#把参考图放进-Blender" class="headerlink" title="把参考图放进 Blender"></a>把参考图放进 Blender</h3><ul><li><code>Shift + A → Image → Reference</code>  </li><li>分别放正面、侧面图  </li><li>调整位置，让它们：  <ul><li>脚踩在同一条地面线上  </li><li>头顶高度一致  </li></ul></li></ul><p>这样后面建模时不会干扰操作。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/meeting_01.00_00_31_02.Still003.png" >        </span>      </p><p>下一章：建模！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Model </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【Fufu建模与动画1】项目背景</title>
+      <link href="/2025/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/"/>
+      <url>/2025/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="【Fufu建模与动画1】项目背景"><a href="#【Fufu建模与动画1】项目背景" class="headerlink" title="【Fufu建模与动画1】项目背景"></a>【Fufu建模与动画1】项目背景</h1><blockquote><p>记录一次并不完美，但非常真实的建模过程<br>工具：Blender<br>关键词：角色建模 / 绑定 / 权重 / 三渲二 / Eevee</p></blockquote><p>作为手书爱好者我一直有一个做自己手书的愿望！最近听到了《尸蜡》这首歌真是太感动了。</p><p>（是不是听胃弱会得胃病呢，最近胃很不听话啊）</p><p>所以为fufu制作了这样一段手书，背景致敬《尸蜡》。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/VS--CCbilibili-0%E2%80%9920%E2%80%9D.jpg" >        </span>      </p><p>我希望角色是偏玩偶感、偏软软的卡通风格，但背景和镜头可以“认真”一点：质感细一点、层次多一点，这样会有一种反差，画面更像 MV/时尚片。</p><p>所以我尝试了三渲二的风格化。</p><p>mmd我看了很多，主要分为3D的，优质在细腻的建模和动作，很多现成动作很炫酷，但不是谁都喜欢看流行编舞。</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-01-18%20164612.png" >        </span>      </p><p>我更喜欢逐帧动画的感觉。所以这次我选择了Q版的角色给一种更加艺术的感觉！</p><p>下面就来看看是怎么建模的吧！</p><p>        <span class="lazyload-img-span">        <img              data-src="%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/meeting_01.00_00_02_07.Still002.png" >        </span>      </p><p>下一章 参考图和 AI 三视图</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Model </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>weep</title>
       <link href="/2024/05/13/weep/"/>
       <url>/2024/05/13/weep/</url>
