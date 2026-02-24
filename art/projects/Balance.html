@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ENCYCLOPEDIA OF FLOWERING PLANTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --card: #0d0d0d;
+            --border: #1a1a1a
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem
+        }
+
+        .panel {
+            background: rgba(13, 13, 13, 0.85);
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 6px
+        }
+
+        .aframe-container {
+            height: 60vh
+        }
+
+        @media (min-width:1024px) {
+            .aframe-container {
+                height: 72vh
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-8">
+
+    <div class="mb-8">
+        <a href="../index.html"
+            class="mono text-zinc-500 hover:text-white transition text-sm uppercase tracking-widest">← Back to Works</a>
+    </div>
+
+    <main class="w-full mx-auto grid grid-cols-1 gap-8 p-12">
+        <header>
+            <span class="mono text-zinc-600">PROJECT_DETAIL</span>
+            <h1 class="text-4xl font-light mt-4 mb-2">ENCYCLOPEDIA OF FLOWERING PLANTS</h1>
+            <p class="mono text-zinc-400">A VR botanical archive reimagining the evolutionary history of flowering
+                plants.</p>
+        </header>
+
+        <!-- 项目信息卡片（仿 black-sheep 格式） -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Role</h3>
+                <p class="text-zinc-300">Lead · Programmer · Shine Wang</p>
+            </div>
+            <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Technology</h3>
+                <p class="text-zinc-300">UnityXR, C#, High-fidelity 3D</p>
+            </div>
+            <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Timeline</h3>
+                <p class="text-zinc-300">2026</p>
+            </div>
+        </div>
+
+
+        <!-- Media section: images & video (this is a VR application showcase, not WebVR) -->
+        <section class="project-media">
+            <div class="max-w-3xl mx-auto mb-16 px-4">
+                <div class="aspect-video w-full relative group">
+                    <video class="w-full h-full border border-[#1a1a1a] rounded-[2px] shadow-2xl" controls>
+                        <source src="/art/assets/videos/balance.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="absolute -top-2 -left-2 w-4 h-4 border-t border-l border-zinc-700"></div>
+                    <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b border-r border-zinc-700"></div>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="https://github.com/Shannju/Blooming/releases/tag/1.2" target="_blank" rel="noopener noreferrer"
+                        class="mono inline-block border border-[#1a1a1a] px-5 py-3 text-zinc-300 hover:text-white hover:border-zinc-500 transition uppercase tracking-widest text-sm">
+                        Download
+                    </a>
+                </div>
+            </div>
+
+
+
+            <article class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-zinc-300 leading-relaxed mb-4">
+                    High-fidelity 3D models enable <strong>detailed, anatomy-based interactions</strong>, allowing users
+                    to deconstruct plants to explore internal structures and evolutionary traits. Through advanced Unity
+                    rendering and narrated insights, <em>The Blooming Library</em> transforms botanical education into a
+                    restorative, immersive "textbook of the future."
+                </p>
+                <p class="text-zinc-500 text-sm italic">
+                    *Botanical models provided by Yuichi Kano under a CC0 public domain license.
+                </p>
+            </article>
+
+
+
+
+        <!-- Footer navigation -->
+        <div class="mt-6">
+            <footer class="pt-8 border-t border-[#1a1a1a] flex justify-between mono text-zinc-500">
+                <a href="black-sheep.html" class="hover:text-white transition">← Previous Project</a>
+                <a href="slime-mold.html" class="hover:text-white transition">Next Project →</a>
+            </footer>
+        </div>
+
+    </main>
+
+    <!-- No WebVR scripts: this page showcases a native VR application with images & video -->
+
+</body>
+
+</html>
