@@ -1,0 +1,723 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 解决载入外链限制的问题 -->
+  <meta name="referrer" content="no-referrer" />
+  <title>  【Fufu建模与动画5】衣服 |    Blog of Shan</title>
+  <meta name="description" content="Daydreamer.">
+  <!-- 标签页图标 -->
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Shannju/Picture/Ico/hanaku.ico" type="image/x-icon">
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+  <!-- 网站置灰,做成可配置的文件 -->
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Blog of Shan
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/about" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              ABOUT
+            </li>
+          </a>
+        
+          <a href="/art/index.html" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              Art
+            </li>
+          </a>
+        
+
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             Categories
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
+             </div>
+          </li>
+        
+        
+        
+        <a href="/search">
+          <li class="menu-li  animate__animated  animate__fadeInUp">
+            <i class="ri-search-line"></i>
+          </li>
+        </a>
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Blog of Shan
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/about" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>ABOUT</span>
+      </div>
+    </a>
+  
+    <a href="/art/index.html" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>Art</span>
+      </div>
+    </a>
+  
+  
+    <a href="/search">  
+      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
+        <i class="ri-search-line"></i>
+      </div>
+    </a>
+    
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">【Fufu建模与动画5】衣服</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">1月 16 2026</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h3 id="做衣服的两种方式"><a href="#做衣服的两种方式" class="headerlink" title="做衣服的两种方式"></a>做衣服的两种方式</h3><p>给角色做衣服，常见其实就两种思路：一种是布料模拟，另一种是直接用网格配合权重。布料模拟效果当然真实，但对性能要求比较高，调起来也很花时间，而且对新手并不友好。所以选择更稳妥、通用性更强的「网格 + 权重」方式来做衣服。</p>
+<p> 这种方法最大的好处是：衣服好控制、好改，而且之后想给角色换衣服也会非常方便。</p>
+<h3 id="复制身体网格，把权重一起带过去"><a href="#复制身体网格，把权重一起带过去" class="headerlink" title="复制身体网格，把权重一起带过去"></a>复制身体网格，把权重一起带过去</h3><p>在开始之前，我们需要打开一个已经绑定好骨骼和权重的角色。只要身体本身已经正确绑定，当我们直接从身体上复制出一部分网格来做衣服时，这些顶点对应的权重也会被一并复制到新的网格上。<br> 也就是说，衣服一开始就“继承”了身体的权重，这一步能直接帮我们规避掉大量后期权重修不动、拉包、穿模的问题，是整个流程里最关键的地方。</p>
+<h3 id="上衣"><a href="#上衣" class="headerlink" title="上衣"></a>上衣</h3><p>制作上衣时，我们直接从身体网格中选出衣服对应的区域。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_04_05.Still035-1769737232380.png" >
+        </span>
+      
+<p>使用“循环线内侧区域”的选择方式，一次性选中衣服的整体区域。得到一个完整的“衣服形状”选区后，复制一份，再把它从身体里分离出来，这样就得到一个独立的衣服网格。</p>
+<p>进入衣服的编辑模式，全选后用法线方向缩放，把衣服整体往外顶一点点，这一步可以有效避免和身体重叠造成的破面问题。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_04_13.Still036-1769737234648.png" >
+        </span>
+      
+<p> 如果想让衣服有厚度，可以给衣服加一个实体化修改器。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_05_05.Still037-1769727491878.png" >
+        </span>
+      
+<p>在此基础上，就可以开始加衣服的造型细节了。</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_08_13.Still039-1769737236051.png" >
+        </span>
+      
+<h2 id="裙子制作"><a href="#裙子制作" class="headerlink" title="裙子制作"></a>裙子制作</h2><p>裤子的做法和上衣几乎是一样的</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_27_12.Still044-1769737237737.png" >
+        </span>
+      
+<p>袖子</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_30_05.Still046-1769737239281.png" >
+        </span>
+      
+<p>加些倒角</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_48_12.Still049-1769737241053.png" >
+        </span>
+      
+<p>鞋子</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_31_07.Still047-1769737242545.png" >
+        </span>
+      
+<h4 id="小装饰与约束"><a href="#小装饰与约束" class="headerlink" title="小装饰与约束"></a>小装饰与约束</h4><p>衣服上的小装饰，比如纽扣、拉链头，都可以直接从衣服上复制小网格来做。如果不希望这些装饰在动画中产生明显变形，可以配合约束来使用。</p>
+<p>做了一个领带</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_13_03.Still040-1769737244083.png" >
+        </span>
+      
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_02_16_01.Still042.png" >
+        </span>
+      
+<p>最终效果</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/meeting_01.00_03_34_05.Still053.png" >
+        </span>
+      </h4><p>这种网格复制权重的方法，最大的优势就是省时间、省精力。衣服一开始就拥有和身体一致的权重，进入姿态模式随便摆动作，衣服都会完整跟随，几乎不会出大问题。<br> 对新手来说，这意味着不用在权重上反复折腾，也不用担心一动就穿模。同时，因为衣服都是独立网格，还可以通过集合快速切换不同款式，非常适合做换装和多方案展示。</p>
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Model</div>
+            <ul>
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2025/12/01/AI%20and%203D%20Modeling/" class="post-categoris-bottom-link">
+                  AI and 3D Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/" class="post-categoris-bottom-link">
+                  Fufu建模与动画1-项目背景
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%20Modeling-&amp;-Animation-2%E3%80%91Pre-production/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画2】前期准备｜从 AI 三视图开始
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu-Modeling-&amp;-Animation-3%E3%80%91Modeling/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 3】Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画3】建模
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-4%E3%80%91Rigging-and-Weight-Painting/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 4】Rigging and Weight Painting
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画4】骨骼绑定与权重
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-5%E3%80%91Clothing/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 5】Clothing
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画5】衣服
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu-Modeling-&amp;-Animation-6%E3%80%91Materials-and-Rendering/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 6】Materials and Rendering
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB6%E3%80%91%E6%9D%90%E8%B4%A8%E4%B8%8E%E6%B8%B2%E6%9F%93/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画6】材质与渲染
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%81%9A%E8%A1%A3%E6%9C%8D%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="space-toc-text">做衣服的两种方式</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E5%A4%8D%E5%88%B6%E8%BA%AB%E4%BD%93%E7%BD%91%E6%A0%BC%EF%BC%8C%E6%8A%8A%E6%9D%83%E9%87%8D%E4%B8%80%E8%B5%B7%E5%B8%A6%E8%BF%87%E5%8E%BB"><span class="space-toc-text">复制身体网格，把权重一起带过去</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E4%B8%8A%E8%A1%A3"><span class="space-toc-text">上衣</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%A3%99%E5%AD%90%E5%88%B6%E4%BD%9C"><span class="space-toc-text">裙子制作</span></a>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "6yQDH0ht1DDGme31rowgRuFn-9Nh9j0Va",
+        app_key: "koc9LbBKjbamjlPmoR1NxL2N",
+        placeholder: "来唠嗑~",
+        avatar:"robohash",
+    });
+</script>
+
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated animate__fadeInUp">
+    <div class="footer-inner">
+        <div class="footer-text">
+            <p>Copyright @ <a href="">WangShan</a> Welcome to hell~</p>
+
+        </div>
+
+        <div class="busuanzi-counter">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" class="footer-text">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                
+                    <span>本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+                  
+                  
+            </span>
+        </div>
+
+        <div class="footer-contact">
+            <ul class="footer-ul">
+                
+                    <li class="footer-li">
+                        <a href="https://github.com/Shannju" target="_blank">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="mailto:Wangshan9102@163.com" target="_blank">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="https://space.bilibili.com/17387202" target="_blank">
+                            <i class="ri-bilibili-line"></i>
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

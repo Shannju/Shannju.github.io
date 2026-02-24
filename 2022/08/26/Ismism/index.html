@@ -1,0 +1,919 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 解决载入外链限制的问题 -->
+  <meta name="referrer" content="no-referrer" />
+  <title>  哲学 | Ismism |    Blog of Shan</title>
+  <meta name="description" content="Daydreamer.">
+  <!-- 标签页图标 -->
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Shannju/Picture/Ico/hanaku.ico" type="image/x-icon">
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+  <!-- 网站置灰,做成可配置的文件 -->
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Blog of Shan
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/about" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              ABOUT
+            </li>
+          </a>
+        
+          <a href="/art/index.html" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              Art
+            </li>
+          </a>
+        
+
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             Categories
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
+             </div>
+          </li>
+        
+        
+        
+        <a href="/search">
+          <li class="menu-li  animate__animated  animate__fadeInUp">
+            <i class="ri-search-line"></i>
+          </li>
+        </a>
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Blog of Shan
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/about" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>ABOUT</span>
+      </div>
+    </a>
+  
+    <a href="/art/index.html" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>Art</span>
+      </div>
+    </a>
+  
+  
+    <a href="/search">  
+      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
+        <i class="ri-search-line"></i>
+      </div>
+    </a>
+    
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">哲学 | Ismism</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">8月 26 2022</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="Ismism-—-哲学史笔记"><a href="#Ismism-—-哲学史笔记" class="headerlink" title="Ismism — 哲学史笔记"></a>Ismism — 哲学史笔记</h1><blockquote>
+<p> “如果学习哲学的人非但没有因此养成谦卑的习惯，学会鞭辟入里、小心谨慎地分析，反而借此赢得了知识上的骄矜，随心所欲地滥用这些危险的语句，那将不只是对哲学的践踏，更会戕害公共讨论的品格和日常生活的常识感。” </p>
+<p> —- 维特根斯坦 </p>
+</blockquote>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><h2 id="11-科学实在论"><a href="#11-科学实在论" class="headerlink" title="11 科学实在论"></a>11 科学实在论</h2><h3 id="113-认知主义-Cognitrism"><a href="#113-认知主义-Cognitrism" class="headerlink" title="113 认知主义 Cognitrism"></a>113 认知主义 Cognitrism</h3><p>1-1-中心（现象）</p>
+<p><strong>人的体验的现象，看到听到感受到，是脑子的活动和人的心灵意识是一码事。集中到现象学的维度，就是你的精神，中心化的结构。体验就是中心化结构的产物。</strong></p>
+<p>认知科学，从各个角度研究意识结构，大脑模式，可以重新建构人工智能</p>
+<p>eg：冯-诺依曼 以及冯-诺依曼结构 &lt;-&gt;图灵机</p>
+<p>对于mind的想象，美国体系对于cs生命科学的主导体系</p>
+<p>聪明药，嗑聪明药。安慰剂效应。人的意志可以通过科学方法控制，所有现象由意识心灵创造，意识又可以通过科学把握，把心当作一个工程学的结果。</p>
+<h4 id="1131-功能主义-（函数主义）-Functionalism！"><a href="#1131-功能主义-（函数主义）-Functionalism！" class="headerlink" title="1131 功能主义 （函数主义） Functionalism！"></a>1131 功能主义 （函数主义） Functionalism！</h4><p>1-1-3-秩序</p>
+<p>心里的活动，（感情，活动），都是由函数决定的。不存在什么超越。</p>
+<p>体验的现象是构建出来的，世界没有什么真正意义的超越性。只有函数的自我运动，自己运用他自己。</p>
+<p>eg：希拉里-普特南 杰瑞-Ford“所有的心灵状态只能用思想的语言描述”。不能用物理的描述，不能用诗意的唯心的话语描述。</p>
+<p>eg：理工南圈子。缸中之脑（希拉里-普特南）体验到的现象都是由函数，电信号模拟出来的。缸，简陋，输入的计算机，非常好。崇拜造出计算机的人，将自己依附上去。</p>
+<h4 id="1132-自由进化论-Freedom-Evolutionism"><a href="#1132-自由进化论-Freedom-Evolutionism" class="headerlink" title="1132 自由进化论 Freedom Evolutionism"></a>1132 自由进化论 Freedom Evolutionism</h4><p>1-1-3-冲突 决定论的僵死的物理法则，和更自由的meme的冲突。</p>
+<p>eg：《自私的基因》理查德-道金斯</p>
+<p>gene有自由，自主性，有超越性的力量，成为宇宙存在的目的。</p>
+<p>丹尼尔-丹尼特《意识的阐述》，meme，表情包。gene是生物学层面的，meme是认知的构造物，文化的方面怎么构造自己。生命游戏，自由进化论，有不变的图像。有一些meme比较有优势，吞噬了其他的meme。这些东西有自主性的吗？</p>
+<p>Ai， 迭代，希望有一天意识从中涌现出来。</p>
+<p>什么样的表情包会获得胜利，流传起来呢？还是被某种更高级的机制控制的？</p>
+<p>不成熟，死理性，自由竞争的维度。</p>
+<h4 id="1133-认知自我主义-Cognitive-Egoism"><a href="#1133-认知自我主义-Cognitive-Egoism" class="headerlink" title="1133 认知自我主义 Cognitive Egoism"></a>1133 认知自我主义 Cognitive Egoism</h4><p>1-1-3-中心 所有的意识建构活动中，最重要的是自我意识、</p>
+<p>eg：安东尼奥 dama西奥 </p>
+<p>原我要维护稳态自我意识，要有一个目的，作为第一人称的，符号性的自我，自传式的自我。维护一个平稳的状态。</p>
+<p>人的情绪最重要，比理性的算计重要，ration &gt; logic</p>
+<p>索罗斯，资本家，有个性。特立独行，违背市场逻辑，dama西奥粉丝。索罗斯深陷资本主义漩涡。</p>
+<p>一种高级的资产阶级意识形态消费品</p>
+<h4 id="1134-认知无我论-Cognitive-Anat！"><a href="#1134-认知无我论-Cognitive-Anat！" class="headerlink" title="1134 认知无我论 Cognitive Anat！"></a>1134 认知无我论 Cognitive Anat！</h4><p>1-1-3-虚无</p>
+<p>没有自我存在，研究太多认知主义，意识到必须通过自我意识才能研究意识，这样是失败的。</p>
+<p>真正的意识是研究框架，这个是透明的，你没法找到他的踪迹。我承认这些电化学过程是真实的，还是说都不存在，只有物理主义的存在。</p>
+<p>自我意识是一种一种幻觉，保留自我意识，还是保留他们产生的物理依据。我的自我不存在，只存在电化学机制。</p>
+<p>eg：梅清格尔 德国，欧陆哲学叛徒哈哈哈。意识是一个透明的东西，没法研究捏。一直坚持物理主义，只承认物理性的关系，然后他投靠了佛教。消解自我的同一性，过佛教徒的生活，不不要相信有什么中心。</p>
+<p>eg：乔布斯，正念！禅宗化的，佛教化的。爷不是资本家啦，无欲无求。科技资本家，知识资本家的后现代的人生态度，忽悠底层程序员，头发掉光直接出家？？？</p>
+<h3 id="114-行为主义-Behaviorism"><a href="#114-行为主义-Behaviorism" class="headerlink" title="114 行为主义 Behaviorism"></a>114 行为主义 Behaviorism</h3><p>1-1-虚无</p>
+<p>世界是个有序的整体；存在的本体性的东西，是秩序生成的客观的现实；人体验到的是虚无；心是一个混乱黑匣子，不用在意。</p>
+<p>eg：杨教主，圣伊丽莎白，电疗！约翰华生动物行为学杂志编辑。只看病人的行为就好啦，输入和输出。</p>
+<p>科学实在论对于人类的反噬，搞不好电你哦。</p>
+<h4 id="1114-操作行为主义-Operant-Behaviorism-极端行为主义"><a href="#1114-操作行为主义-Operant-Behaviorism-极端行为主义" class="headerlink" title="1114 操作行为主义 Operant Behaviorism 极端行为主义"></a>1114 操作行为主义 Operant Behaviorism 极端行为主义</h4><p>控制你的主动行为</p>
+<p>1-1（可以被操作的对象object）-4（黑箱子）-秩序（的自我循环，变量关系variable ralation）</p>
+<p>行为主义+操作主义 把行为主义的科学精神，极端化。</p>
+<p>eg: 斯金纳skinner 剥皮的 行为分两种，应答性的，操作性的行为oprate。没有自由，操作性的行为可以通过行为学心理学加以控制。斯金纳箱，放点耗子，自由活动，耗子有了操作性行为而不是研究应答性的行为，人的自由也是变量行为啊。</p>
+<p>赫尔</p>
+<p>中国，自以为自己在操作，其实你还是不自由的，快手抖音。你好像在自由的挑选，其实你早已被算法控制，武器，操作行为主义。</p>
+<h4 id="1142-目的行为主义-Purposive-Behaviorism"><a href="#1142-目的行为主义-Purposive-Behaviorism" class="headerlink" title="1142 目的行为主义 Purposive Behaviorism"></a>1142 目的行为主义 Purposive Behaviorism</h4><p>1-1-4-冲突</p>
+<p>分子性的行为molecular孤立的，摩尔式Molar的，宏观的行为。一摩尔，有10^23个分子。</p>
+<p>爱德华-托尔曼，新的科研形态，研究整体的心理学。可以做文学电影的分析。</p>
+<p>相亲平台，观察用户的行为，人好像有了整体的文化性的行为，其实还是分子行为的组合体</p>
+<h4 id="1143-应用行为分析-Applied-Behavior-Analysis-ABA"><a href="#1143-应用行为分析-Applied-Behavior-Analysis-ABA" class="headerlink" title="1143 应用行为分析 Applied Behavior Analysis ABA"></a>1143 应用行为分析 Applied Behavior Analysis ABA</h4><p>1-1-4-目的（行为改善）Behavior Improvement</p>
+<p>监狱的行为矫正，员工培训，自闭症孩子，addicter。</p>
+<p>不能说话，不敢反抗</p>
+<p>eg：组织行为管理杂志 背背佳</p>
+<h4 id="1144-社会行为主义-Social-Behaviorism"><a href="#1144-社会行为主义-Social-Behaviorism" class="headerlink" title="1144 社会行为主义 Social Behaviorism"></a>1144 社会行为主义 Social Behaviorism</h4><p>1-1-4（黑箱 社会行为）-虚无 符号性互动 Symbolic Interaction</p>
+<p>没有意义，代码空转哈哈哈。</p>
+<p>eg：美国社会心理的后现代化，米德《心灵，自我与社会》，社会到心理到符号学。庸俗的结构主义。类似1124</p>
+<p>eg：weibo 微信 朋友圈建构了社会认同，符号性的互动，决定了社会学的意义，而不是心灵，自我感受为基准点，没有目的没有确定性。</p>
+<p>4 解构主义 11 的下场，庸俗的后现代的，科学实在论的失败，真正的科学是突破</p>
+<h2 id="12-宗教实在论"><a href="#12-宗教实在论" class="headerlink" title="12 宗教实在论"></a>12 宗教实在论</h2><p>1 Cosmos（科学Universe）宇宙 ，一个由至高的东西主宰的</p>
+<p>2 存在：一种二分，the Being和存在者beings的冲突</p>
+<p>第一实体和派生的实体</p>
+<p>太一和杂多 （the Ones and the many）</p>
+<p>（科学的话，秩序和物质，物理法则和物理实体是同一种东西，秩序=实体，规律实现了自己成为了例子。）</p>
+<p>前现代，世界是分裂的，主奴的关系。</p>
+<p>eg：柏拉图，理念是完美的CAD，范式，没法在现实里尽善尽美。</p>
+<p>新柏拉图主义，庸俗化的曲解，主奴二分，神的世界派生出了世界，（原来只是图纸，没有生产力）。</p>
+<p>eg：教育活动，知识传道者和接收者，派生行的，前现代的教育，知识层面的主奴关系。</p>
+<h3 id="121-神创论-Creationism"><a href="#121-神创论-Creationism" class="headerlink" title="121 神创论 Creationism"></a>121 神创论 Creationism</h3><p>认为人类的灵魂，<strong>原教旨主义?</strong> 对手是达尔文</p>
+<p>场域：一种秩序。场域是宇宙，是自身的秩序</p>
+<p>本体论：对立，creater creature</p>
+<p>认识论：灵魂soul，神创造的。你的体验，灵魂是创造的。</p>
+<p>1-（1-1）-1</p>
+<p>难以反驳，不相信有能力skeptical，心里的痛苦仇恨都是上帝让他这么做的。</p>
+<p>eg：奥古斯汀《忏悔录》灵魂是谁创生的？7th day 耶和华歇了。-》灵魂是从世界演化出来的。</p>
+<p>creationism vs evolutionism</p>
+<p>《John 福音》</p>
+<p>杰罗姆认为，灵魂是父母创造的。不行啊，会推导出Christ，Maria有无基督性。</p>
+<p>是休息啦，也是在工作，但是是ctrlcv出来的，灵魂是copy的。制造的。Copism拷贝主义。</p>
+<p>eg：文化形象对应物，检讨书。超越性的力量，心灵通过忏悔和重新创造。</p>
+<h4 id="1211-自然神论-Deism"><a href="#1211-自然神论-Deism" class="headerlink" title="1211 自然神论 Deism"></a>1211 自然神论 Deism</h4><p>目的是循环，创造以后就自己运动了。上帝变成第一推动力。</p>
+<p>1-2（first cause和日常生活的因果）-1（<del>soul</del>/psyche）-1（自然法则natural law，不再干涉他）</p>
+<ul>
+<li><p>eg：赫拉克利特：Eros是first cause vs the causes and effects of beings</p>
+<p>因果网络，the causal order of beings </p>
+</li>
+<li><p>不再是soul，词根日耳曼saiwalo sea 神秘可怖 暴怒的上帝，灵魂的来源</p>
+<p>psyche 呼吸，温和。来自女神Psykhe，被Eros爱上，背叛Eros。为了赎罪，完成各种智力的游戏。</p>
+<p>有了呼吸，自反性，自己维持住了呼吸。</p>
+<blockquote>
+<p><strong>psyche</strong>  </p>
+<p>[Date: 1600-1700; Language:  Greek; Origin: <em>‘<strong>breath, life, soul,  mind</strong>‘</em>]<br>someone’s mind, or their deepest feelings, which control their  attitudes and behaviour<br>　
+        <span class="lazyload-img-span">
+        <img   
+           data-src="Ismism.assets/res_i_8CB0DC57.png" >
+        </span>
+      <em>Freud’s account of <strong>the human psyche</strong></em><br>　
+        <span class="lazyload-img-span">
+        <img   
+           data-src="Ismism.assets/res_i_8CB0DC57.png" >
+        </span>
+      <em>A characteristic of the feminine psyche is to seek approval  from others.</em></p>
+</blockquote>
+</li>
+</ul>
+<p>笑话，后面的事情由我们决定了，上帝你的工作已经完成了。</p>
+<p>近代科学，去人格化了上帝，从自然神论来的。上帝给他关起来，关起Eros，爱欲被束缚。</p>
+<p>笛卡尔，怀疑，他们最后解放了爱欲。古典科学到了现代科学。事物自己推动自己。量子力学，不需要一个universal的first cause。万事万物成local的self-cause。</p>
+<p>前现代的残余。</p>
+<p>eg：英国 赫尔伯特 牛顿。布尔乔亚兴起了，第三阶级，鼓吹原来的原来的生活习惯，宗教迷信。布尔乔亚没有政权，教育水平不高，瞎jb信超自然，神秘主义，反过来侵蚀贵族共同体。</p>
+<p>牛顿，觉得妖风震震，推荐你们接受1-2-1-1架空神权的这一套。第一推动力，开发自由贸易，现代经济秩序转起来，金钱可以干涉贵族和僧侣。牛顿在调和二者矛盾，叫宗教退出ontic实际存在的维度。</p>
+<p>eg：文化现象，第一推动，照骗。去宗教化，君主立宪。骗进来再说，头像，我本人没有这么好看~</p>
+<p>齐泽克 君主立宪 前现代的残余，对于资本主义是必须的，</p>
+<p>是第一推动。资本主义符号学，自己无法显现，必须设立意志的他者，对立面。现代资本主义，必须要寄生在前现代的残余上。纯的现代性是幻想（答网友13问）前现代的残余是一个不断生成的反动力量，必须维持资本主义，不然他要复辟。那种重复，庄严，无聊。从无法忍受的大典礼来到了酒吧喝。</p>
+<p>解开了理智的封印，科学主义异化了爱欲。</p>
+<h4 id="1212-神义论-Theo-dicism"><a href="#1212-神义论-Theo-dicism" class="headerlink" title="1212 神义论 Theo-dicism"></a>1212 神义论 Theo-dicism</h4><p>Theo神 正义</p>
+<p>认识 是soul了</p>
+<p>目的：theodicy 神义vs 罪恶evil</p>
+<p>为了给上帝创造的世界的恶，痛苦灾厄辩护，即使这样上帝是至善的</p>
+<p>eg：</p>
+<p><strong>普罗狄诺</strong> 恶是不存在的，是善的缺失，没有足够的善。不承认恶的本体论地位，人在认识论上是有限的，如果和上帝一样全知，就知道只有善存在了。</p>
+<p>鸵鸟辩护</p>
+<p>只要看远一点，就知道全是善意啦</p>
+<p><strong>奥古斯汀</strong>：善是运动的，从0到1，一个东西变得完满，实现其内在的理念。恶，反向的趋势。</p>
+<p><strong>恶的产生</strong>：</p>
+<ul>
+<li>万物本身是有限的，不是全在（满溢的），要变得完善，饥荒匮乏，神主导的秩序甩锅给万物</li>
+<li>人的认识有限，人不是全知的</li>
+<li>人的自由有堕落的可能，伦理上有恶的可能</li>
+<li>这不是上帝造成的吗？？？</li>
+</ul>
+<p>甩锅到有限性上去</p>
+<p><strong>爱任纽的辩护</strong>：恶是本体论上有意义的，是上帝的考验。要成为完满，人要救赎自己，-1到1。</p>
+<p>问题：上帝意志有恶的部分</p>
+<p><strong>莱布尼茨：</strong>《神义论》大棋党</p>
+<ul>
+<li><p>预定和谐 （自然神论plus） 万物都是上帝安排好，后面与我无关</p>
+</li>
+<li><p>充足理由律 （第一推动力plus） 一切都有原因，但是分两种：</p>
+<ul>
+<li>必然现象（直接推到第一推动力，世界毁灭、审判）</li>
+<li>偶然现象（推到宇宙中形而下的因果性网络，因果关系整体被第一推动力决定）</li>
+</ul>
+<p>恶是偶然的，被世间的因果网络隔开了，不<strong>直接</strong>归责于上帝咯</p>
+</li>
+<li><p>最好的世界 上帝自己有自由意志，在无数个更坏的世界里挑出来这个最好的。让一切都服从秩序，除了human。不是处于无能，而是出于大度，仁慈。让你有自由意志，即使会有罪恶，打开潘多拉的盒子，允许你有美好和自由，创造美好，归功上帝，罪恶怪你自己。</p>
+</li>
+</ul>
+<p>单子论，每个事务都是一个单子，但是有一个单子折射了于其他所有单子的关系。就是源代码库。</p>
+<p>上帝的角色成了源代码</p>
+<h5 id="上帝是啥"><a href="#上帝是啥" class="headerlink" title="上帝是啥"></a>上帝是啥</h5><p>普：暴君，恶不存在</p>
+<p>奥：昏君 甩锅</p>
+<p>爱：崇祯 用恶来考验臣民</p>
+<p>莱（贵族的雍容的姿态）：玩世不恭的木匠皇帝 无为而治。好的归他、坏的甩锅。浊世佳公子，世界是他的一个艺术品。坏的归鉴赏者本人。</p>
+<p>教士阶层用来抵御底层的反抗的，麻痹底层。迷惑贵族，谄媚之。</p>
+<p>前反思的</p>
+<p>eg：丘吉尔 Democracy是最不坏的制度。什么样的现实权力关系使得Democracy最好捏？当时的Capitalism的利益分配格局。扭曲利益分配格局，在这个残酷的恶的生产关系下，这个政治是好的，为什么不砸碎这现实的shit呢。</p>
+<p>eg：这已经是最好的了。。。爹妈话语。小孩好了归他，坏了归自己。妙。寻求第一推动，你不是我生的吗？</p>
+<h4 id="1213-一元论诺斯替主义-Monistic-Gnosticism"><a href="#1213-一元论诺斯替主义-Monistic-Gnosticism" class="headerlink" title="1213 一元论诺斯替主义 Monistic Gnosticism"></a>1213 一元论诺斯替主义 Monistic Gnosticism</h4><p>华伦蒂诺 Valentinus</p>
+<p>场域：Cosmos Bythos 华子的头头？ Prime Being 神话性的宇宙论，EVA，one narrative</p>
+<p> Bythos 创立了15个对立，作为至高存在的代言人，只有一个堕落，化生物质世界。</p>
+<p>本体论：裂开，Form Pleroma 灵知 vs Phenomena Kenoma</p>
+<p>认识：人类体验到的看作堕落的，我们把握的知识是虚假的。未反思？Sophia，智慧是堕落的原因。Sakla（古叙利亚语）愚蠢，信仰了符号学。</p>
+<p>目的：Theodicy vs Evil 被Gnosis灵知调和。人是最低世界中的最高贵者</p>
+<p>通过语言，Incarnation化生 前世，Sprite共同体的精神净化</p>
+<p>落选圣座，无法调和社会矛盾</p>
+<h5 id="三种人"><a href="#三种人" class="headerlink" title="三种人"></a>三种人</h5><p>spritial 祭祀 materrial 武士 商人、市民阶级 农民 Animal man savage所有的剩余 奴隶 贱民</p>
+<p>Thrinity 三分法=二分法+剩余（构成性利益之外，支持上层的神圣性，否定厌恶逃避、紧急一种误会。<strong>力比多焦虑</strong>）神圣性的本质是污秽，不可触碰，好像就干净了。甩出构成性意外来想象神圣。</p>
+<p>整合社会，悲惨的人在son得到认同，另一部分在爹这里认同</p>
+<p>甩锅的结构</p>
+<p>eg：最上面ok的，只是操作除了问题。最差和最好的。gnosis来调和矛盾</p>
+<h4 id="1214-模态位格一元论-Modelistic-Monarchianism"><a href="#1214-模态位格一元论-Modelistic-Monarchianism" class="headerlink" title="1214 模态位格一元论 Modelistic Monarchianism"></a>1214 模态位格一元论 Modelistic Monarchianism</h4><p>Sabellius Modolism <strong>形态主义</strong> 模式主义</p>
+<p>Creationism 华子创造整个世界</p>
+<p>位格Person 上帝有三个位格——<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/圣父">圣父</a>、圣子、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/圣灵">圣灵</a>。  三个位格的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/神性">神性</a>本质只有一个，就是上帝。 </p>
+<p>passion passive suffer</p>
+<p><strong>passion</strong>  </p>
+<p>Origin: <em>Late Latin</em> passio  <em>‘suffering’</em>, from <em>Latin</em> pati <strong><em>‘to suffer’</em></strong>]</p>
+<p>身居高位者（心不坏）微服私访，自己作的孽，到这个世界去体验一遍，回去做了调整，广洒甘露。</p>
+<p>大爹者只是闭塞视听</p>
+<h3 id="122-偶像崇拜-Idolism"><a href="#122-偶像崇拜-Idolism" class="headerlink" title="122 偶像崇拜 Idolism"></a>122 偶像崇拜 Idolism</h3><p><iframe src="//player.bilibili.com/player.html?aid=803377195&bvid=BV1py4y137ag&cid=349534637&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width = "100%"> </iframe><br>Idolatry</p>
+<p>-1场域：神话叙述下的世界</p>
+<p>-2本体论：神圣的力量和凡俗的力量</p>
+<p>-2认识论：体验的部分是神圣的，一部分是劣品</p>
+<p>至高存在为了赎罪，变成有限的存在，平凡的存在来受难。</p>
+<p>反过来，平凡的存在通过受苦，（陶的烧制）变成至高存在的符号性象征icon symbol，代表了人的符号学本质，共同体的力量。</p>
+<p>人本质是符号学动物，符号可以用来献祭。</p>
+<p>eg：<strong>埃斯库罗斯 《阿伽门农》悲剧</strong> 献祭的双重结构？</p>
+<p>父亲杀死女儿，姘头和妻子杀了丈夫，儿子弑母（姘头和妻子的儿子杀了兄长？哈哈哈循环了）</p>
+<p><strong>弑女：</strong>父亲和女儿的关系是can’t be  sexualized，为了某个神圣秩序可以献祭女儿，隐喻嫁出女儿，virginity的消逝。</p>
+<p><strong>弑母：</strong>母子共同体，母子乱伦隐喻。</p>
+<p><strong>诗性正义？</strong></p>
+<blockquote>
+<p><strong>《Poetic Justice: The Literary Imagination and Public Life 》</strong></p>
+<p> 玛莎·努斯鲍姆教授在本书中论证了小说等文学作品通过使人们对于异于自己的他者生活的体味与同情，扩展了那种有助于公共生活决策的想象力。本书传达的核心观念是，对于适当的公共话语和一个民主社会来说，文学想象是一个不可或缺的有机组成部分。作者特别强调了文学与人文教育对于公共生活和国家的重要性 </p>
+</blockquote>
+<p><strong>弑父：</strong>将符号学秩序，厌恶符号学，构成性例外。否认神圣权威。</p>
+<p>姘头和妻子为什么代表邪恶？丰产性。是谁能让这事情继续失衡。对于生育性的恐惧（会使得失衡继续下去），对之的自我阉割。</p>
+<p>偶像崇拜一开始是血脉崇拜，丰产性的崇拜（献祭生殖性的东西）。和神做交易（交易不是丰产的，可以停止无序，维护某种均衡）。</p>
+<p>处子崇拜。</p>
+<p>偶像崇拜人类特有的符号性活动，是进步性的了，符号性活动代替了想象性认同。敬畏、谄媚、交易算计，都拉开了符号学距离。</p>
+<p><strong>埃斯库罗斯《被缚的普罗米修斯》</strong></p>
+<p><strong>献祭</strong>：人类用一种无味的牺牲来对抗过剩，减法。</p>
+<p>火，献祭性的力量，会消耗东西。</p>
+<p>通过陶土、颜料、视觉符号、人格化，对创伤暴力命名，纳入符号学秩序，束缚住。是进步性的调和，有局限性，代表了创伤性。</p>
+<p>排斥力，排斥内在的不一致性。借由外部偶像的不可能性，神圣性，完美性，<strong>来和自己内在妄想保持距离。</strong></p>
+<p>献祭女儿，为了诗性正义弑母。</p>
+<p><strong>eg：追星女孩</strong></p>
+<p>女性是男性符号学体制的虚构，女性性没有标定，没有符号学告诉她主体性。投射了自我认同，选择现象级的符号，<strong>客体小a？构成性例外？</strong></p>
+<p>对称<strong>互补</strong>的符号性交易，偶像是完美的，那我是平凡的。</p>
+<h4 id="1221-传殖主义（说）-Traducianism"><a href="#1221-传殖主义（说）-Traducianism" class="headerlink" title="1221 传殖主义（说） Traducianism"></a>1221 传殖主义（说） Traducianism</h4><p>对比：121 creationism 隐含人的灵魂是直接被创造的 后面1234为了辩护</p>
+<p><strong>血脉崇拜</strong>，父系血脉代替大他者</p>
+<p>代表人物：<strong>德尔图良</strong></p>
+<p>Adam 阿达姆 和夏娃 第一批人类 creator</p>
+<p>传的是soul，原初的罪已经犯下 sinful life 出生前选择了堕落的存在，为什么我们都必要被拯救。</p>
+<p>有点自责的，原初暴力。血脉传承时候，<strong>伦理属性</strong>也在被传承？</p>
+<p>世界的不完美性（祖先的愤怒导致的），我的有限性，无限的恶的可能性（是我的血脉导致的），<strong>一种剩余</strong>？</p>
+<p>神圣性也被传承下来。</p>
+<p>血脉本身被看成有瑕疵，也被看成是崇高的。</p>
+<p>把庸俗的父权崇拜（前文化的）给意识形态化了。</p>
+<p>世代传承的sin，用曾经的祖先来僭代大他者。</p>
+<p>弑父，俄狄浦斯情结已经被包含。</p>
+<p>场域1：一个造世的神话叙事，（我是共工的后人，女娲，伏羲）连贯的叙述</p>
+<p>本体2：父精母血 创生性的力量vs凡俗的力量 派生性的存在（割肉啖母）</p>
+<p>认知2：Faiith vs Pagan</p>
+<p>Faith：主线任务唯一，克服存在主义危机，存在的唯一目的是广大门楣，翻身赎罪，发扬荣光</p>
+<p>有维持最小共同体生存的功能。在罗马，维系下层的功能。</p>
+<p>Pagan：没有主线任务的，目的论有张力的。会让人穷人迷失。</p>
+<blockquote>
+<p><strong>pagan</strong><br>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/26/Ismism/res_i_9DB12AFC.bmp" >
+        </span>
+       person who is not a believer in any of the world’s chief  religions, esp one who is neither a Christian, a Jew nor a Moslem 异教徒（尤指非基督教﹑  犹太教或回教教徒）. </p>
+</blockquote>
+<p><strong>孝</strong>：守三年，下一代有承接祖先生存意识的存在，不能服从大他者的意志（灾难）。家族，微观权力，人口再生产单元。</p>
+<p>目的1：Rule of Faith 对于Scripture的坚持，这里包含了一切真理。族规族谱。联系到某种共同体的原初想象。</p>
+<blockquote>
+<p><strong>scripture</strong>  </p>
+<p>[Date: 1300-1400; Language:  Latin; Origin: scriptura <em>‘<strong>something  written</strong>‘</em>, from scribere; <strong>SCRIBE</strong>]<br>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="file:///C:/Users/Lenovo/AppData/Local/Temp/Lingoes/Translator/lingoes-cn/dict/temp/D4722835273E184582F2D24696A738EA/res_i_95D5C9C1.png" >
+        </span>
+        <strong>Scripture</strong>[U] <em>also</em> <strong>the (Holy)  Scriptures</strong><br>the Bible<br>　
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/26/Ismism/res_i_8CB0DC57.png" >
+        </span>
+      <em>the way God is portrayed in Scripture</em><br>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="file:///C:/Users/Lenovo/AppData/Local/Temp/Lingoes/Translator/lingoes-cn/dict/temp/D4722835273E184582F2D24696A738EA/res_i_A33C7BD5.png" >
+        </span>
+       [U and C]<br>the holy books of a particular  religion<br>　
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2022/08/26/Ismism/res_i_8CB0DC57.png" >
+        </span>
+      <em>Hindu scriptures</em></p>
+</blockquote>
+<p>去性化的男性共同体生活，女性难以连接成共同体。</p>
+<p>曾国藩家书，前现代蛇皮哈哈哈</p>
+<p>目的不过是符号学的暴力！僵死。</p>
+<p>灵魂也是由祖先创造的，不行。对于小的部族，有一定粘结作用。body的结合能派生出灵魂。</p>
+<p><strong>借力打力</strong>：将自己的存在神秘化，回去找大他者！他们搞血脉崇拜，我搞宇宙崇拜。名臣大将。苏秦：我的舌头在不在？在就没事啦。</p>
+<p>高的搞来自共同体的强大底蕴，圣人崇拜，师承形态。</p>
+<p>不是由父母交配起来，孩子更多的受语用学习惯，精神意识由符号系统装配起来。</p>
+<p><strong>符号学阉割？</strong>加以阻断你的短路，否则你没法进入有梯度的符号学体系。</p>
+<p>可怖的圣体，刚过世的祖先。直面大他者，不一致性出现在方方面面，投射到我们接触的最多的父系上，投入爱欲来收束不一致性。</p>
+<h4 id="1222-部分主义-Partialism"><a href="#1222-部分主义-Partialism" class="headerlink" title="1222 部分主义 Partialism"></a>1222 部分主义 Partialism</h4><p>st. Partrick  神圣帕特里 </p>
+<p>将trnity比作shamrock三叶草</p>
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">读书</div>
+            <ul>
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2022/08/26/Ismism/" class="post-categoris-bottom-link">
+                  哲学 | Ismism
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/09/28/2022-09-28%20%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E8%8E%B1%E8%92%99%E6%89%98%E5%A4%AB/" class="post-categoris-bottom-link">
+                  文学 |（俄）莱蒙托夫
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/09/28/2022-09-28-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E8%BD%A6%E5%B0%94%E5%B0%BC%E9%9B%AA%E5%A4%AB%E6%96%AF%E5%9F%BA/" class="post-categoris-bottom-link">
+                  文学 |（俄）车尔尼雪夫斯基
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/10/10/2022-10-10-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E6%9E%9C%E6%88%88%E9%87%8C/" class="post-categoris-bottom-link">
+                  文学 |（俄）果戈里
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/10/14/2022-10-14%20%E6%96%87%E5%AD%A6%20%EF%BC%88%E4%BF%84%EF%BC%89%E5%B1%A0%E6%A0%BC%E6%B6%85%E5%A4%AB/" class="post-categoris-bottom-link">
+                  文学 |（俄）屠格涅夫
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/11/10/2022-11-10-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E5%88%97%E5%A4%AB-%E6%89%98%E5%B0%94%E6%96%AF%E6%B3%B0/" class="post-categoris-bottom-link">
+                  文学 |（俄）列夫-托尔斯泰
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/11/10/2022-11-10-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/" class="post-categoris-bottom-link">
+                  文学 |（俄）陀思妥耶夫斯基
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/12/03/2022-12-3-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E5%A5%91%E6%9F%AF%E5%A4%AB/" class="post-categoris-bottom-link">
+                  文学 |（俄）契诃夫
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/12/03/2022-12-3-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E9%AB%98%E5%B0%94%E5%9F%BA/" class="post-categoris-bottom-link">
+                  文学 |（俄）高尔基
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/12/03/2022-12-3-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E6%89%8E%E7%B1%B3%E4%BA%9A%E4%BA%AC/" class="post-categoris-bottom-link">
+                  文学 |（俄）扎米亚京
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/12/03/2022-12-3-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E5%B8%83%E5%B0%94%E5%8A%A0%E7%A7%91%E5%A4%AB/" class="post-categoris-bottom-link">
+                  文学 |（俄）布尔加科夫
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2022/12/03/2022-12-3-%E6%96%87%E5%AD%A6%EF%BC%88%E4%BF%84%EF%BC%89%E5%B8%95%E4%B9%8C%E6%96%AF%E6%89%98%E5%A4%AB%E6%96%AF%E5%9F%BA/" class="post-categoris-bottom-link">
+                  文学 |（俄）帕乌斯托夫斯基
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2025/12/31/%E5%B9%B4%E5%BA%A6%E4%B9%A6%E5%8D%95/" class="post-categoris-bottom-link">
+                  书单 | 2022-2025年度
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#1"><span class="space-toc-text">1</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#11-%E7%A7%91%E5%AD%A6%E5%AE%9E%E5%9C%A8%E8%AE%BA"><span class="space-toc-text">11 科学实在论</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#113-%E8%AE%A4%E7%9F%A5%E4%B8%BB%E4%B9%89-Cognitrism"><span class="space-toc-text">113 认知主义 Cognitrism</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#114-%E8%A1%8C%E4%B8%BA%E4%B8%BB%E4%B9%89-Behaviorism"><span class="space-toc-text">114 行为主义 Behaviorism</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#12-%E5%AE%97%E6%95%99%E5%AE%9E%E5%9C%A8%E8%AE%BA"><span class="space-toc-text">12 宗教实在论</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#121-%E7%A5%9E%E5%88%9B%E8%AE%BA-Creationism"><span class="space-toc-text">121 神创论 Creationism</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#122-%E5%81%B6%E5%83%8F%E5%B4%87%E6%8B%9C-Idolism"><span class="space-toc-text">122 偶像崇拜 Idolism</span></a></li></ol></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "6yQDH0ht1DDGme31rowgRuFn-9Nh9j0Va",
+        app_key: "koc9LbBKjbamjlPmoR1NxL2N",
+        placeholder: "来唠嗑~",
+        avatar:"robohash",
+    });
+</script>
+
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated animate__fadeInUp">
+    <div class="footer-inner">
+        <div class="footer-text">
+            <p>Copyright @ <a href="">WangShan</a> Welcome to hell~</p>
+
+        </div>
+
+        <div class="busuanzi-counter">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" class="footer-text">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                
+                    <span>本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+                  
+                  
+            </span>
+        </div>
+
+        <div class="footer-contact">
+            <ul class="footer-ul">
+                
+                    <li class="footer-li">
+                        <a href="https://github.com/Shannju" target="_blank">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="mailto:Wangshan9102@163.com" target="_blank">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="https://space.bilibili.com/17387202" target="_blank">
+                            <i class="ri-bilibili-line"></i>
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

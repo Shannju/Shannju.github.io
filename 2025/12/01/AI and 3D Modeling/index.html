@@ -1,0 +1,728 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 解决载入外链限制的问题 -->
+  <meta name="referrer" content="no-referrer" />
+  <title>  AI and 3D Modeling |    Blog of Shan</title>
+  <meta name="description" content="Daydreamer.">
+  <!-- 标签页图标 -->
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Shannju/Picture/Ico/hanaku.ico" type="image/x-icon">
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+  <!-- 网站置灰,做成可配置的文件 -->
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Blog of Shan
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/about" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              ABOUT
+            </li>
+          </a>
+        
+          <a href="/art/index.html" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              Art
+            </li>
+          </a>
+        
+
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             Categories
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
+             </div>
+          </li>
+        
+        
+        
+        <a href="/search">
+          <li class="menu-li  animate__animated  animate__fadeInUp">
+            <i class="ri-search-line"></i>
+          </li>
+        </a>
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Blog of Shan
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/about" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>ABOUT</span>
+      </div>
+    </a>
+  
+    <a href="/art/index.html" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>Art</span>
+      </div>
+    </a>
+  
+  
+    <a href="/search">  
+      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
+        <i class="ri-search-line"></i>
+      </div>
+    </a>
+    
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">AI and 3D Modeling</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">12月 01 2025</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="AI与建模-AI-and-3D-Modeling"><a href="#AI与建模-AI-and-3D-Modeling" class="headerlink" title="AI与建模 | AI and 3D Modeling"></a>AI与建模 | AI and 3D Modeling</h1><p>在2025年学习建模，不可避免的问题就是AI。如果我将这次完全只做传统建模，未免有些浪费。我花时间在这方面做了思考，并且和ChatGPT讨论了这个问题，以下是一些心得。<br>Learning 3D modeling in 2025 inevitably involves addressing AI. It would be a waste of opportunity to focus solely on traditional modeling. I have spent time reflecting on this and discussed the topic with ChatGPT; here are some of my insights.</p>
+<p>我个人的判断是，当下的3D建模AI还停留在软表面+贴图生成，对于硬表面建模辅助有限。这可以类比图片生成的模型：LLM接触的都是渲染后的效果图，自然不能生成渲染前的建模文件。<br>My personal assessment is that current 3D modeling AI is still limited to soft-surface and texture generation, providing limited assistance for hard-surface modeling. This is analogous to image generation models: LLMs are trained on rendered final images, so they naturally cannot generate the underlying modeling source files.</p>
+<hr>
+<blockquote>
+<p><strong>我 (Me):</strong> 对于传统3D建模，AI 可以在什么方向补充？<br>For traditional 3D modeling, in what areas can AI provide support?</p>
+<p><strong>GPT:</strong> AI 可以在 <strong>不改变传统 3D 建模本质（建模师的结构判断 + 审美 + 拆解能力）</strong> 的前提下，成为强大的“增能工具”。 它主要补在 <strong>繁琐、重复、低产出、流程阻塞</strong> 的部分，而不取代创作性。<br>AI can serve as a powerful “enhancer” without changing the essence of traditional 3D modeling (the modeler’s structural judgment, aesthetics, and deconstruction skills). It mainly addresses <strong>tedious, repetitive, low-output, and workflow-bottleneck</strong> stages, rather than replacing creativity.</p>
+</blockquote>
+<hr>
+<h3 id="⭐-AI-在传统-3D-建模里的-8-个关键方向"><a href="#⭐-AI-在传统-3D-建模里的-8-个关键方向" class="headerlink" title="⭐ AI 在传统 3D 建模里的 8 个关键方向"></a>⭐ AI 在传统 3D 建模里的 8 个关键方向</h3><h3 id="8-Key-Directions-for-AI-in-Traditional-3D-Modeling"><a href="#8-Key-Directions-for-AI-in-Traditional-3D-Modeling" class="headerlink" title="8 Key Directions for AI in Traditional 3D Modeling"></a>8 Key Directions for AI in Traditional 3D Modeling</h3><h4 id="1-参考图生成-设计辅助-Reference-Generation-amp-Design-Assistance"><a href="#1-参考图生成-设计辅助-Reference-Generation-amp-Design-Assistance" class="headerlink" title="1. 参考图生成 / 设计辅助 | Reference Generation &amp; Design Assistance"></a><strong>1. 参考图生成 / 设计辅助 | Reference Generation &amp; Design Assistance</strong></h4><p>AI 可以帮你解决：缺少合适的设计参考；寻找素材耗时。<br>AI helps solve: lack of design references and time-consuming asset searches.</p>
+<ul>
+<li><strong>Stable Diffusion / Midjourney</strong> → 快速出风格、材质、构型 (Quickly generate styles, materials, and forms)</li>
+<li><strong>生成 turn-around</strong> (Generate multi-view/turn-around references)</li>
+<li><strong>生成贴图参考</strong> (Generate texture references like skin, fabric, or metal wear)</li>
+</ul>
+<p>🔹 <strong>对建模师最大帮助：找参考从 2 小时 → 10 分钟。</strong><br>🔹 <strong>Biggest Benefit:</strong> Reducing reference hunting from 2 hours to 10 minutes.</p>
+<blockquote>
+<p><strong>心得：</strong> 这主要适合设计阶段，从预制展示交流的高保真渲染到美术概念的三视图，使用图片生成的功能就可以完成想法的沟通。AI生成的三视图能不能用？存疑。<br><strong>Insight:</strong> This is mainly suitable for the design phase. From high-fidelity renders for communication to conceptual orthographic views, image generation can facilitate idea sharing. However, whether AI-generated orthographic views are truly usable remains questionable.</p>
+</blockquote>
+<hr>
+<h4 id="2-阴影图-轮廓图-分解图生成-Shadow-Silhouette-amp-Exploded-View-Generation"><a href="#2-阴影图-轮廓图-分解图生成-Shadow-Silhouette-amp-Exploded-View-Generation" class="headerlink" title="2. 阴影图 / 轮廓图 / 分解图生成 | Shadow, Silhouette &amp; Exploded View Generation"></a><strong>2. 阴影图 / 轮廓图 / 分解图生成 | Shadow, Silhouette &amp; Exploded View Generation</strong></h4><p>AI 可以将复杂的参考图自动转换：<br>AI can automatically transform complex reference images:</p>
+<ul>
+<li><strong>轮廓 (Silhouettes)</strong> → 清晰边界，用于蓝图建模 (Clear boundaries for blueprint modeling)</li>
+<li><strong>色块 (Color Blocks)</strong> → 区域拆分，便于拓扑规划 (Area segmentation for topology planning)</li>
+<li><strong>高光/阴影提取 (Highlight/Shadow Extraction)</strong> → 结构定位 (Structural positioning)</li>
+<li><strong>多视角推断</strong> (Multi-view inference to improve modeling accuracy)</li>
+</ul>
+<p>🔹 <strong>对建模师最大帮助：快速读懂参考结构，减少试错。</strong><br>🔹 <strong>Biggest Benefit:</strong> Quickly understanding reference structures and reducing trial and error.</p>
+<blockquote>
+<p><strong>心得：</strong> 如上文，我认为这更属于 CV（计算机视觉）处理的范围，有了 LLM，让没机会用 CV 的人也可以接触到。<br><strong>Insight:</strong> As mentioned above, I believe this falls more under Computer Vision (CV) processing. LLMs allow those who wouldn’t normally use CV tools to access these capabilities.</p>
+</blockquote>
+<hr>
+<h4 id="3-AI-驱动的自动拓扑-重拓扑-AI-Driven-Auto-Retopology"><a href="#3-AI-驱动的自动拓扑-重拓扑-AI-Driven-Auto-Retopology" class="headerlink" title="3. AI 驱动的自动拓扑 / 重拓扑 | AI-Driven Auto-Retopology"></a><strong>3. AI 驱动的自动拓扑 / 重拓扑 | AI-Driven Auto-Retopology</strong></h4><p>现在已有 AI 重拓扑工具：<br>Existing AI retopology tools:</p>
+<ul>
+<li><strong>ZBrush ZRemesher</strong> (内置智能拓扑 / Built-in smart topology)</li>
+<li><strong>Blender + Quad Remesher</strong></li>
+<li><strong>instant-meshes + AI 辅助</strong> (AI-assisted instant-meshes)</li>
+<li><strong>AutoTopo、AIQuad</strong> (正在变成插件的研究原型 / Research prototypes becoming plugins)</li>
+</ul>
+<p>🔹 <strong>最大帮助：从半天的手动 retopo → 10 分钟自动草稿，然后建模师再精修即可。</strong><br>🔹 <strong>Biggest Benefit:</strong> From half a day of manual retopology to a 10-minute auto-draft, which the modeler then refines.</p>
+<blockquote>
+<p><strong>心得：</strong> 这次使用 Blender 的 SmartUV，没想到已经带了 AI 重拓扑。说实话这个很惊讶到。<br><strong>Insight:</strong> I used Blender’s SmartUV this time and was surprised to find it already incorporates AI retopology. Honestly, it was quite impressive.</p>
+</blockquote>
+<hr>
+<h4 id="4-智能-UV-展开-Smart-UV-Unwrapping"><a href="#4-智能-UV-展开-Smart-UV-Unwrapping" class="headerlink" title="4. 智能 UV 展开 | Smart UV Unwrapping"></a><strong>4. 智能 UV 展开 | Smart UV Unwrapping</strong></h4><p>AI 可以学习最佳切线方式，避免：<br>AI learns optimal seam placement to avoid:</p>
+<ul>
+<li><strong>拉伸 (Stretching)</strong></li>
+<li><strong>重叠 (Overlapping)</strong></li>
+<li><strong>不合理拼接 (Illogical seams)</strong></li>
+</ul>
+<p>例如：<strong>RizomUV</strong> 的智能算法，以及 <strong>Blender Smart UV Project</strong> 正在加入的学习数据。<br>Examples include RizomUV’s smart algorithms and Blender’s Smart UV Project, which is integrating learning data.</p>
+<p>🔹 <strong>价值：UV 从痛苦的手工 → 半自动化。</strong><br>🔹 <strong>Value:</strong> Turning the painful manual UV process into a semi-automated one.</p>
+<hr>
+<h4 id="5-贴图生成-材质辅助-Texture-Generation-amp-Material-Assistance"><a href="#5-贴图生成-材质辅助-Texture-Generation-amp-Material-Assistance" class="headerlink" title="5. 贴图生成 / 材质辅助 | Texture Generation &amp; Material Assistance"></a><strong>5. 贴图生成 / 材质辅助 | Texture Generation &amp; Material Assistance</strong></h4><p>AI 在纹理方面成熟度很高：<br>AI maturity in texturing/materials is very high:</p>
+<ul>
+<li><strong>Adobe Substance AI Generator / ArmorPaint AI / AI PBR pack generator</strong></li>
+<li><strong>自动生成 (Auto-generate):</strong> BaseColor, Normal, Roughness, Metallic, Height, AO.</li>
+<li><strong>纹理缝合、统一色调</strong> (Texture stitching and tone unification)</li>
+</ul>
+<p>🔹 <strong>价值：让建模师不用自己画所有贴图 → 专注细节美术。</strong><br>🔹 <strong>Value:</strong> Allowing modelers to focus on artistic detail rather than painting every texture from scratch.</p>
+<hr>
+<h4 id="6-3D-扫描-→-AI-清理-补全-3D-Scan-Cleanup-amp-Completion"><a href="#6-3D-扫描-→-AI-清理-补全-3D-Scan-Cleanup-amp-Completion" class="headerlink" title="6. 3D 扫描 → AI 清理/补全 | 3D Scan Cleanup &amp; Completion"></a><strong>6. 3D 扫描 → AI 清理/补全 | 3D Scan Cleanup &amp; Completion</strong></h4><p>适合场景资产、布料、自然元素、角色基础模型：<br>Suitable for environment assets, fabric, natural elements, and base character models:</p>
+<ul>
+<li><strong>去噪、修洞、补面</strong> (Denoising, hole filling, and surface patching)</li>
+<li><strong>快速规整拓扑</strong> (Rapid topology regularization)</li>
+<li><strong>Gaussian Splatting 系列</strong> (AI 3D 重建 / AI 3D reconstruction)</li>
+</ul>
+<p>🔹 <strong>价值：降低做真实道具/自然场景的成本。</strong><br>🔹 <strong>Value:</strong> Lowering the cost of creating realistic props and natural scenes.</p>
+<blockquote>
+<p><strong>心得：</strong> 这个我觉得可以应用到像素风格渲染上。先建立简单的 3D 草模，再经过像素渲染器，既可以保留精细的效果，又可以去掉其 3D 边缘，从而达到风格化的效果。<br><strong>Insight:</strong> I think this can be applied to pixel-art rendering. By creating simple 3D blockouts and passing them through a pixel renderer, one can retain detailed effects while removing 3D edges to achieve a stylized look.</p>
+</blockquote>
+<hr>
+<h4 id="7-Prompt-→-粗模-Prompt-to-Blockout"><a href="#7-Prompt-→-粗模-Prompt-to-Blockout" class="headerlink" title="7. Prompt → 粗模 | Prompt to Blockout"></a><strong>7. Prompt → 粗模 | Prompt to Blockout</strong></h4><p>注意：<strong>AI 只能生成“草模/块体”，不适合直接用在项目</strong>。<br>Note: AI is currently only suitable for “blockouts/whiteboxes” and not for direct project use.</p>
+<ul>
+<li><strong>代表工具 (Tools):</strong> OpenAI Shap-E, 3DTopia, Tripo, Luma “Genie”.</li>
+<li><strong>用途:</strong> 作为 Blockout、灵感快试、早期关卡填充。</li>
+<li><strong>Use Cases:</strong> Blockouts, rapid inspiration testing, early-stage level filling.</li>
+</ul>
+<p>🔹 <strong>价值：自动生成基础模型，建模师负责清修与细化。</strong><br>🔹 <strong>Value:</strong> Automated base models; the modeler is responsible for cleanup and detailing.</p>
+<hr>
+<h4 id="8-AI-动态-LOD-优化-AI-Dynamic-LOD-amp-Optimization"><a href="#8-AI-动态-LOD-优化-AI-Dynamic-LOD-amp-Optimization" class="headerlink" title="8. AI 动态 LOD / 优化 | AI Dynamic LOD &amp; Optimization"></a><strong>8. AI 动态 LOD / 优化 | AI Dynamic LOD &amp; Optimization</strong></h4><p>用于游戏或 VR 场景：<br>Used for gaming or VR scenarios:</p>
+<ul>
+<li><strong>自动生成 LOD1/LOD2/LOD3</strong> (Auto-generation of LODs)</li>
+<li><strong>自动烘焙贴图</strong> (Auto-baking maps: normal, ambient occlusion)</li>
+<li><strong>多边形数优化与自动合批</strong> (Polygon count optimization and auto-batching)</li>
+</ul>
+<p>🔹 <strong>价值：将原本枯燥、易出错且配置敏感的流程自动化。</strong><br>🔹 <strong>Value:</strong> Automating processes that were previously tedious, error-prone, and configuration-sensitive.</p>
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Model</div>
+            <ul>
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2025/12/01/AI%20and%203D%20Modeling/" class="post-categoris-bottom-link">
+                  AI and 3D Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/" class="post-categoris-bottom-link">
+                  Fufu建模与动画1-项目背景
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%20Modeling-&amp;-Animation-2%E3%80%91Pre-production/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画2】前期准备｜从 AI 三视图开始
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu-Modeling-&amp;-Animation-3%E3%80%91Modeling/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 3】Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画3】建模
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-4%E3%80%91Rigging-and-Weight-Painting/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 4】Rigging and Weight Painting
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画4】骨骼绑定与权重
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-5%E3%80%91Clothing/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 5】Clothing
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画5】衣服
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu-Modeling-&amp;-Animation-6%E3%80%91Materials-and-Rendering/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 6】Materials and Rendering
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB6%E3%80%91%E6%9D%90%E8%B4%A8%E4%B8%8E%E6%B8%B2%E6%9F%93/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画6】材质与渲染
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#%E2%AD%90-AI-%E5%9C%A8%E4%BC%A0%E7%BB%9F-3D-%E5%BB%BA%E6%A8%A1%E9%87%8C%E7%9A%84-8-%E4%B8%AA%E5%85%B3%E9%94%AE%E6%96%B9%E5%90%91"><span class="space-toc-text">⭐ AI 在传统 3D 建模里的 8 个关键方向</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#8-Key-Directions-for-AI-in-Traditional-3D-Modeling"><span class="space-toc-text">8 Key Directions for AI in Traditional 3D Modeling</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "6yQDH0ht1DDGme31rowgRuFn-9Nh9j0Va",
+        app_key: "koc9LbBKjbamjlPmoR1NxL2N",
+        placeholder: "来唠嗑~",
+        avatar:"robohash",
+    });
+</script>
+
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated animate__fadeInUp">
+    <div class="footer-inner">
+        <div class="footer-text">
+            <p>Copyright @ <a href="">WangShan</a> Welcome to hell~</p>
+
+        </div>
+
+        <div class="busuanzi-counter">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" class="footer-text">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                
+                    <span>本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+                  
+                  
+            </span>
+        </div>
+
+        <div class="footer-contact">
+            <ul class="footer-ul">
+                
+                    <li class="footer-li">
+                        <a href="https://github.com/Shannju" target="_blank">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="mailto:Wangshan9102@163.com" target="_blank">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="https://space.bilibili.com/17387202" target="_blank">
+                            <i class="ri-bilibili-line"></i>
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

@@ -1,0 +1,758 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 解决载入外链限制的问题 -->
+  <meta name="referrer" content="no-referrer" />
+  <title>  【Fufu Modeling &amp; Animation 3】Modeling |    Blog of Shan</title>
+  <meta name="description" content="Daydreamer.">
+  <!-- 标签页图标 -->
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Shannju/Picture/Ico/hanaku.ico" type="image/x-icon">
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+  <!-- 网站置灰,做成可配置的文件 -->
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          Blog of Shan
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/about" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              ABOUT
+            </li>
+          </a>
+        
+          <a href="/art/index.html" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              Art
+            </li>
+          </a>
+        
+
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             Categories
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Debug/">Debug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Model/">Model</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E4%BD%9C/">合作</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A3%B0%E6%B3%A2/">声波</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BD%B1%E8%AF%84/">影评</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%97/">诗</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/">随想</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%83%B3/%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB/">二级分类</a><span class="category-list-count">1</span></li></ul></li></ul>
+             </div>
+          </li>
+        
+        
+        
+        <a href="/search">
+          <li class="menu-li  animate__animated  animate__fadeInUp">
+            <i class="ri-search-line"></i>
+          </li>
+        </a>
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        Blog of Shan
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/about" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>ABOUT</span>
+      </div>
+    </a>
+  
+    <a href="/art/index.html" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>Art</span>
+      </div>
+    </a>
+  
+  
+    <a href="/search">  
+      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
+        <i class="ri-search-line"></i>
+      </div>
+    </a>
+    
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">【Fufu Modeling &amp; Animation 3】Modeling</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">1月 14 2026</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <p>Modeling in Blender is actually quite simple. Let’s take a look together.</p>
+<p>As the saying goes, “everything starts from a cube.”<br>First, press <strong>Shift + A</strong> to add a cube. Then press <strong>Ctrl + 1</strong> to add one level of subdivision, and apply the modifier. This gives us a quad-based sphere.</p>
+<p>By adjusting the surrounding vertices, we can quickly get a basic head shape.</p>
+<p>The head is usually divided into “three sections.” At the moment, we only have the upper and lower parts,<br>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_00_34_04.Still005-1769737177573.png" >
+        </span>
+      <br>so we can select the middle edge loop and press <strong>Ctrl + B</strong> to bevel it. This creates the three-section structure of the head.</p>
+<p>Next, add another subdivision and apply it.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_00_31_07.Still004-1769737179664.png" >
+        </span>
+      
+<p><strong>Small tip: Mirror Modifier</strong></p>
+<p>To make editing easier, switch to X-ray mode, select the vertices on the left half, and delete them. Then add a <strong>Mirror Modifier</strong> and enable “Show in Edit Mode.”</p>
+<p>This way, since the model is symmetrical, you only need to edit one side and the other side will be mirrored automatically.</p>
+<p>Go back to Object Mode, press <strong>Ctrl + 2</strong> to add two levels of subdivision, and right-click to choose <strong>Shade Smooth</strong>. The head will now look much smoother.</p>
+<p>Make some small adjustments to make the shape cuter. At this point, the overall head shape is basically done.</p>
+<p>I left the eyes for later—they’re the finishing touch, after all. I originally planned to use textures for facial expressions, but unfortunately I wasn’t able to make that work in the end.</p>
+<p>Add the hair.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_12_14.Still009-1769737181908.png" >
+        </span>
+      
+<p>And twin ponytails made with curves!</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_27_14.Still011-1769737183963.png" >
+        </span>
+      
+<hr>
+<h2 id="Body"><a href="#Body" class="headerlink" title="Body"></a>Body</h2><p>Press <strong>Tab</strong> to enter Edit Mode. Select the middle edge loop and press <strong>Ctrl + B</strong> to bevel it, dividing the body into upper, middle, and lower sections.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_30_04.Still013-1769737185273.png" >
+        </span>
+      
+<p>Adjust the scale and move it slightly upward so the three sections are more evenly distributed.</p>
+<p>At the moment, the body looks a bit short, so scale it vertically to make it taller.</p>
+<p>Then switch to the right view and push it slightly forward to roughly shape the back.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_31_00.Still014-1769737187021.png" >
+        </span>
+      
+<p>Next, add more geometry: press <strong>Ctrl + 1</strong> to add a subdivision and apply it. This gives you more room to refine the shape.</p>
+<hr>
+<h3 id="Arms-and-A-Pose"><a href="#Arms-and-A-Pose" class="headerlink" title="Arms and A-Pose"></a>Arms and A-Pose</h3><p>Now let’s make the arms. Enter Edit Mode and find the four faces where the arms connect to the body. Right-click and choose the “Circle” option in the Loop tools (from the Loop add-on).</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_32_00.Still015-1769655907074-1769737188633.png" >
+        </span>
+      
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_32_10.Still016-1769737190246.png" >
+        </span>
+      
+<p>After extruding the arms, adjust the armpit area.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_34_11.Still018-1769737194801.png" >
+        </span>
+      
+<p>Add a <strong>Mirror Modifier</strong> and enable “Clipping / Merge” to reduce issues when editing along the center line.</p>
+<hr>
+<h3 id="Legs-and-Feet"><a href="#Legs-and-Feet" class="headerlink" title="Legs and Feet"></a>Legs and Feet</h3><p>Next, move on to the legs. The process is similar. First, find the faces where the legs connect to the body. Be careful not to use the two faces next to the center line, or the legs may end up fused together.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_37_07.Still020-1769737196292.png" >
+        </span>
+      
+<p>Select the four faces and press <strong>E</strong> to extrude downward, then adjust the shape so the legs naturally hang down.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_37_13.Still021-1769737197815.png" >
+        </span>
+      
+<p>If the extrusion tilts, you can straighten it by scaling to zero along a specific axis.</p>
+<p>For the leg shape, you can keep it simple and make it rounder.</p>
+<p>Then move on to the feet: at the ankle, add a loop cut with <strong>Ctrl + R</strong>, then press <strong>E</strong> to extrude the foot. Add a few more loop cuts at the bottom to adjust the thickness and shape of the sole. Check the proportions from both the side and the front.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_40_05.Still022-1769737199509.png" >
+        </span>
+      
+<p>Add enough subdivisions to support the shape.</p>
+<p>The neck is also very simple: select the faces above the shoulders,</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_45_00.Still023.png" >
+        </span>
+      
+<p>press <strong>E</strong> to extrude, then <strong>S</strong> to scale, and <strong>G</strong> to move it slightly backward.</p>
+<p>At this point, the body is basically finished.</p>
+
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2026/01/14/%E3%80%90Fufu-Modeling-&-Animation-3%E3%80%91Modeling/meeting_01.00_01_49_09.Still025-1769737200959.png" >
+        </span>
+      
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Model</div>
+            <ul>
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2025/12/01/AI%20and%203D%20Modeling/" class="post-categoris-bottom-link">
+                  AI and 3D Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/12/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB1%E3%80%91%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF/" class="post-categoris-bottom-link">
+                  Fufu建模与动画1-项目背景
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%20Modeling-&amp;-Animation-2%E3%80%91Pre-production/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 2】Pre-production｜Starting with AI Orthographic Views
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/13/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB2%E3%80%91%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BD%9C%E4%BB%8E%20AI%20%E4%B8%89%E8%A7%86%E5%9B%BE%E5%BC%80%E5%A7%8B/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画2】前期准备｜从 AI 三视图开始
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu-Modeling-&amp;-Animation-3%E3%80%91Modeling/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 3】Modeling
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/14/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB3%E3%80%91%E5%BB%BA%E6%A8%A1/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画3】建模
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-4%E3%80%91Rigging-and-Weight-Painting/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 4】Rigging and Weight Painting
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB4%E3%80%91%E9%AA%A8%E9%AA%BC%E7%BB%91%E5%AE%9A%E4%B8%8E%E6%9D%83%E9%87%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画4】骨骼绑定与权重
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu-Modeling-&amp;-Animation-5%E3%80%91Clothing/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 5】Clothing
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/16/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB5%E3%80%91%E8%A1%A3%E6%9C%8D/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画5】衣服
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu-Modeling-&amp;-Animation-6%E3%80%91Materials-and-Rendering/" class="post-categoris-bottom-link">
+                  【Fufu Modeling &amp; Animation 6】Materials and Rendering
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2026/01/17/%E3%80%90Fufu%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB6%E3%80%91%E6%9D%90%E8%B4%A8%E4%B8%8E%E6%B8%B2%E6%9F%93/" class="post-categoris-bottom-link">
+                  【Fufu建模与动画6】材质与渲染
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Body"><span class="space-toc-text">Body</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Arms-and-A-Pose"><span class="space-toc-text">Arms and A-Pose</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Legs-and-Feet"><span class="space-toc-text">Legs and Feet</span></a></li></ol></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "6yQDH0ht1DDGme31rowgRuFn-9Nh9j0Va",
+        app_key: "koc9LbBKjbamjlPmoR1NxL2N",
+        placeholder: "来唠嗑~",
+        avatar:"robohash",
+    });
+</script>
+
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated animate__fadeInUp">
+    <div class="footer-inner">
+        <div class="footer-text">
+            <p>Copyright @ <a href="">WangShan</a> Welcome to hell~</p>
+
+        </div>
+
+        <div class="busuanzi-counter">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv" class="footer-text">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                
+                    <span>本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+                  
+                  
+            </span>
+        </div>
+
+        <div class="footer-contact">
+            <ul class="footer-ul">
+                
+                    <li class="footer-li">
+                        <a href="https://github.com/Shannju" target="_blank">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="mailto:Wangshan9102@163.com" target="_blank">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="footer-li">
+                        <a href="https://space.bilibili.com/17387202" target="_blank">
+                            <i class="ri-bilibili-line"></i>
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
+</html>

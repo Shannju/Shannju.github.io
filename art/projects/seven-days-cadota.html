@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Days in Cad'ota | Xinjiang Niya Ruins Immersive Exhibition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入字体 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --card: #0d0d0d;
+            --border: #1a1a1a;
+            --text-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mono {
+            font-family: var(--text-mono);
+            font-size: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* 项目媒体样式 */
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+
+        .project-media video {
+            background: var(--card);
+        }
+    </style>
+
+</head>
+
+<body class="min-h-screen p-12">
+
+    <!-- 返回链接 -->
+    <div class="mb-16">
+        <a href="../index.html"
+            class="mono text-zinc-500 hover:text-white transition text-sm uppercase tracking-widest">
+            ← Back to Works
+        </a>
+    </div>
+
+    <!-- 项目内容 -->
+    <div class="max-w-6xl mx-auto space-y-24">
+
+        <!-- 项目标题和基本信息 -->
+        <section>
+            <header class="mb-12">
+                <span class="mono text-zinc-600">PROJECT_DETAIL</span>
+                <h1 class="text-4xl font-light mt-4 mb-2">Seven Days in Cad'ota</h1>
+                <p class="mono text-zinc-400 text-lg">Xinjiang Niya Ruins Immersive Exhibition</p>
+            </header>
+
+            <!-- 项目信息卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Role</h3>
+                    <p class="text-zinc-300">Technical Team / Unity Programming / Hardware Integration</p>
+                </div>
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Technology</h3>
+                    <p class="text-zinc-300">Unity, Laser-tracking, Laser Mapping</p>
+                </div>
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Timeline</h3>
+                    <p class="text-zinc-300">2025.07</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要媒体展示 -->
+
+        <!-- 详情图片网格 -->
+        <div class="grid project-grid grid-cols-2 gap-8 mb-16">
+            <img src="../assets/images/7-detail-1.jpg" alt="Project detail 1">
+            <img src="../assets/images/7-detail-4.jpg" alt="Project detail 2">
+            
+        </div>
+        <!-- 项目描述 -->
+        <article class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-2xl mb-8 mono text-zinc-300 uppercase tracking-widest">// Project Overview</h2>
+            <p class="text-zinc-400 leading-relaxed text-xl italic mb-4 mono">2025.07</p>
+            <p class="text-zinc-300 leading-relaxed text-xl mb-6"><strong>"Seven Days in Cad'ota: Xinjiang Niya Ruins
+                    Immersive Exhibition"</strong> — An archaeological survey of the "Pompeii of the East" through
+                digital excavation.</p>
+            <p class="text-zinc-400 leading-relaxed mb-4">Organized by the <strong>Xinjiang Museum</strong> and
+                <strong>ALIGHT ROOM</strong> at the <strong>Lafayette Culture and Arts Center</strong>, this exhibition
+                provides an immersive tour of the ancient city of Niya (Cad'ota). As part of the technical team, I was
+                responsible for the <strong>Unity programming</strong> and hardware integration for the "Sand Sea
+                Treasure Hunt" installation.
+            </p>
+        </article>
+        <!-- 详情图片网格 -->
+        <div class="grid project-grid grid-cols-1 gap-8 mb-16">
+            <img src="../assets/images/7-detail-2.jpg" alt="Project detail 2">
+            
+        </div>
+
+        <!-- 项目描述续 -->
+        <article class="max-w-3xl mx-auto text-center mb-16">
+            <p class="text-zinc-400 leading-relaxed">The experience utilizes physical flashlights equipped with
+                <strong>laser-tracking</strong> technology to drive real-time <strong>laser mapping</strong> across a
+                desert-like environment. By scanning the physical sand, visitors trigger digital shaders that reveal
+                100+ cultural relics—including the "Five Stars Rise in the East" brocade—buried beneath the dunes. This
+                interaction transforms the visitor into a digital archaeologist, using precise <strong>laser
+                    mapping</strong> to bridge the gap between static museum archives and a prosperous Silk Road
+                civilization.
+            </p>
+            <p class="mt-6">
+                <a href="https://www.meet-in-shanghai.net/en/news/7-days-in-cadota-exploring-niya-ruins-from-an-archeological-perspective-759849/"
+                    target="_blank" rel="noopener noreferrer"
+                    class="mono text-zinc-500 hover:text-white underline transition">→ Exhibition Coverage (Meet in
+                    Shanghai)</a>
+            </p>
+        </article>
+        </section>
+
+        <!-- 项目导航 -->
+        <footer class="pt-16 border-t border-[#1a1a1a] flex justify-between mono text-zinc-500">
+            <a href="black-sheep.html" class="hover:text-white transition">← Black Sheep</a>
+            <a href="the-quest-vacheron.html" class="hover:text-white transition">THE QUEST →</a>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

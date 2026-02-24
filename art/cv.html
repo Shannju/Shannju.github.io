@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wang Shan | CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --text-main: #71717a;
+            /* zinc-500 */
+            --text-mono: 'JetBrains Mono', monospace;
+            --text-sans: 'Inter', sans-serif;
+            --purple-light: #c4b5fd;
+            /* 统一的淡紫色 */
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--text-mono);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .mono {
+            font-family: var(--text-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* 统一使用纯淡紫色 */
+        .purple-accent {
+            color: var(--purple-light);
+            font-weight: 500;
+            /* 保持一点字重以区分正文 */
+        }
+
+        .contact-link {
+            border-bottom: 1px solid #27272a;
+            color: var(--text-main);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding-bottom: 2px;
+        }
+
+        .contact-link:hover {
+            border-color: var(--purple-light);
+            color: var(--purple-light);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-12 md:p-20">
+
+    <div class="mb-16">
+        <a href="index.html"
+            class="mono text-zinc-500 hover:text-white transition-colors text-xs uppercase tracking-[0.2em]">
+            ← Back to Works
+        </a>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <section class="mb-16">
+            <header class="mb-10 border-b border-zinc-900 pb-4">
+                <span class="mono text-zinc-600 tracking-[0.15em]">INFO / CV</span>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
+
+                <div class="md:col-span-2 space-y-8">
+
+                    <div class="relative mb-2">
+                        <h1 class="text-[2.75rem] font-light tracking-tight text-white mb-4 flex items-baseline gap-4" style="font-family: var(--text-sans);">
+                            Wang Shan
+                            <span class="text-[1.35rem] font-normal text-zinc-600 tracking-widest" style="font-family: var(--text-sans);">王珊</span>
+                        </h1>
+
+                        <p class="mono text-[13px] text-zinc-500 leading-loose max-w-[95%]">
+                            I am a Master's student at <span class="purple-accent">Goldsmiths, University of London</span>, majoring in
+                            <span class="purple-accent">MA Virtual and Augmented Reality</span>. I am a <span class="purple-accent">Creative Technologist</span>
+                            and <span class="purple-accent">VR Developer</span> interested in creating novel XR experiences that unveil the
+                            past, the future, and the invisible dimensions of our reality.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mono text-zinc-500 text-[13px] leading-loose space-y-2 pt-1 border-l border-zinc-800/80 pl-6">
+                        <p>Before joining Goldsmiths in 2025, I studied at the USC-SJTU Institute of Cultural and
+                            Creative Industry, Shanghai Jiao Tong University.</p>
+                        <p>I received my B.S. degree in Computer Science from Nanjing University in 2024. I worked as a
+                            Research Assistant at the Institute of Neuroscience, Chinese Academy of Sciences (2023) and
+                            was a visiting student at the National Taiwan University of Arts (2023).</p>
+                    </div>
+
+                    <section class="pt-6">
+                        <h3 class="mono text-zinc-600 mb-4 uppercase tracking-widest flex items-center gap-4">
+                            <span class="w-6 h-[1px] bg-zinc-800"></span> Selected Papers
+                        </h3>
+                        <ul class="list-none space-y-2 pl-10">
+                            <li>
+                                <a href="assets/papers/A Novel Interactive Slime Mould Algorithm-Based Platform for Generative Art and Optimization.pdf"
+                                    target="_blank"
+                                    class="block mono text-[13px] text-zinc-500 leading-loose transition-colors group">
+                                    <span class="purple-accent group-hover:text-white transition-colors">A Novel
+                                        Interactive Slime Mould Algorithm-Based Platform for Generative Art and
+                                        Optimization (C&C'25)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="space-y-8 mt-2 md:pl-8">
+                    <div class="relative max-w-xs w-48 h-48 bg-[#0d0d0f] p-1 shadow-2xl rounded-sm group">
+                        <div
+                            class="absolute inset-0 border border-white/5 transition-colors group-hover:border-white/10">
+                        </div>
+                        <img src="assets/images/ws.png" class="w-full h-full object-cover relative z-10"
+                            alt="Wang Shan">
+                    </div>
+
+                    <section>
+                        <h3 class="mono text-zinc-600 mb-3 uppercase tracking-[0.2em]">// Contact</h3>
+                        <div class="flex flex-col space-y-2 mono text-[13px] text-zinc-500 leading-loose">
+                            <a class="contact-link w-fit">wshine5202@@gmail.com</a>
+                            <a href="https://github.com/Shannju" class="contact-link w-fit">GitHub</a>
+                            <a href="https://www.linkedin.com/in/shine-wang-5130b338a/"
+                                class="contact-link w-fit">LinkedIn</a>
+                            <a href="https://www.instagram.com/irrational_program/"
+                                class="contact-link w-fit">Instagram</a>
+                            <a href="https://shannju.itch.io/" class="contact-link w-fit">Itch.io</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
+

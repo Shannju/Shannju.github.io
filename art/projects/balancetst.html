@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALANCE | Meditative VR Sensory Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --card: #0d0d0d;
+            --border: #1a1a1a;
+            --text-mono: 'JetBrains Mono', monospace;
+            --purple-light: #c4b5fd;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mono {
+            font-family: var(--text-mono);
+            font-size: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .purple-accent {
+            color: var(--purple-light);
+            font-weight: 500;
+        }
+
+        .project-video {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            background: var(--card);
+        }
+    </style>
+
+</head>
+
+<body class="min-h-screen p-12">
+
+    <div class="mb-16">
+        <a href="../index.html"
+            class="mono text-zinc-500 hover:text-white transition text-sm uppercase tracking-widest">
+            ← Back to Works
+        </a>
+    </div>
+
+    <div class="max-w-6xl mx-auto space-y-16">
+
+
+        <section>
+            <header class="mb-10">
+                <span class="mono text-zinc-600">PROJECT_DETAIL</span>
+                <h1 class="text-4xl font-light mt-4 mb-2">BALANCE</h1>
+                <p class="mono text-zinc-400 text-lg">A Meditative VR Sensory Study</p>
+            </header>
+            <div class="max-w-4xl mx-auto mb-12">
+                <video class="project-video" controls playsinline>
+                    <source src="../assets/videos/balance.mp4" type="video/mp4">
+                </video>
+            </div>
+            <article class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-2xl mb-8 mono text-zinc-300 uppercase tracking-widest">// Project Overview</h2>
+                <p class="text-zinc-400 leading-relaxed text-xl italic mb-4 mono">2026</p>
+                <p class="text-zinc-300 leading-relaxed text-xl mb-6"><strong>BALANCE</strong> — A meditative VR
+                    sensory study in vestibular-visual equilibrium and body-as-interface.</p>
+                <p class="text-zinc-400 leading-relaxed">Built by Shine Wang, the experience uses 6DoF roll
+                    tracking, non-linear balance mapping, and stillness detection to transform physical calm into
+                    realtime visual and spatial-audio feedback.</p>
+            </article>
+
+
+            <article class="max-w-4xl mx-auto text-zinc-400 leading-relaxed mb-10">
+                <h2 class="mono text-zinc-600 mb-4 uppercase tracking-widest flex items-center gap-4">
+                    <span class="w-6 h-[1px] bg-zinc-800"></span> System Requirements
+                </h2>
+                <p class="mb-2"><span class="text-zinc-200">Minimum:</span> Quest 2 / Android 10+ / 6GB RAM / 1GB
+                    Storage</p>
+                <p><span class="text-zinc-200">Recommended:</span> Quest 3 / Headphones / Clear play area</p>
+            </article>
+
+            <div class="max-w-4xl mx-auto">
+                <h2 class="mono text-zinc-600 mb-4 uppercase tracking-widest flex items-center gap-4">
+                    <span class="w-6 h-[1px] bg-zinc-800"></span> Download APK
+                </h2>
+                <ul class="list-none space-y-2 pl-10">
+                    <li>
+                        <a href="../assets/download/BALANCE.apk" download target="_blank"
+                            class="block mono text-[13px] text-zinc-500 leading-loose transition-colors group">
+                            <span class="purple-accent group-hover:text-white transition-colors">BALANCE.apk</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="pt-16 border-t border-[#1a1a1a] flex justify-between mono text-zinc-500">
+            <a href="black-sheep.html" class="hover:text-white transition">← Previous Project</a>
+            <a href="zebrafish-brain-atlas.html" class="hover:text-white transition">NEXT PROJECT →</a>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

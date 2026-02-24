@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zebrafish Brain Atlas | Immersive Visualization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --card: #0d0d0d;
+            --border: #1a1a1a;
+            --text-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mono {
+            font-family: var(--text-mono);
+            font-size: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+
+        .project-media video {
+            background: var(--card);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-12">
+
+    <div class="mb-16">
+        <a href="../index.html"
+            class="mono text-zinc-500 hover:text-white transition text-sm uppercase tracking-widest">← Back to Works</a>
+    </div>
+
+    <div class="max-w-6xl mx-auto space-y-24">
+
+        <section>
+            <header class="mb-12">
+                <span class="mono text-zinc-600">PROJECT_DETAIL</span>
+                <h1 class="text-4xl font-light mt-4 mb-2">Zebrafish Brain Atlas</h1>
+                <p class="mono text-zinc-400 text-lg">Immersive Visualization</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Role</h3>
+                    <p class="text-zinc-300">VR Video Production</p>
+                </div>
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Technology</h3>
+                    <p class="text-zinc-300">Cinematic Rendering · Biological Data Visualization</p>
+                </div>
+                <div class="bg-[#0d0d0d] border border-[#1a1a1a] p-6">
+                    <h3 class="mono text-zinc-600 mb-3 uppercase tracking-widest">// Timeline</h3>
+                    <p class="text-zinc-300">2023 – 2024</p>
+                </div>
+            </div>
+        </section>
+
+            <article class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl mb-8 mono text-zinc-300 uppercase tracking-widest">// Project Overview</h2>
+                <p class="text-zinc-400 leading-relaxed text-xl italic mb-4 mono">2023–2024</p>
+                <p class="text-zinc-300 leading-relaxed text-xl mb-6"><strong>"Zebrafish Brain Atlas: Immersive
+                        Visualization"</strong> — A cinematic scientific visualization of the zebrafish brain's
+                    developmental architecture.</p>
+                <p class="text-zinc-400 leading-relaxed mb-4">This VR video production offers a monumental, walk-through
+                    tour of the zebrafish brain, mapping the spatial relationships of over 50 neuroanatomical regions.
+                    By blending high-resolution biological data with cinematic rendering, the project showcases
+                    developmental biology insights at an architectural scale.</p>
+                <p class="text-zinc-400 leading-relaxed">The visualization serves as an immersive archive, allowing
+                    audiences to witness the complexity of life through a lens that bridges microscopic science with
+                    large-scale digital art.</p>
+            </article>
+        </section>
+
+            <!-- 详情图片网格 -->
+            <div class="grid project-grid grid-cols-2 gap-8 mb-8">
+                <img src="../assets/images/zfish-detail-1.png" alt="Zebrafish Brain Atlas - Detail 1">
+                <img src="../assets/images/zfish-detail-2.jpg" alt="Zebrafish Brain Atlas - Detail 2">
+            </div>
+            <p class="mono text-zinc-600 text-xs mb-16">Images: <a href="https://socialbeta.cn" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-zinc-400 underline">SocialBeta</a></p>
+
+
+        <footer class="pt-16 border-t border-[#1a1a1a] flex justify-between mono text-zinc-500">
+            <a href="the-quest-vacheron.html" class="hover:text-white transition">← The Quest</a>
+            <a href="encyclopedia-of-flowering-plants.html" class="hover:text-white transition">ENCYCLOPEDIA →</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

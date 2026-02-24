@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wang Shan | Creative Technologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #000; --card: #0d0d0d; --border: #1a1a1a; --text-mono: 'JetBrains Mono', monospace; }
+        body { background-color: var(--bg); color: #fff; font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+        .mono { font-family: var(--text-mono); font-size: 0.75rem; letter-spacing: -0.02em; }
+        
+        /* 侧边栏固定 */
+        aside { border-right: 1px solid var(--border); }
+        
+        /* 视频容器：保持 16:9 或自定义比例 */
+        .video-container { position: relative; background: #0a0a0a; overflow: hidden; border: 1px solid var(--border); transition: border 0.3s; }
+        .video-container:hover { border-color: #444; }
+        .video-container video, .video-container iframe { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.4s; border: 0; }
+        .video-container:hover video, .video-container:hover iframe { opacity: 1; }
+        /* Make embedded iframe preview non-interactive so the surrounding card link still works */
+        .video-container iframe { pointer-events: none; }
+
+        /* 分级瀑布流布局 */
+        .tier-hero { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .tier-solid { column-count: 2; column-gap: 1.5rem; }
+        .tier-lab { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        
+        .card { break-inside: avoid; margin-bottom: 1.5rem; }
+        .tag { background: #1a1a1a; padding: 2px 6px; border-radius: 2px; color: #888; }
+        .role-tag { color: #fff; border: 1px solid #333; }
+
+        @media (max-width: 1024px) {
+            .tier-hero, .tier-solid { grid-template-columns: 1fr; column-count: 1; }
+            .tier-lab { grid-template-columns: repeat(2, 1fr); }
+            aside { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+            main { margin-left: 0; }
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <!-- 侧边导航 -->
+    <aside class="fixed w-64 h-screen p-8 flex flex-col justify-between">
+        <div>
+            <h1 class="text-xl font-semibold tracking-tighter">WANG SHAN</h1>
+            <p class="mono text-zinc-500 mt-1 uppercase">Creative Technologist</p>
+            
+            <nav class="mt-16 space-y-6 text-sm uppercase tracking-widest">
+                <a href="#hero" class="block text-zinc-500 hover:text-white transition">01. Independent</a>
+                <a href="#solid" class="block text-zinc-500 hover:text-white transition">02. Collective</a>
+                <a href="#lab" class="block text-zinc-500 hover:text-white transition">03. Exploration</a>
+                <a href="#visual" class="block text-zinc-500 hover:text-white transition">04. Visual</a>
+                <a href="cv.html" class="block text-zinc-500 hover:text-white transition pt-8">Info / CV</a>
+            </nav>
+        </div>
+        <div class="mono text-zinc-600 text-[10px] leading-relaxed">
+            SYSTEM: v2.0.24<br>STATUS: AVAILABLE FOR COLLAB
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="ml-64 p-12 w-full space-y-32">
+
+        <!-- 1. HERO TIER: 核心竞争力 -->
+        <section id="hero">
+            <header class="mb-10">
+                <span class="mono text-zinc-600">SECTION_01</span>
+                <h2 class="text-sm font-light uppercase tracking-[0.3em] text-zinc-400">01. Independent</h2>
+            </header>
+            <div class="tier-hero">
+                <!-- 项目: Zebrafish Brain Atlas -->
+                <a href="projects/zebrafish-brain-atlas.html" class="card group block">
+                    <div class="video-container aspect-video mb-4">
+                        <img src="assets/images/zfish-detail-1.png" alt="Zebrafish Brain Atlas" class="w-full h-full object-cover border border-[#1a1a1a]" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg">Zebrafish Brain Atlas</h3>
+                        <span class="mono tag role-tag">VR Visualization</span>
+                    </div>
+                    <p class="mono text-zinc-500 mt-2">Cinematic Rendering / Neuroanatomy · 50+ brain regions</p>
+                </a>
+
+                <!-- 项目: AR Magic: Frostbound Eve -->
+                <a href="projects/ar-magic.html" class="card group block">
+                    <div class="video-container aspect-video mb-4">
+                        <img src="assets/images/armagic.jpg" alt="AR Magic preview" class="w-full h-full object-cover border border-[#1a1a1a]" />
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg">AR Magic</h3>
+                        <span class="mono tag role-tag">MR Experience</span>
+                    </div>
+                    <p class="mono text-zinc-500 mt-2">Meta AR/MR / Hand Tracking / VFX</p>
+                </a>
+
+                <!-- 项目: Black Sheep -->
+                <a href="projects/black-sheep.html" class="card group block">
+                    <div class="video-container aspect-video mb-4">
+                        <iframe src="https://www.youtube.com/embed/vlOMWhcopoE?rel=0&modestbranding=1" title="Black Sheep preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg">Black Sheep</h3>
+                        <span class="mono tag role-tag">VR Game</span>
+                    </div>
+                    <p class="mono text-zinc-500 mt-2">UnityXR / C# / Psychological Narrative</p>
+                </a>
+
+                <!-- 项目: Encyclopedia of Flowering Plants -->
+                <a href="projects/encyclopedia-of-flowering-plants.html" class="card group block">
+                    <div class="video-container aspect-video mb-4">
+                        <iframe src="https://www.youtube.com/embed/1IX7l4Ih0uY?rel=0&modestbranding=1" title="Encyclopedia of Flowering Plants preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg">Flowering Plants</h3>
+                        <span class="mono tag role-tag">VR Archive</span>
+                    </div>
+                    <p class="mono text-zinc-500 mt-2">UnityXR / C# / Botanical 3D</p>
+                </a>
+
+                <!-- 项目: Slime-Mold -->
+                <div class="card group">
+                    <div class="video-container aspect-video mb-4">
+                        <video loop muted playsinline onmouseover="this.play()" onmouseout="this.pause();">
+                            <source src="slime-mold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg">Bio-inspired Platform</h3>
+                        <span class="mono tag">HCI 2025</span>
+                    </div>
+                    <p class="mono text-zinc-500 mt-2">Algorithm Design / WebGL / Generative</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SOLID TIER: 工程能力 -->
+        <section id="solid">
+            <header class="mb-10">
+                <span class="mono text-zinc-600">SECTION_02</span>
+                <h2 class="text-sm font-light uppercase tracking-[0.3em] text-zinc-400">02. Collective</h2>
+            </header>
+            <div class="tier-solid">
+                <!-- 项目: Seven Days in Cad'ota -->
+                <a href="projects/seven-days-cadota.html" class="card group block">
+                    <div class="aspect-[4/3] mb-4 border border-[#222] overflow-hidden">
+                        <img src="assets/images/7-detail-1.jpg" alt="Seven Days in Cad'ota" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" />
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium">Seven Days in Cad'ota</h4>
+                        <span class="mono tag">Technical Team</span>
+                    </div>
+                    <p class="text-xs text-zinc-500 mt-2">Unity / Laser Mapping · Sand Sea Treasure Hunt @ Xinjiang Museum.</p>
+                </a>
+                <!-- 项目: The Quest - Vacheron Constantin -->
+                <a href="projects/the-quest-vacheron.html" class="card group block">
+                    <div class="aspect-[4/3] mb-4 border border-[#222] overflow-hidden">
+                        <img src="https://socialbeta.oss-cn-hangzhou.aliyuncs.com/upload/221685-1751984286.jpg" alt="The Quest - Vacheron Constantin 270th Anniversary" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" />
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium">The Quest</h4>
+                        <span class="mono tag">Technical Lead</span>
+                    </div>
+                    <p class="text-xs text-zinc-500 mt-2">Vacheron Constantin 270th · Stellar Chart @ Zhangyuan.</p>
+                </a>
+
+                <!-- 项目: A Novel Interactive Slime-Mold Algorithm Platform -->
+                <a href="projects/slime-mold.html" class="card group block">
+                    <div class="aspect-[4/3] mb-4 border border-[#222] overflow-hidden">
+                        <div class="w-full h-full bg-[#050505] flex items-center justify-center text-[10px] mono text-zinc-500 tracking-[0.2em]">
+                            SMA / WEBGL / 2024–2025
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-medium">Interactive Slime-Mold Platform</h4>
+                        <span class="mono tag">Research Collab</span>
+                    </div>
+                    <p class="text-xs text-zinc-500 mt-2">Bio-inspired generative art · HCII 2025 · Swarm intelligence visualization.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. LAB TIER: 实验室 -->
+        <section id="lab">
+            <header class="mb-10 text-center">
+                <span class="mono text-zinc-600">SECTION_03</span>
+                <h2 class="text-sm font-light uppercase tracking-[0.3em] text-zinc-400">03. Exploration</h2>
+            </header>
+            <div class="tier-lab">
+                <a href="projects/webAR-idol-visualization.html" class="card group block">
+                    <div class="video-container aspect-square mb-2">
+                        <iframe src="https://www.youtube.com/embed/db40562S4Y8?rel=0&modestbranding=1" title="WebAR Idol Visualization preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="mono text-[10px] text-zinc-400 uppercase">WebAR / 8th Wall</p>
+                </a>
+                <a href="https://youtu.be/hpS7TspRTnE" target="_blank" rel="noopener noreferrer" class="card group block">
+                    <div class="video-container aspect-square mb-2">
+                        <iframe src="https://www.youtube.com/embed/hpS7TspRTnE?rel=0&modestbranding=1" title="Animation Rendering preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p class="mono text-[10px] text-zinc-400 uppercase">Animation Rendering</p>
+                </a>
+                <div class="card">
+                    <div class="bg-[#0a0a0a] aspect-square border border-[#1a1a1a] mb-2"></div>
+                    <p class="mono text-[10px] text-zinc-400 uppercase">Asset Pipeline</p>
+                </div>
+                <div class="card">
+                    <div class="bg-[#0a0a0a] aspect-square border border-[#1a1a1a] mb-2"></div>
+                    <p class="mono text-[10px] text-zinc-400 uppercase">Unity Tools</p>
+                </div>
+                <div class="card">
+                    <div class="bg-[#0a0a0a] aspect-square border border-[#1a1a1a] mb-2"></div>
+                    <p class="mono text-[10px] text-zinc-400 uppercase">Zebrafish VR</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. AESTHETIC TIER: 视觉美学 -->
+        <section id="visual" class="pb-32">
+            <header class="mb-10">
+                <span class="mono text-zinc-600">SECTION_04</span>
+                <h2 class="text-sm font-light uppercase tracking-[0.3em] text-zinc-400">Visual Aesthetic / Photography</h2>
+            </header>
+            <div class="grid grid-cols-6 gap-2">
+                <!-- 极简摄影小图阵列 -->
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+                <div class="aspect-[3/4] bg-zinc-900 grayscale hover:grayscale-0 transition duration-500"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // 简单的平滑滚动脚本 - 只处理页面内锚点
+        document.querySelectorAll('aside a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // 只对页面内锚点进行平滑滚动，其他链接正常跳转
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // 外部链接（如cv.html）会正常跳转，不会被阻止
+            });
+        });
+    </script>
+</body>
+</html>
