@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const AUTH_LV3 = "1425";
   const PASS_EVIDENCE = "03/02"; 
   
-  const TEXT_MAIN = "You’ve restored the power. Good. I am Elena. I cannot explain everything yet. Open the first level of the refrigerator first. That is where we begin. The code is connected to a life that was about to begin.";
-  const TEXT_AUTH_1 = "Four things inside the refrigerator do not belong here. Put them back where they belong. Stand where she once stood, and see through her eyes. Then you will obtain the password for the next lock.";
+  const TEXT_MAIN = "You’ve restored the power. Good. I am Elena. I cannot explain everything yet. Open the first level of the refrigerator first. That is where we begin. The code is the day Edith was waiting for—her grandchild’s due date. Look closely at her sewing workspace; the month and the day she was counting down to are hidden among the threads.";
+  const TEXT_AUTH_1 = "There are four items in the fridge that do not belong. Clues beside the lock on the second layer will help you identify them. Find these items, then place them into the washbasin one by one and clean them in sequence to reveal what is hidden. Only then can you stand in her footsteps and see the next lock’s key. Once you have the code, retrieve the items — their purpose is not yet finished.";
   const TEXT_AUTH_2 = "Do you see the four icons beneath the refrigerator wheel? They are the four shackles that bound her life. There is no absolute weight here, only relative suffering. Understand their burden in relation to one another, and you will be able to turn the final lock.";
   const TEXT_AUTH_3 = "A frozen female body… proof of an ending. But we still need a killer. One final step remains. After that, I will show you everything I know about that day—everything I heard, and everything I saw.\nNow, please enter the code hidden in the image to access the communication system.";
   const TEXT_EVIDENCE = "You have seen the life Edith lived. Whether you truly found what people call the truth no longer matters. She has already left everything behind, and my purpose ends here as well. I can no longer keep anything for her. \nOne last thing: submit the reference numbers of the two most important pieces of evidence. After that, you may leave this place and collect your payment. Goodbye, cleaner.";
@@ -319,9 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const audioMain = document.getElementById('audio-main');
   const audioDashboard = document.getElementById('audio-dashboard');
-  const audioSecurity = document.getElementById('audio-security');
   const dashboardAiWrapper = document.getElementById('dashboard-ai-wrapper');
-  const securityAiWrapper = document.getElementById('security-ai-wrapper');
+  const securityVideoArea = document.getElementById('security-video-area');
+  const securityFinalVideo = document.getElementById('security-final-video');
 
   const DASHBOARD_SCENES = {
     prologue: { text: TEXT_MAIN, audioId: 'main', src: 'sounds/Prologue.mp3' },
@@ -385,29 +385,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function handleSecurityAudioEnded() {
+  function handleSecurityVideoEnded() {
     securityIsPlaying = false;
     securityReplayReady = true;
-    if (securityAiWrapper) securityAiWrapper.classList.add('ai-replay-ready');
+    if (securityVideoArea) securityVideoArea.classList.add('ai-replay-ready');
   }
 
   function playEvidenceSequence() {
     securityIsPlaying = true;
     securityReplayReady = false;
-    if (securityAiWrapper) securityAiWrapper.classList.remove('ai-replay-ready');
-    typeWriterEffect('security-typewriter', TEXT_EVIDENCE);
-    if (audioSecurity) {
-      audioSecurity.src = 'sounds/Final.mp3';
-      audioSecurity.currentTime = 0;
-      const p = audioSecurity.play();
+    if (securityVideoArea) securityVideoArea.classList.remove('ai-replay-ready');
+
+    if (securityFinalVideo) {
+      securityFinalVideo.style.display = 'block';
+      securityFinalVideo.pause();
+      securityFinalVideo.currentTime = 0;
+      const p = securityFinalVideo.play();
       if (p !== undefined) p.catch(() => {});
     }
   }
 
-  if (audioSecurity) audioSecurity.addEventListener('ended', handleSecurityAudioEnded);
+  if (securityFinalVideo) securityFinalVideo.addEventListener('ended', handleSecurityVideoEnded);
 
-  if (securityAiWrapper) {
-    securityAiWrapper.addEventListener('click', (e) => {
+  if (securityVideoArea) {
+    securityVideoArea.addEventListener('click', (e) => {
       if (!securityReplayReady || securityIsPlaying) return;
       e.stopPropagation();
       playEvidenceSequence();
@@ -583,10 +584,6 @@ document.addEventListener('DOMContentLoaded', () => {
       stopGlitch(); 
       navTruth.classList.remove('guide-pulse');
       
-      document.getElementById('security-stream').style.display = 'block';
-      initCodeStream('security-stream');
-      document.getElementById('security-ai-wrapper').style.display = 'flex';
-      document.getElementById('security-ai-wrapper').classList.add('speaking');
       document.querySelectorAll('#security-video-area .placeholder-icon, #security-video-area .placeholder-text').forEach(i => i.style.display = 'none');
       
       playEvidenceSequence();
@@ -640,7 +637,7 @@ document.addEventListener('DOMContentLoaded', () => {
     securityReplayReady = false;
     securityIsPlaying = false;
     if (dashboardAiWrapper) dashboardAiWrapper.classList.remove('ai-replay-ready');
-    if (securityAiWrapper) securityAiWrapper.classList.remove('ai-replay-ready');
+    if (securityVideoArea) securityVideoArea.classList.remove('ai-replay-ready');
     if (audioMain) {
       audioMain.pause();
       audioMain.currentTime = 0;
@@ -649,12 +646,12 @@ document.addEventListener('DOMContentLoaded', () => {
       audioDashboard.pause();
       audioDashboard.currentTime = 0;
     }
-    if (audioSecurity) {
-      audioSecurity.pause();
-      audioSecurity.currentTime = 0;
+    if (securityFinalVideo) {
+      securityFinalVideo.pause();
+      securityFinalVideo.currentTime = 0;
+      securityFinalVideo.style.display = 'none';
     }
     document.getElementById('dashboard-typewriter').innerHTML = '';
-    document.getElementById('security-typewriter').innerHTML = '';
     unlockedAuths.clear();
 
     commsLockOverlay.classList.remove('unlocked');
@@ -708,10 +705,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const readContacts = new Set();
   let elenaTriggered = false;
   const elenaMessages = [
-    "I heard fierce arguing and violent impacts, and then the current snapped and everything went dark.",
-    "When I came back online, she was struggling and crying inside my body, and there was nothing I could do.",
+    "I heard fierce arguing and violent impacts, and then the current snapped and everything went dark. When I came back online, she was struggling and crying inside my body, and there was nothing I could do.",
     "When it finally fell quiet, I was opened again. Someone took something out of me, and an old man’s laughter crackled through the phone.",
-    "At least, in the deepest part of me, we were in each other’s arms again."
+    "At least, in the deepest part of me, we were in each other’s arms again.",
+    "The truth is buried beneath the grime. The floor near the refrigerator still holds the echo of those footsteps.",
+    "Use the mop to clear the area; I will recover the surveillance data from the shadows.",
+    "After reviewing the surveillance footage and the envelope on the carpet, please enter the Evidence Envelope ID and the Surveillance Clip ID into the submission window to identify the true killer."
   ];
 
   function renderChatHistory(contactId) {

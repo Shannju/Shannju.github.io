@@ -141,6 +141,25 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display"
 .mini-ai-wrapper.ai-replay-ready {
   cursor: pointer;
 }
+
+/* Truth Report: evidence-video click-to-replay */
+#security-video-area.ai-replay-ready {
+  cursor: pointer;
+}
+
+#security-video-area .security-final-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  background: #ffffff;
+}
+
+#security-video-area video.security-final-video {
+  pointer-events: auto;
+}
 @keyframes aiSpeak {
   0% { transform: scale(0.45); }
   25% { transform: scale(0.47); }
