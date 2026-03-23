@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Aurora | Premium Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="Picture/RedBlue.png" />
+    <link rel="preload" as="image" href="Picture/Toe.PNG" />
+    <link rel="preload" as="image" href="Picture/Baby.jpg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -171,7 +174,7 @@
                 </div>
 
                 <div class="comms-large-image" style="flex: 1; width: 100%; background: rgba(255,255,255,0.4); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.6); flex-direction: column; min-height: 0; padding: 8px; box-sizing: border-box;">
-                   <img src="picture/RedBlue.png" alt="" class="comms-puzzle-image zoomable-image" />
+                   <img src="Picture/RedBlue.png" alt="" class="comms-puzzle-image zoomable-image" />
                 </div>
 
                 <div style="flex-shrink: 0; width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: auto;">
@@ -368,6 +371,19 @@
       </div>
     </div>
 
+    <template id="chat-image-toe-template">
+      <div class="chat-image-placeholder chat-image-with-photo">
+        <img src="Picture/Toe.PNG" alt="Severed_Toe.jpg" class="zoomable-image" />
+      </div>
+    </template>
+
+    <template id="chat-image-baby-template">
+      <div class="chat-image-placeholder chat-image-with-photo">
+        <img src="Picture/Baby.jpg" alt="Ultrasound_Scan.jpg" class="zoomable-image" />
+      </div>
+    </template>
+
     <script src="script.js"></script>
+
   </body>
 </html>

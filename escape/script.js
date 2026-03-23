@@ -696,8 +696,8 @@ document.addEventListener('DOMContentLoaded', () => {
       { type: 'text', text: "Please reply. I’m getting really worried. I might come over to check on you.", time: "17:30" }
     ],
     unknown: [
-      { type: 'image', title: "Severed_Toe.jpg", img: "picture/Toe.PNG", text: "Your son thought he could play with our money. He was wrong.", time: "00:08" },
-      { type: 'image', title: "Ultrasound_Scan.jpg", img: "picture/Baby.jpg", text: "Such a happy little family. A baby on the way.", time: "00:09" },
+      { type: 'image', title: "Severed_Toe.jpg", templateId: 'chat-image-toe-template', text: "Your son thought he could play with our money. He was wrong.", time: "00:08" },
+      { type: 'image', title: "Ultrasound_Scan.jpg", templateId: 'chat-image-baby-template', text: "Such a happy little family. A baby on the way.", time: "00:09" },
       { type: 'text', text: "Pay his debt, or the next piece we take won't be a toe. Don’t make us ruin it.", time: "00:11" }
     ]
   };
@@ -713,29 +713,45 @@ document.addEventListener('DOMContentLoaded', () => {
     "After reviewing the surveillance footage and the envelope on the carpet, please enter the Evidence Envelope ID and the Surveillance Clip ID into the submission window to identify the true killer."
   ];
 
+  function buildChatImageNode(templateId, title) {
+    const template = document.getElementById(templateId);
+    if (template && template.content) {
+      const fragment = template.content.cloneNode(true);
+      const img = fragment.querySelector('img');
+      if (img && title) img.alt = title;
+      return fragment;
+    }
+
+    const fallback = document.createElement('div');
+    fallback.className = 'chat-image-placeholder';
+    fallback.innerHTML = `
+      <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span class="text-caption">${title || 'Image'} (Placeholder)</span>
+    `;
+    return fallback;
+  }
+
   function renderChatHistory(contactId) {
     const messages = chatData[contactId] || [];
     chatHistoryContainer.innerHTML = '<div class="chat-date-pill">Today, March 20, 2026</div>';
     messages.forEach(msg => {
       const bubble = document.createElement('div');
       bubble.className = `chat-bubble ${msg.type === 'sent' ? 'sent' : 'received'} glass-thick`;
-      let contentHtml = '';
+
       if (msg.type === 'image') {
-        if (msg.img) {
-          contentHtml = `
-          <div class="chat-image-placeholder chat-image-with-photo">
-            <img src="${msg.img}" alt="${msg.title || ''}" class="zoomable-image" />
-          </div>`;
-        } else {
-          contentHtml = `
-          <div class="chat-image-placeholder">
-            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-            <span class="text-caption">${msg.title} (Placeholder)</span>
-          </div>`;
-        }
+        bubble.appendChild(buildChatImageNode(msg.templateId, msg.title));
       }
-      contentHtml += `<p class="text-body">${msg.text}</p><span class="chat-time">${msg.time}</span>`;
-      bubble.innerHTML = contentHtml;
+
+      const body = document.createElement('p');
+      body.className = 'text-body';
+      body.textContent = msg.text;
+
+      const time = document.createElement('span');
+      time.className = 'chat-time';
+      time.textContent = msg.time;
+
+      bubble.appendChild(body);
+      bubble.appendChild(time);
       chatHistoryContainer.appendChild(bubble);
     });
     chatHistoryContainer.scrollTop = chatHistoryContainer.scrollHeight;
