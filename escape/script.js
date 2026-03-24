@@ -160,9 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const AUTH_LV3 = "1425";
   const PASS_EVIDENCE = "03/02"; 
   
-  const TEXT_MAIN = "You’ve restored the power. Good. I am Elena. I cannot explain everything yet. Open the first level of the refrigerator first. That is where we begin. The code is the day Edith was waiting for—her grandchild’s due date. Look closely at her sewing workspace; the month and the day she was counting down to are hidden among the threads.";
+  const TEXT_MAIN = "You’ve restored the power. Good. I am Elena. I cannot explain everything yet. Open the first level of the refrigerator first. That is where we begin. The code is the day Edith was waiting for—her grandchild’s due date.\nPlease enter the month and the day into the iPad first, then you may release the physical latch. Look closely at her sewing workspace; the two numbers she recorded as she counted down to that new life are hidden right there.";
   const TEXT_AUTH_1 = "There are four items in the fridge that do not belong. Clues beside the lock on the second layer will help you identify them. Find these items, then place them into the washbasin one by one and clean them in sequence to reveal what is hidden. Only then can you stand in her footsteps and see the next lock’s key. Once you have the code, retrieve the items — their purpose is not yet finished.";
-  const TEXT_AUTH_2 = "Do you see the four icons beneath the refrigerator wheel? They are the four shackles that bound her life. There is no absolute weight here, only relative suffering. Understand their burden in relation to one another, and you will be able to turn the final lock.";
+  const TEXT_AUTH_2 = "Do you see the four icons on the scale on the table? They are the four shackles that bound her life. There is no absolute weight here, only relative suffering. Understand their burden in relation to one another, and you will be able to turn the final lock.";
   const TEXT_AUTH_3 = "A frozen female body… proof of an ending. But we still need a killer. One final step remains. After that, I will show you everything I know about that day—everything I heard, and everything I saw.\nNow, please enter the code hidden in the image to access the communication system.";
   const TEXT_EVIDENCE = "You have seen the life Edith lived. Whether you truly found what people call the truth no longer matters. She has already left everything behind, and my purpose ends here as well. I can no longer keep anything for her. \nOne last thing: submit the reference numbers of the two most important pieces of evidence. After that, you may leave this place and collect your payment. Goodbye, cleaner.";
 
@@ -182,6 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navItems = document.querySelectorAll('.nav-item[data-target]');
   const views = document.querySelectorAll('.view-layer');
+  const homeView = document.getElementById('home-view');
+  const commsView = document.getElementById('comms-view');
+  const securityView = document.getElementById('security-view');
   const logoutBtn = document.getElementById('logout-btn');
 
   const uniLockOverlay = document.getElementById('universal-lock-overlay');
@@ -337,6 +340,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let securityReplayReady = false;
   let securityIsPlaying = false;
 
+  function pauseAllMedia() {
+    if (audioMain) { audioMain.pause(); audioMain.currentTime = 0; }
+    if (audioDashboard) { audioDashboard.pause(); audioDashboard.currentTime = 0; }
+    typewriterSessionId++;
+    dashboardIsPlaying = false;
+    dashboardReplayReady = true;
+    if (dashboardAiWrapper) dashboardAiWrapper.classList.add('ai-replay-ready');
+    securityIsPlaying = false;
+    securityReplayReady = true;
+    if (securityVideoArea) securityVideoArea.classList.add('ai-replay-ready');
+    if (securityFinalVideo) {
+      securityFinalVideo.pause();
+      securityFinalVideo.currentTime = 0;
+    }
+  }
+
   function handleDashboardAudioEnded(e) {
     const scene = dashboardActiveScene ? DASHBOARD_SCENES[dashboardActiveScene] : null;
     if (!scene) return;
@@ -349,7 +368,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function playDashboardScene(sceneKey) {
     const scene = DASHBOARD_SCENES[sceneKey];
-    if (!scene || !dashboardAiWrapper) return;
+    if (!scene || !dashboardAiWrapper) return Promise.resolve();
+    typewriterSessionId++;
+    if (securityFinalVideo) { securityFinalVideo.pause(); securityFinalVideo.currentTime = 0; }
+    securityIsPlaying = false;
+    securityReplayReady = true;
+    if (securityVideoArea) securityVideoArea.classList.add('ai-replay-ready');
     dashboardIsPlaying = true;
     dashboardReplayReady = false;
     dashboardActiveScene = sceneKey;
@@ -365,13 +389,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const audioEl = scene.audioId === 'main' ? audioMain : audioDashboard;
+    const audioEnded = audioEl ? new Promise(resolve => {
+      const handler = () => { audioEl.removeEventListener('ended', handler); resolve(); };
+      audioEl.addEventListener('ended', handler);
+    }) : Promise.resolve();
     if (audioEl) {
       audioEl.src = scene.src;
       audioEl.currentTime = 0;
       const p = audioEl.play();
       if (p !== undefined) p.catch(() => {});
     }
-    typeWriterEffect('dashboard-typewriter', scene.text);
+    const textDone = typeWriterEffect('dashboard-typewriter', scene.text);
+    return Promise.all([audioEnded, textDone]);
   }
 
   if (audioMain) audioMain.addEventListener('ended', handleDashboardAudioEnded);
@@ -379,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (dashboardAiWrapper) {
     dashboardAiWrapper.addEventListener('click', (e) => {
+      if (!homeView || !homeView.classList.contains('view-active')) return;
       if (!dashboardReplayReady || dashboardIsPlaying || !dashboardActiveScene) return;
       e.stopPropagation();
       playDashboardScene(dashboardActiveScene);
@@ -392,6 +422,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function playEvidenceSequence() {
+    typewriterSessionId++;
+    if (audioMain) { audioMain.pause(); audioMain.currentTime = 0; }
+    if (audioDashboard) { audioDashboard.pause(); audioDashboard.currentTime = 0; }
+    dashboardIsPlaying = false;
+    dashboardReplayReady = true;
+    if (dashboardAiWrapper) dashboardAiWrapper.classList.add('ai-replay-ready');
     securityIsPlaying = true;
     securityReplayReady = false;
     if (securityVideoArea) securityVideoArea.classList.remove('ai-replay-ready');
@@ -409,7 +445,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (securityVideoArea) {
     securityVideoArea.addEventListener('click', (e) => {
-      if (!securityReplayReady || securityIsPlaying) return;
+      if (!securityView || !securityView.classList.contains('view-active')) return;
+      if (securityIsPlaying || !evidenceLockOverlay.classList.contains('unlocked')) return;
       e.stopPropagation();
       playEvidenceSequence();
     });
@@ -422,11 +459,10 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCommsGateState();
   updateTruthReportGateState();
 
-  [uniLockOverlay, commsLockOverlay, evidenceLockOverlay].forEach(overlay => {
+  [uniLockOverlay, commsLockOverlay].forEach(overlay => {
     overlay.addEventListener('mousedown', (e) => {
       if (e.target === overlay) {
         overlay.classList.add('unlocked');
-        if (overlay === evidenceLockOverlay) stopGlitch();
         if (overlay === commsLockOverlay) {
           clearCommsSlots();
           if (commsPasscodeWrap) commsPasscodeWrap.classList.remove('shake-error');
@@ -492,6 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================= 2. 主控台权限操作 =================
   accessBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      if (!homeView || !homeView.classList.contains('view-active')) return;
       currentExpectedAuth = btn.getAttribute('data-auth');
       
       if (currentExpectedAuth === "0423") {
@@ -524,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
       uniLockOverlay.classList.add('unlocked');
       uniPasscodeInput.value = "";
       unlockedAuths.add(currentExpectedAuth);
-      playDashboardScene(currentExpectedAuth);
+      const scenePromise = playDashboardScene(currentExpectedAuth);
 
       if (currentExpectedAuth === "0423") {
           document.querySelector('[data-auth="0423"]').classList.remove('guide-pulse');
@@ -535,6 +572,12 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (currentExpectedAuth === AUTH_LV3) {
           document.querySelector('[data-auth="' + AUTH_LV3 + '"]').classList.remove('guide-pulse');
           document.querySelector('[data-target="comms-view"]').classList.add('guide-pulse');
+          scenePromise.then(() => {
+            setTimeout(() => {
+              const commsNav = document.querySelector('[data-target="comms-view"]');
+              if (commsNav) commsNav.click();
+            }, 2000);
+          });
       }
 
       updateCommsGateState();
@@ -608,6 +651,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (view.id === targetId) view.classList.add('view-active');
         else view.classList.remove('view-active');
       });
+
+      pauseAllMedia();
 
       if (targetId === 'security-view' && !evidenceLockOverlay.classList.contains('unlocked')) {
           startGlitch();
@@ -710,7 +755,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "At least, in the deepest part of me, we were in each other’s arms again.",
     "The truth is buried beneath the grime. The floor near the refrigerator still holds the echo of those footsteps.",
     "Use the mop to clear the area; I will recover the surveillance data from the shadows.",
-    "After reviewing the surveillance footage and the envelope on the carpet, please enter the Evidence Envelope ID and the Surveillance Clip ID into the submission window to identify the true killer."
+    "After reviewing the surveillance footage and the envelope on the carpet, please enter the Evidence Envelope ID and the Surveillance Clip ID into the submission window to identify the true killer.",
+    "Once you have the truth, enter the Evidence Envelope ID and the Surveillance Clip ID into the window below to condemn the one who did this."
   ];
 
   function buildChatImageNode(templateId, title) {
@@ -798,6 +844,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chatData['elena'] = [];
 
     elenaBtn.addEventListener('click', () => {
+      if (!commsView || !commsView.classList.contains('view-active')) return;
       document.querySelectorAll('.chat-contact-item').forEach(b => b.classList.remove('active'));
       elenaBtn.classList.add('active'); elenaBtn.classList.remove('unread');
       chatEmptyState.style.display = 'none'; chatActiveWindow.style.display = 'flex';
@@ -828,6 +875,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.chat-contact-item').forEach(btn => {
     btn.addEventListener('click', () => {
+      if (!commsView || !commsView.classList.contains('view-active')) return;
       document.querySelectorAll('.chat-contact-item').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       btn.classList.remove('unread');

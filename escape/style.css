@@ -245,8 +245,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display"
 .spacer { flex: 1; }
 .action-logout { color: var(--text-secondary); }
 .content-wrapper { flex: 1; position: relative; }
-.view-layer { position: absolute; inset: 0; opacity: 0; transform: translateY(16px) scale(0.98); pointer-events: none; transition: all 0.6s var(--spring); display: flex; flex-direction: column; }
-.view-layer.view-active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.view-layer { position: absolute; inset: 0; opacity: 0; transform: translateY(16px) scale(0.98); pointer-events: none; visibility: hidden; z-index: 0; transition: all 0.6s var(--spring); display: flex; flex-direction: column; }
+.view-layer.view-active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; visibility: visible; z-index: 1; }
 .top-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; padding: 0 8px; }
 .status-pill { padding: 10px 16px; border-radius: 99px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; }
 .split-layout { display: grid; grid-template-columns: 1fr 340px; gap: 24px; flex: 1; }
