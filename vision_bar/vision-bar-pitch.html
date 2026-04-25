@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision Bar Pitch</title>
+  <style>
+    :root {
+      --bg: #050607;
+      --ink: #f4f0e8;
+      --muted: #a7a7a0;
+      --dim: #6d706c;
+      --cyan: #84fff0;
+      --gold: #f5c35d;
+      --rose: #e58aa9;
+      --violet: #a98cff;
+      --green: #a6f0b6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "SF Pro Display", "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      letter-spacing: 0;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .deck {
+      position: relative;
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+      gap: clamp(28px, 5vw, 80px);
+      align-items: center;
+      padding: clamp(34px, 6vw, 92px);
+      opacity: 0;
+      transform: translateX(48px) scale(0.99);
+      animation: slideIn 420ms ease both;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      display: grid;
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(132, 255, 240, 0.16), transparent 28%),
+        radial-gradient(circle at 78% 70%, rgba(245, 195, 93, 0.12), transparent 24%),
+        linear-gradient(105deg, rgba(255,255,255,0.05), transparent 36%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .content,
+    .visual {
+      position: relative;
+      z-index: 3;
+    }
+
+    .content {
+      z-index: 4;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: clamp(12px, 1.1vw, 15px);
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      max-width: 930px;
+      font-weight: 760;
+      line-height: 0.98;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: clamp(60px, 9vw, 138px);
+    }
+
+    h2 {
+      font-size: clamp(40px, 6vw, 92px);
+    }
+
+    .subtitle {
+      margin: 26px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(20px, 2vw, 30px);
+      line-height: 1.35;
+    }
+
+    .body {
+      margin-top: 30px;
+      display: grid;
+      gap: 16px;
+      max-width: 760px;
+      color: #d8d4ca;
+      font-size: clamp(17px, 1.35vw, 22px);
+      line-height: 1.58;
+    }
+
+    .body p {
+      margin: 0;
+    }
+
+    .quote {
+      margin-top: 34px;
+      padding-left: 18px;
+      border-left: 2px solid rgba(132, 255, 240, 0.72);
+      color: #fff7dd;
+      font-size: clamp(22px, 2.3vw, 34px);
+      line-height: 1.28;
+      text-wrap: balance;
+    }
+
+    .meta {
+      position: fixed;
+      z-index: 5;
+      left: clamp(22px, 4vw, 64px);
+      bottom: clamp(18px, 3vw, 46px);
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      color: var(--dim);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .progress {
+      width: 120px;
+      height: 1px;
+      background: rgba(255,255,255,0.22);
+    }
+
+    .progress span {
+      display: block;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--cyan), var(--gold));
+      transition: width 420ms ease;
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 5;
+      right: clamp(22px, 4vw, 64px);
+      bottom: clamp(18px, 3vw, 46px);
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      color: var(--ink);
+      font-size: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(16px);
+    }
+
+    button:hover {
+      border-color: rgba(132, 255, 240, 0.75);
+      color: var(--cyan);
+    }
+
+    .glass {
+      position: relative;
+      width: min(38vw, 460px);
+      min-width: 310px;
+      aspect-ratio: 0.72;
+      margin-inline: auto;
+      border-radius: 8px 8px 86px 86px / 8px 8px 42px 42px;
+      border: 1px solid rgba(255,255,255,0.34);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.15), transparent 18%, transparent 78%, rgba(255,255,255,0.12)),
+        linear-gradient(180deg, transparent 0 22%, rgba(132, 255, 240, 0.08) 25%, rgba(229, 138, 169, 0.13) 66%, rgba(245, 195, 93, 0.18));
+      box-shadow:
+        inset 0 0 42px rgba(255,255,255,0.08),
+        inset 0 -70px 80px rgba(132,255,240,0.09),
+        0 0 90px rgba(132,255,240,0.12);
+      overflow: hidden;
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 20% 12% 7%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 52%, rgba(255,255,255,0.88) 0 1px, transparent 2px 100%),
+        radial-gradient(ellipse at 52% 56%, rgba(132,255,240,0.35), transparent 30%),
+        conic-gradient(from 120deg, transparent, rgba(169,140,255,0.55), rgba(132,255,240,0.22), transparent, rgba(245,195,93,0.35), transparent);
+      filter: blur(0.4px);
+      mix-blend-mode: screen;
+      animation: swirl 9s linear infinite;
+    }
+
+    .glass::after {
+      content: "";
+      position: absolute;
+      left: -20%;
+      right: -20%;
+      top: 28%;
+      height: 30%;
+      background: linear-gradient(95deg, transparent, rgba(255,255,255,0.34), rgba(132,255,240,0.12), transparent);
+      filter: blur(14px);
+      transform: rotate(-12deg);
+      animation: beam 5s ease-in-out infinite alternate;
+    }
+
+    .mist {
+      position: absolute;
+      inset: -12% -20% auto;
+      height: 44%;
+      background:
+        radial-gradient(ellipse at 35% 70%, rgba(255,255,255,0.22), transparent 34%),
+        radial-gradient(ellipse at 68% 64%, rgba(132,255,240,0.16), transparent 32%);
+      filter: blur(18px);
+      animation: mist 7s ease-in-out infinite alternate;
+    }
+
+    .cards {
+      display: grid;
+      gap: 14px;
+      max-width: 650px;
+    }
+
+    .drink {
+      border-left: 1px solid rgba(255,255,255,0.22);
+      padding: 10px 0 12px 20px;
+    }
+
+    .drink strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(22px, 2.2vw, 34px);
+      line-height: 1.15;
+    }
+
+    .drink span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.2vw, 19px);
+      line-height: 1.45;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 760px;
+    }
+
+    .keywords span {
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 9px 13px;
+      color: #ddd8ce;
+      background: rgba(255,255,255,0.045);
+      font-size: clamp(14px, 1vw, 16px);
+      backdrop-filter: blur(12px);
+    }
+
+    .beam-field {
+      position: relative;
+      width: min(43vw, 560px);
+      min-width: 330px;
+      aspect-ratio: 1;
+      margin-inline: auto;
+    }
+
+    .slide:first-child .media-stack {
+      width: min(36vw, 520px);
+      transform: translateX(1vw);
+    }
+
+    .beam-field i {
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      top: 48%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(132,255,240,0.92), rgba(245,195,93,0.56), transparent);
+      box-shadow: 0 0 28px rgba(132,255,240,0.7);
+      transform-origin: center;
+      animation: pulse 3.6s ease-in-out infinite;
+    }
+
+    .beam-field i:nth-child(1) { transform: rotate(-34deg); }
+    .beam-field i:nth-child(2) { transform: rotate(-14deg); animation-delay: -1s; }
+    .beam-field i:nth-child(3) { transform: rotate(12deg); animation-delay: -2s; }
+    .beam-field i:nth-child(4) { transform: rotate(36deg); animation-delay: -2.7s; }
+
+    .orb {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 46%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background:
+        radial-gradient(circle at 46% 48%, rgba(255,255,255,0.8) 0 1px, transparent 2px 100%),
+        radial-gradient(circle at 50% 50%, rgba(132,255,240,0.26), transparent 55%);
+      box-shadow: inset 0 0 42px rgba(255,255,255,0.08), 0 0 80px rgba(132,255,240,0.16);
+      animation: float 5.5s ease-in-out infinite;
+    }
+
+    .split-note {
+      color: var(--muted);
+      font-size: clamp(15px, 1vw, 18px);
+      line-height: 1.5;
+      max-width: 560px;
+      margin-top: 22px;
+    }
+
+    .media-stack,
+    .media-grid {
+      position: relative;
+      width: min(43vw, 610px);
+      min-width: 330px;
+      margin-inline: auto;
+    }
+
+    .media-stack {
+      display: grid;
+      aspect-ratio: 0.82;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .media-frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 60px rgba(132,255,240,0.1);
+      isolation: isolate;
+    }
+
+    .media-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(132,255,240,0.16), transparent 34%, rgba(245,195,93,0.1)),
+        radial-gradient(circle at 48% 42%, transparent 35%, rgba(5,6,7,0.34));
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .media-frame video,
+    .media-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.05) saturate(1.08);
+    }
+
+    .media-frame.tall {
+      grid-area: 1 / 1;
+      aspect-ratio: 0.62;
+      transform: rotate(-1.2deg);
+    }
+
+    .media-frame.float {
+      width: 52%;
+      aspect-ratio: 1.2;
+      align-self: end;
+      justify-self: end;
+      transform: translate(8%, 5%) rotate(2deg);
+      box-shadow: 0 0 52px rgba(245,195,93,0.16);
+      z-index: 2;
+    }
+
+    .media-grid .media-frame {
+      aspect-ratio: 1.2;
+    }
+
+    .media-grid .wide {
+      grid-column: 1 / -1;
+      aspect-ratio: 1.9;
+    }
+
+    .photo-flow,
+    .workshop-wall {
+      position: relative;
+      z-index: 2;
+      width: min(54vw, 820px);
+      margin-inline: auto;
+    }
+
+    .photo-flow {
+      display: grid;
+      gap: 14px;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .photo-track {
+      display: flex;
+      gap: 14px;
+      width: max-content;
+      animation: driftLeft 44s linear infinite;
+    }
+
+    .photo-track.reverse {
+      animation-name: driftRight;
+      animation-duration: 52s;
+    }
+
+    .photo-track .media-frame {
+      width: clamp(210px, 18vw, 310px);
+      height: clamp(130px, 18vh, 210px);
+      flex: 0 0 auto;
+    }
+
+    .workshop-wall {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: minmax(320px, 52vh);
+    }
+
+    .ref-wall {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(130px, 1fr));
+      gap: 10px;
+      width: min(46vw, 760px);
+      margin-inline: auto;
+    }
+
+    .ref-wall .media-frame {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .ref-wall .media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .workshop-wall .media-frame {
+      width: 100%;
+      height: 100%;
+    }
+
+    .application-slide .visual {
+      align-self: center;
+    }
+
+    .caption {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 10px;
+      z-index: 3;
+      color: rgba(244,240,232,0.82);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .media-beam {
+      position: absolute;
+      inset: 8% -18%;
+      background: linear-gradient(105deg, transparent, rgba(132,255,240,0.22), rgba(245,195,93,0.18), transparent);
+      filter: blur(16px);
+      transform: rotate(-11deg);
+      pointer-events: none;
+      z-index: 4;
+      animation: beam 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes swirl {
+      from { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.08); }
+      to { transform: rotate(360deg) scale(1); }
+    }
+
+    @keyframes beam {
+      from { opacity: 0.45; transform: translateY(-8px) rotate(-15deg); }
+      to { opacity: 0.9; transform: translateY(24px) rotate(-8deg); }
+    }
+
+    @keyframes mist {
+      from { transform: translateX(-6%) translateY(0); opacity: 0.55; }
+      to { transform: translateX(8%) translateY(-8px); opacity: 0.9; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.24; filter: blur(1px); }
+      50% { opacity: 0.88; filter: blur(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(-50%, -52%) scale(0.98); }
+      50% { transform: translate(-50%, -47%) scale(1.04); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(30px) scale(0.992); }
+      to { opacity: 1; transform: translateX(0) scale(1); }
+    }
+
+    @keyframes driftLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes driftRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    @media (max-width: 860px) {
+      .slide {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        align-content: center;
+        padding: 32px 24px 84px;
+      }
+
+      .visual {
+        order: -1;
+      }
+
+      .glass,
+      .beam-field,
+      .media-stack,
+      .media-grid {
+        min-width: 0;
+        width: min(68vw, 330px);
+      }
+
+      .media-stack {
+        aspect-ratio: 1.05;
+      }
+
+      .media-frame.tall {
+        aspect-ratio: 1.12;
+      }
+
+      .media-grid {
+        gap: 8px;
+      }
+
+      .photo-flow,
+      .workshop-wall {
+        width: min(86vw, 520px);
+        gap: 8px;
+      }
+
+      .photo-track {
+        gap: 8px;
+      }
+
+      .photo-track .media-frame {
+        width: 180px;
+        height: 112px;
+      }
+
+      .workshop-wall {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 190px;
+      }
+
+      .ref-wall {
+        width: min(82vw, 600px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .media-grid .media-frame {
+        aspect-ratio: 1.45;
+      }
+
+      .media-grid .wide {
+        aspect-ratio: 2.2;
+      }
+
+      h1 {
+        font-size: clamp(54px, 13vw, 92px);
+      }
+
+      h2 {
+        font-size: clamp(36px, 8vw, 58px);
+      }
+
+      .subtitle,
+      .body,
+      .quote {
+        margin-top: 18px;
+      }
+
+      .nav {
+        right: 24px;
+      }
+
+      .application-slide {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-content: center;
+        gap: 18px;
+        padding-top: 28px;
+      }
+
+      .application-slide .visual {
+        order: 0;
+      }
+
+      .application-slide h2 {
+        font-size: clamp(32px, 6.8vw, 50px);
+      }
+
+      .application-slide .body {
+        font-size: clamp(14px, 1.9vw, 17px);
+        line-height: 1.48;
+      }
+
+      .application-slide .quote {
+        font-size: clamp(18px, 2.8vw, 26px);
+      }
+
+      .application-slide .ref-wall {
+        width: min(46vw, 390px);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .application-slide {
+        grid-template-columns: 1fr;
+        align-content: start;
+      }
+
+      .application-slide .visual {
+        order: -1;
+      }
+
+      .application-slide .ref-wall {
+        width: min(84vw, 520px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <main class="deck" aria-live="polite">
+    <section class="slide active">
+      <div class="content">
+        <p class="kicker">01 Concept / Floating Drink</p>
+        <h1>Vision Bar</h1>
+        <p class="subtitle">A drink becomes a vessel for digital visions. Light enters the liquid, and the image briefly appears inside the glass.</p>
+        <div class="quote">Mirage in a glass. Drinkable digital visions.</div>
+      </div>
+      <div class="visual">
+        <div class="glass"><div class="mist"></div></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">02 Inspiration / Persona Yuzu</p>
+        <h2>It Started With A Game Drink</h2>
+        <div class="body">
+          <p>Persona's yuzu drink suggests that a beverage can carry mood, identity, and visual energy.</p>
+          <p>Ordering a drink becomes a moment of seeing.</p>
+        </div>
+        <div class="quote">A drink can behave like a character: color, personality, and a burst of light.</div>
+      </div>
+      <div class="visual">
+        <div class="media-grid">
+          <div class="media-frame">
+            <img src="assets/persona-ref-01.jpg" alt="Persona yuzu juice reference">
+            <span class="caption">persona yuzu</span>
+          </div>
+          <div class="media-frame">
+            <img src="assets/persona-ref-02.jpg" alt="Persona drink reference">
+            <span class="caption">game reference</span>
+          </div>
+          <div class="media-frame wide">
+            <video src="assets/persona-yuzu.mp4" autoplay muted loop playsinline></video>
+            <span class="caption">color / mood / identity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">03 Personal Path / Photography</p>
+        <h2>Photography Taught Me Light</h2>
+        <div class="quote">Before XR, I photographed children. The camera was never the point. Light was.</div>
+      </div>
+      <div class="visual">
+        <div class="photo-flow">
+          <div class="photo-track">
+            <div class="media-frame"><img src="assets/photo-portrait-01.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-02.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-03.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-04.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-05.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-06.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-07.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-08.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-01.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-02.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-03.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-04.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-05.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-06.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-07.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-08.jpg" alt="Photography work"></div>
+          </div>
+          <div class="photo-track reverse">
+            <div class="media-frame"><img src="assets/photo-portrait-09.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-10.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-11.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-12.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-13.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-14.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-15.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-09.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-10.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-11.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-12.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-13.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-14.jpg" alt="Photography work"></div>
+            <div class="media-frame"><img src="assets/photo-portrait-15.jpg" alt="Photography work"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">04 Workshop / Light Practice</p>
+        <h2>From Photograph To Light Space</h2>
+        <div class="quote">I enlarged my images and let light activate them in space.</div>
+      </div>
+      <div class="visual">
+        <div class="workshop-wall">
+          <div class="media-frame">
+            <img src="assets/light-workshop-01.jpg" alt="Light workshop photo projection">
+          </div>
+          <div class="media-frame">
+            <img src="assets/light-workshop-02.jpg" alt="Light workshop installation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">05 Reference / Tyndall Effect</p>
+        <h2>Making The Light Path Visible</h2>
+        <div class="body">
+          <p>A fog projection experiment shows how particles can hold light in the air.</p>
+          <p>The image does not have to land on a flat screen. It can be suspended by mist, liquid, ice, and bubbles.</p>
+        </div>
+        <div class="quote">The projection path becomes part of the work.</div>
+      </div>
+      <div class="visual">
+        <div class="media-stack">
+          <div class="media-frame tall">
+            <video src="assets/fog-reference.mp4" autoplay muted loop playsinline></video>
+            <span class="caption">fog projection reference</span>
+          </div>
+          <div class="media-beam"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">06 Imaging Methods</p>
+        <h2>Two Ways To Image Inside A Drink</h2>
+        <div class="cards">
+          <div class="drink">
+            <strong>Wine Glass Reflection</strong>
+            <span>A projected image reflects through the curved surface of a wine glass, creating a fragile floating illusion inside the drink.</span>
+          </div>
+          <div class="drink">
+            <strong>Refraction, Tyndall, Reflection</strong>
+            <span>The cup itself becomes the optical system: liquid refraction, particle scattering, ice, bubbles, and mirrors reveal layers of light.</span>
+          </div>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="media-grid">
+          <div class="media-frame wide">
+            <video src="assets/glass-test.mp4" autoplay muted loop playsinline></video>
+            <span class="caption">wine glass reflection</span>
+          </div>
+          <div class="media-frame">
+            <video src="assets/wine-glass-experiment.mp4" autoplay muted loop playsinline></video>
+            <span class="caption">glass experiment mp4</span>
+          </div>
+          <div class="media-frame">
+            <img src="assets/current-photo-03.jpg" alt="Refraction and drink projection">
+            <span class="caption">refraction in glass</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide application-slide">
+      <div class="content">
+        <p class="kicker">07 Application / Future</p>
+        <h2>From One Drink To A Temporary Atmosphere</h2>
+        <div class="body">
+          <p>Many existing bars already create beautiful light-and-shadow environments, but the experience often stays around the drink itself.</p>
+          <p>Vision Bar uses stronger projection to let the drink become the core of a spatial effect.</p>
+          <p>A glass becomes the anchor for a fleeting atmosphere across the table, the wall, and the surrounding bar space.</p>
+        </div>
+        <div class="quote">A temporary mood, shaped around one drink.</div>
+      </div>
+      <div class="visual">
+        <div class="ref-wall">
+          <div class="media-frame">
+            <img src="assets/bar-ref-01.jpg" alt="Bar light reference">
+          </div>
+          <div class="media-frame">
+            <img src="assets/bar-ref-02.jpg" alt="Bar light reference">
+          </div>
+          <div class="media-frame">
+            <img src="assets/bar-ref-03.jpg" alt="Bar light reference">
+          </div>
+          <div class="media-frame">
+            <img src="assets/bar-ref-04.jpg" alt="Bar light reference">
+          </div>
+          <div class="media-frame">
+            <img src="assets/bar-ref-05.jpg" alt="Bar light reference">
+          </div>
+          <div class="media-frame">
+            <img src="assets/bar-ref-06.jpg" alt="Bar light reference">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="meta">
+    <span id="count">01 / 07</span>
+    <div class="progress"><span id="bar"></span></div>
+  </div>
+
+  <div class="nav" aria-label="slide navigation">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const count = document.querySelector("#count");
+    const bar = document.querySelector("#bar");
+    let index = 0;
+
+    function showSlide(nextIndex) {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      count.textContent = `${String(index + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+      bar.style.width = `${((index + 1) / slides.length) * 100}%`;
+    }
+
+    document.querySelector("#prev").addEventListener("click", () => showSlide(index - 1));
+    document.querySelector("#next").addEventListener("click", () => showSlide(index + 1));
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === " ") showSlide(index + 1);
+      if (event.key === "ArrowLeft") showSlide(index - 1);
+    });
+
+    const canvas = document.querySelector("#particles");
+    const ctx = canvas.getContext("2d");
+    const particles = [];
+    const beams = [];
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seed();
+    }
+
+    function seed() {
+      particles.length = 0;
+      beams.length = 0;
+      const total = Math.min(180, Math.floor(width * height / 9000));
+      for (let i = 0; i < total; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 1.8 + 0.4,
+          vx: (Math.random() - 0.5) * 0.22,
+          vy: -Math.random() * 0.28 - 0.03,
+          hue: Math.random() < 0.56 ? 178 : Math.random() < 0.78 ? 42 : 332,
+          a: Math.random() * 0.48 + 0.12
+        });
+      }
+      for (let i = 0; i < 7; i++) {
+        beams.push({
+          y: Math.random() * height,
+          angle: -0.28 + Math.random() * 0.56,
+          alpha: 0.02 + Math.random() * 0.05,
+          speed: 0.08 + Math.random() * 0.15
+        });
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "rgba(5, 6, 7, 0.16)";
+      ctx.fillRect(0, 0, width, height);
+
+      beams.forEach((beam) => {
+        beam.y += beam.speed;
+        if (beam.y > height + 120) beam.y = -120;
+        ctx.save();
+        ctx.translate(width * 0.5, beam.y);
+        ctx.rotate(beam.angle);
+        const gradient = ctx.createLinearGradient(-width * 0.7, 0, width * 0.7, 0);
+        gradient.addColorStop(0, "rgba(132,255,240,0)");
+        gradient.addColorStop(0.45, `rgba(132,255,240,${beam.alpha})`);
+        gradient.addColorStop(0.56, `rgba(245,195,93,${beam.alpha * 0.7})`);
+        gradient.addColorStop(1, "rgba(132,255,240,0)");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(-width, -18, width * 2, 36);
+        ctx.restore();
+      });
+
+      particles.forEach((p) => {
+        p.x += p.vx + Math.sin(Date.now() * 0.0004 + p.y * 0.01) * 0.08;
+        p.y += p.vy;
+        if (p.y < -12) p.y = height + 12;
+        if (p.x < -12) p.x = width + 12;
+        if (p.x > width + 12) p.x = -12;
+
+        ctx.beginPath();
+        ctx.fillStyle = `hsla(${p.hue}, 92%, 72%, ${p.a})`;
+        ctx.shadowColor = `hsla(${p.hue}, 92%, 72%, 0.8)`;
+        ctx.shadowBlur = 12;
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+    draw();
+    showSlide(0);
+  </script>
+</body>
+</html>
