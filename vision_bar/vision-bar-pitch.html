@@ -512,6 +512,74 @@
       align-self: center;
     }
 
+    .timetable-slide {
+      grid-template-columns: minmax(0, 0.95fr) minmax(460px, 1.05fr);
+    }
+
+    .timetable-slide h2 {
+      max-width: 760px;
+    }
+
+    .timetable {
+      width: min(49vw, 900px);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.055);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.22);
+    }
+
+    .timetable-row {
+      display: grid;
+      grid-template-columns: minmax(130px, 0.8fr) minmax(250px, 1.8fr) minmax(190px, 1.35fr);
+      gap: 24px;
+      padding: 22px 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #d8d4ca;
+    }
+
+    .timetable-row:first-child {
+      border-top: 0;
+    }
+
+    .timetable-head {
+      padding-block: 16px;
+      color: var(--gold);
+      font-size: clamp(12px, 1vw, 15px);
+      font-weight: 780;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .timetable-time {
+      color: var(--cyan);
+      font-size: clamp(17px, 1.35vw, 22px);
+      font-weight: 760;
+      line-height: 1.25;
+    }
+
+    .timetable-focus strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(21px, 1.9vw, 29px);
+      line-height: 1.12;
+    }
+
+    .timetable-focus span {
+      display: block;
+      margin-top: 6px;
+      color: #c8c4bb;
+      font-size: clamp(15px, 1.15vw, 19px);
+      line-height: 1.42;
+    }
+
+    .timetable-output {
+      color: var(--gold);
+      font-size: clamp(16px, 1.24vw, 20px);
+      line-height: 1.35;
+    }
+
     .caption {
       position: absolute;
       left: 12px;
@@ -687,6 +755,25 @@
       .application-slide .ref-wall {
         width: min(46vw, 390px);
       }
+
+      .timetable-slide {
+        grid-template-columns: 1fr;
+        align-content: start;
+      }
+
+      .timetable-slide .visual {
+        order: 0;
+      }
+
+      .timetable {
+        width: min(92vw, 720px);
+      }
+
+      .timetable-row {
+        grid-template-columns: minmax(92px, 0.7fr) minmax(160px, 1.4fr) minmax(130px, 1fr);
+        gap: 12px;
+        padding: 14px;
+      }
     }
 
     @media (max-width: 620px) {
@@ -701,6 +788,15 @@
 
       .application-slide .ref-wall {
         width: min(84vw, 520px);
+      }
+
+      .timetable-row {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .timetable-head {
+        display: none;
       }
     }
   </style>
@@ -901,10 +997,71 @@
         </div>
       </div>
     </section>
+
+    <section class="slide timetable-slide">
+      <div class="content">
+        <p class="kicker">08 Timetable / Summer Plan</p>
+        <h2>From Optical Test To Shanghai Exhibition</h2>
+        <div class="body">
+          <p>A step-by-step summer plan to finish Vision Bar by September 2026.</p>
+          <p>The goal is not only a defense prototype, but a version that can land in a real Shanghai venue.</p>
+        </div>
+        <div class="quote">Prototype in summer.<br>Exhibit in September.</div>
+      </div>
+      <div class="visual">
+        <div class="timetable" aria-label="summer plan timetable">
+          <div class="timetable-row timetable-head">
+            <div>Time</div>
+            <div>Focus</div>
+            <div>Output</div>
+          </div>
+          <div class="timetable-row">
+            <div class="timetable-time">Late Apr - May</div>
+            <div class="timetable-focus">
+              <strong>Optical Tests</strong>
+              <span>Reflection, refraction, Tyndall, mirror.</span>
+            </div>
+            <div class="timetable-output">Basic prototype + references.</div>
+          </div>
+          <div class="timetable-row">
+            <div class="timetable-time">June</div>
+            <div class="timetable-focus">
+              <strong>Visual System</strong>
+              <span>CSS particles, liquids, glasses, ice, fog.</span>
+            </div>
+            <div class="timetable-output">First working drink scene.</div>
+          </div>
+          <div class="timetable-row">
+            <div class="timetable-time">July</div>
+            <div class="timetable-focus">
+              <strong>Spatial Prototype</strong>
+              <span>Drink as the center of table and wall projection.</span>
+            </div>
+            <div class="timetable-output">Small installation test.</div>
+          </div>
+          <div class="timetable-row">
+            <div class="timetable-time">August</div>
+            <div class="timetable-focus">
+              <strong>Exhibition Version</strong>
+              <span>Finalize 2-3 drink scenes and setup.</span>
+            </div>
+            <div class="timetable-output">Show-ready prototype.</div>
+          </div>
+          <div class="timetable-row">
+            <div class="timetable-time">September</div>
+            <div class="timetable-focus">
+              <strong>Defense &amp; Shanghai</strong>
+              <span>Present, install, and document the venue version.</span>
+            </div>
+            <div class="timetable-output">Defense + public showing.</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div class="meta">
-    <span id="count">01 / 07</span>
+    <span id="count">01 / 08</span>
     <div class="progress"><span id="bar"></span></div>
   </div>
 
